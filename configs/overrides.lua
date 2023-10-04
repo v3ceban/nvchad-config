@@ -38,9 +38,11 @@ M.treesitter = {
 
 M.mason = {
   ensure_installed = {
+    --Commented out Mason packages don't install on android in termux. Instal system-wide with pkg install *name*
+
     --c/cpp stuff
-    -- "clangd", --doesn't work on arm/aarch64
-    "clang-format",
+    -- "clangd",
+    -- "clang-format",
 
     --web stuff
     "emmet-language-server",
@@ -51,8 +53,8 @@ M.mason = {
     "eslint_d",
 
     --lua stuff
-    "lua-language-server",
-    "stylua",
+    -- "lua-language-server",
+    -- "stylua",
   },
 }
 
