@@ -41,7 +41,7 @@ M.mason = {
     --Commented out Mason packages don't install on android in termux. Instal system-wide with pkg install *name*
 
     --c/cpp stuff
-    -- "clangd",
+    -- "clangd", --$pkg install clang
     -- "clang-format",
 
     --web stuff
