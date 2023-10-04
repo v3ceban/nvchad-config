@@ -10,4 +10,5 @@ Custom config for NeoVim with NVChad plugin
 
 ## Useful links:
 https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+
 https://github.com/NvChad/example_config/tree/v2.0
