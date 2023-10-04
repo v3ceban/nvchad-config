@@ -7,3 +7,6 @@ Custom config for NeoVim with NVChad plugin
 - css/scss
 - html (no lsp yet)
 - js/ts
+
+## Useful links:
+https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
