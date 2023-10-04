@@ -46,6 +46,7 @@ M.mason = {
     "emmet-language-server",
     "prettier",
     "css-lsp",
+    "html-lsp",
     "typescript-language-server",
     "eslint_d",
 

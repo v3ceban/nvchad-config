@@ -5,7 +5,7 @@ Custom config for NeoVim with NVChad plugin
 - c/cpp
 - lua
 - css/scss
-- html (no lsp yet)
+- html
 - js/ts
 
 ## Useful links:
