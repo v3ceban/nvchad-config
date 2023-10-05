@@ -14,6 +14,10 @@ Custom config for NeoVim with NVChad plugin
     
     To create one run: <code>npm init @eslint/config</code>
   </details>
+- <details>
+    <summary>php</summary>
+    Only linting is supported so far. Requires php to be installed.
+  </details>
 
 ## Useful links:
 
