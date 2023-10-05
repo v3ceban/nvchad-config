@@ -9,6 +9,7 @@ local opts = {
     f.stylua,
     f.prettier,
     l.eslint_d,
+    l.php,
   },
   on_attach = function(client, bufnr)
     if client.supports_method "textDocument/formatting" then
