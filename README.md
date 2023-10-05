@@ -8,7 +8,12 @@ Custom config for NeoVim with NVChad plugin
 - lua
 - css/scss
 - html
-- js/ts
+- <details>
+    <summary>js/ts</summary>
+    JavaScript and TypeScript linting requires eslint config
+    
+    To create one run: <code>npm init @eslint/config</code>
+  </details>
 
 ## Useful links:
 
