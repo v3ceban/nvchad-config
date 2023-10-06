@@ -17,6 +17,7 @@ Custom config for NeoVim with NVChad plugin
     <summary>php</summary>
     Realized through intelephense. Requires .git to work
     To create one run: <code>git init</code>
+    Requires PHP installed on system for formatter to work.
   </details>
 
 ## Useful links:
