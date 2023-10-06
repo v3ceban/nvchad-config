@@ -11,12 +11,15 @@ Custom config for NeoVim with NVChad plugin
 - <details>
     <summary>js/ts</summary>
     JavaScript and TypeScript linting requires eslint config
+    
     To create one run: <code>npm init @eslint/config</code>
   </details>
 - <details>
     <summary>php</summary>
     Realized through intelephense. Requires .git to work
+    
     To create one run: <code>git init</code>
+    
     Requires PHP installed on system for formatter to work.
   </details>
 
