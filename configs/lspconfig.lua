@@ -10,6 +10,7 @@ local servers = {
   "html",
   "emmet_language_server",
   "tsserver",
+  "intelephense",
 }
 
 for _, lsp in ipairs(servers) do

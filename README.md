@@ -16,7 +16,9 @@ Custom config for NeoVim with NVChad plugin
   </details>
 - <details>
     <summary>php</summary>
-    Only linting is supported so far. Requires php to be installed.
+    Realized with intelephense. Requires git to work
+
+  Run <code>git init</code> for magic to happen
   </details>
 
 ## Useful links:

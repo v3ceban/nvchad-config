@@ -54,7 +54,9 @@ M.mason = {
     "typescript-language-server", --javascript lsp
     "eslint_d", --javascript linter
     --
+    --php stuff
     --lua stuff
+    "intelephense", --php lsp and linter
     -- "lua-language-server", --lua lsp and linter
     -- "stylua", --lua formatter
   },
