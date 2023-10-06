@@ -55,8 +55,10 @@ M.mason = {
     "eslint_d", --javascript linter
     --
     --php stuff
-    --lua stuff
     "intelephense", --php lsp and linter
+    "php-cs-fixer", --php formatter
+    --
+    --lua stuff
     -- "lua-language-server", --lua lsp and linter
     -- "stylua", --lua formatter
   },

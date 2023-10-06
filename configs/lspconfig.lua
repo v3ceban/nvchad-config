@@ -10,7 +10,6 @@ local servers = {
   "html",
   "emmet_language_server",
   "tsserver",
-  "intelephense",
 }
 
 for _, lsp in ipairs(servers) do
@@ -19,3 +18,20 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+--customized setup for php
+lspconfig.intelephense.setup {
+  init_options = {
+    globalStoragePath = ".intelephense", --creates .intelephense directory inside project folder, without this setting it creates one at ~/intelephense
+    -- licenceKey = "LICENSE_KEY", --if you have one
+  },
+  settings = {
+    intelephense = {
+      telemerty = {
+        enabled = false, --no, thanks
+      },
+    },
+  },
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
