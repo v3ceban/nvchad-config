@@ -20,16 +20,15 @@ Custom config for NeoVim with NVChad plugin
     
     To create one run: <code>git init</code>
     
-    Requires PHP installed on system for formatter to work.
+    Requires PHP installed on system for formatter to work
   </details>
 - <details>
-  <summary>chat gpt</summary>
-  Uses chatgpt.nvim plugin.
-
-  Requires $OPENAI_API_KEY set as a variable in .bashrc
-
-  For usage and more info visit: https://github.com/jackmort/chatgpt.nvim
-
+    <summary>chat gpt</summary>
+    Uses chatgpt.nvim plugin.
+    
+    Requires <code>$OPENAI_API_KEY</code> set as a variable in .bashrc
+  
+    For usage and more info visit: https://github.com/jackmort/chatgpt.nvim
   </details>
 
 ## Useful links:
