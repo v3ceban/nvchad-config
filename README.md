@@ -44,7 +44,9 @@ To install:
 
 - Uses [chatgpt.nvim](https://github.com/jackmort/chatgpt.nvim) plugin
 - Requires `$OPENAI_API_KEY` set as a variable in .bashrc
-  OR
+
+OR
+
 - Requires `api_key_cmd` configuration option passed as a setup param
 
 ### Python
