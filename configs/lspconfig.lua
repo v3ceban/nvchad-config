@@ -10,6 +10,7 @@ local servers = {
   "html",
   "emmet_language_server",
   "tsserver",
+  "pylsp",
 }
 
 for _, lsp in ipairs(servers) do

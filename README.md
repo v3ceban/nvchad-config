@@ -31,6 +31,8 @@ Custom config for NeoVim with NVChad plugin
   For usage and more info visit: https://github.com/jackmort/chatgpt.nvim
   </details>
 
+- python
+
 ## Useful links:
 
 https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md

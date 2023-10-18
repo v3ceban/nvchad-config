@@ -30,6 +30,7 @@ M.treesitter = {
     "lua",
     "markdown",
     "markdown_inline",
+    "python",
   },
   indent = {
     enable = true,
@@ -61,6 +62,10 @@ M.mason = {
     --lua stuff
     -- "lua-language-server", --lua lsp and linter ($pkg install lua-language-server)
     -- "stylua", --lua formatter
+
+    --python
+    "python-lsp-server",
+    "black",
   },
 }
 
