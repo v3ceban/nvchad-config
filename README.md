@@ -4,7 +4,7 @@ My custom config for NeoVim with NvChad and some other plugins
 
 To install:
 
-1. Install NvChad
+1. [Install NvChad](https://nvchad.com/docs/quickstart/install)
 2. Run: `git clone https://github.com/v3ceban/nvchad-config.git ~/.config/nvim/lua/custom`
 3. ??????
 4. PROFIT
@@ -44,9 +44,7 @@ To install:
 
 - Uses [chatgpt.nvim](https://github.com/jackmort/chatgpt.nvim) plugin
 - Requires `$OPENAI_API_KEY` set as a variable in .bashrc
-
-OR
-
+- OR
 - Requires `api_key_cmd` configuration option passed as a setup param
 
 ### Python
