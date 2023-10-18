@@ -11,6 +11,7 @@ local opts = {
     l.eslint_d,
     f.phpcsfixer,
     f.black,
+    l.markdownlint,
   },
   on_attach = function(client, bufnr)
     if client.supports_method "textDocument/formatting" then
