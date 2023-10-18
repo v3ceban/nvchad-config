@@ -10,20 +10,19 @@ Custom config for NeoVim with NVChad plugin
 - html
 - <details>
     <summary>js/ts</summary>
-    - JavaScript and TypeScript linting requires eslint config
-    - To create one run: <code>npm init @eslint/config</code>
+    <p>JavaScript and TypeScript linting requires eslint config</p>
+    <p>To create one run: <code>npm init @eslint/config</code> in the root of the project</p>
   </details>
 - <details>
     <summary>php</summary>
-    - Realized through intelephense. Requires .git to work
-    - To create one run: <code>git init</code>
-    - Requires PHP installed on system for formatter to work
+    <p>Realized through <a href="https://intelephense.com/">intelephense</a>. Requires .git to work</p>
+    <p>To create one run: <code>git init</code> in the root of the project</p>
+    <p>Requires PHP installed on system for formatter to work</p>
   </details>
 - <details>
     <summary>chat gpt</summary>
-    - Uses chatgpt.nvim plugin.
-    - Requires <code>$OPENAI_API_KEY</code> set as a variable in .bashrc or an input as <code>api_key_cmd</code> setup param.
-    - For usage and more info visit: https://github.com/jackmort/chatgpt.nvim
+    <p>Uses <a href="https://github.com/jackmort/chatgpt.nvim">chatgpt.nvim</a> plugin</p>
+    <p>Requires <code>$OPENAI_API_KEY</code> set as a variable in .bashrc or an input as <code>api_key_cmd</code> setup param</p>
   </details>
 - python
 
