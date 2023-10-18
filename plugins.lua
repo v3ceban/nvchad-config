@@ -36,19 +36,7 @@ local plugins = {
       "nvim-telescope/telescope.nvim",
     },
     config = function()
-      require("chatgpt").setup {
-        edit_with_instructions = {
-          keymaps = {
-            close = "<C-x>",
-          },
-        },
-        chat = {
-          keymaps = {
-            close = { "<C-x>" },
-            stop_generating = "<C-c>",
-          },
-        },
-      }
+      require("chatgpt").setup()
     end,
   },
 }
