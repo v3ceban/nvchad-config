@@ -69,6 +69,9 @@ M.mason = {
     --python
     "python-lsp-server",
     "black",
+
+    --markdown
+    "prosemd-lsp",
   },
 }
 
