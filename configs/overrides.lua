@@ -8,6 +8,7 @@ M.treesitter = {
     "scss",
     "javascript",
     "json",
+    "xml",
     "typescript",
     "tsx",
     "sql",
@@ -19,6 +20,8 @@ M.treesitter = {
     "cpp",
     "make",
     "cmake",
+    "meson",
+    "ninja",
 
     --git stuff
     "git_config",
