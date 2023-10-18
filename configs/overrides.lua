@@ -71,7 +71,7 @@ M.mason = {
     "black",
 
     --markdown
-    "prosemd-lsp",
+    -- "prosemd-lsp",
   },
 }
 

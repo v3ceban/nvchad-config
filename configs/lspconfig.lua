@@ -11,7 +11,6 @@ local servers = {
   "emmet_language_server",
   "tsserver",
   "pylsp",
-  "prosemd_lsp",
 }
 
 for _, lsp in ipairs(servers) do
