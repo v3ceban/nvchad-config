@@ -11,6 +11,9 @@ M.general = {
     ["<C-s>"] = { "<cmd> wa <CR>", "Save all files" },
     ["<C-q>"] = { "<cmd> qa <CR>", "Quit everything" },
   },
+  v = {
+    [";"] = { ":", "enter command mode", opts = { nowait = true } },
+  },
 }
 
 return M
