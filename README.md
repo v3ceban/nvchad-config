@@ -26,9 +26,9 @@ Custom config for NeoVim with NVChad plugin
     <summary>chat gpt</summary>
     Uses chatgpt.nvim plugin.
     
-    Requires <code>$OPENAI_API_KEY</code> set as a variable in .bashrc
-  
-    For usage and more info visit: https://github.com/jackmort/chatgpt.nvim
+    Requires <code>$OPENAI_API_KEY</code> set as a variable in .bashrc or an input as <code>api_key_cmd</code> setup param.
+
+  For usage and more info visit: https://github.com/jackmort/chatgpt.nvim
   </details>
 
 ## Useful links:
