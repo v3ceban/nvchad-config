@@ -2,13 +2,14 @@
 
 My custom config for [NeoVim](https://neovim.io/) with [NvChad](https://nvchad.com/) and some other plugins.
 
-The purpose of the config is to keep the default NvChad configurations while providing
-extra features and language support for my personal stack. The config can be used
-as-is and does not require any additional setup or configuration
-(except for uncommenting some lines in configs/overrides.lua file, as some plugins
-are not supported by ARM archetictures).
+The purpose of the config is to keep the default NvChad configurations while
+providing extra features and language support for my personal stack.
 
-To install:
+The config can be used as-is and does not require any additional setup
+or configuration (except for uncommenting some lines in configs/overrides.lua
+file, as some Mason plugins are not supported by ARM architectures).
+
+## Installation
 
 1. [Install NvChad](https://nvchad.com/docs/quickstart/install)
 2. Run: `git clone https://github.com/v3ceban/nvchad-config.git ~/.config/nvim/lua/custom`
