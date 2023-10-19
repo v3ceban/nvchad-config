@@ -1,4 +1,5 @@
 local overrides = require "custom.configs.overrides"
+local whichkey = require "custom.configs.whichkey"
 
 local plugins = {
   {
@@ -28,6 +29,10 @@ local plugins = {
     opts = overrides.nvimtree,
   },
   {
+    "folke/which-key.nvim",
+    opts = whichkey,
+  },
+  {
     "jackMort/ChatGPT.nvim",
     event = "VeryLazy",
     dependencies = {
@@ -38,6 +43,17 @@ local plugins = {
     config = function()
       require("chatgpt").setup {
         api_key_cmd = "pass show openai-api",
+        edit_with_instructions = {
+          keymaps = {
+            close = "<C-x>",
+          },
+        },
+        chat = {
+          keymaps = {
+            close = "<C-x>",
+            stop_generating = "<C-c>",
+          },
+        },
       }
     end,
   },
