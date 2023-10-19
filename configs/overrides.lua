@@ -23,6 +23,9 @@ M.treesitter = {
     "meson",
     "ninja",
 
+    --high lvl
+    "python",
+
     --git stuff
     "git_config",
     "git_rebase",
@@ -33,7 +36,6 @@ M.treesitter = {
     "lua",
     "markdown",
     "markdown_inline",
-    "python",
   },
   indent = {
     enable = true,
@@ -42,7 +44,8 @@ M.treesitter = {
 
 M.mason = {
   ensure_installed = {
-    --Commented out packages don't install on ARM Android in Termux. Uncomment if unapliccable.
+    --Commented out packages don't install with Mason on ARM-powered Android tablet in Termux
+    --Uncomment if unapliccable
 
     --c/cpp stuff
     -- "clangd", --c/cpp lsp and linter ($pkg install clang)
@@ -67,11 +70,11 @@ M.mason = {
     -- "stylua", --lua formatter
 
     --python
-    "python-lsp-server",
-    "black",
+    "python-lsp-server", --python lsp and linter
+    "black", --python formatter
 
     --markdown
-    "markdownlint",
+    "markdownlint", --markdown linter
   },
 }
 

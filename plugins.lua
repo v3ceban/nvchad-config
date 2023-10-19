@@ -33,6 +33,14 @@ local plugins = {
     opts = whichkey,
   },
   {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+  },
+  {
     "jackMort/ChatGPT.nvim",
     event = "VeryLazy",
     dependencies = {

@@ -24,59 +24,67 @@ to run the `:MasonInstallAll` command more easily.
 
 ### HTML
 
-- Uses [vscode-langservers](https://github.com/hrsh7th/vscode-langservers-extracted) as LSP and linter
-- Uses [prettier](https://prettier.io) as formatter
-- Uses [emmet](https://github.com/olrtg/emmet-language-server) as LSP for snippets
+- Uses [vscode-langservers](https://github.com/hrsh7th/vscode-langservers-extracted)
+  for LSP and linting
+- Uses [prettier](https://prettier.io) for formatting
+- Uses [emmet](https://github.com/olrtg/emmet-language-server) for LSP snippets
 
 ### CSS/SCSS
 
-- Uses [vscode-langservers](https://github.com/hrsh7th/vscode-langservers-extracted) as LSP and linter
-- Uses [prettier](https://prettier.io) as formatter
+- Uses [vscode-langservers](https://github.com/hrsh7th/vscode-langservers-extracted)
+  for LSP and linting
+- Uses [prettier](https://prettier.io) for formatting
 
 ### JavaScript/TypeScript
 
-- Uses [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) as LSP
-- Uses [eslint_d](https://github.com/mantoni/eslint_d.js/) as linter
-- Uses [prettier](https://prettier.io) as formatter
+- Uses
+  [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server)
+  for LSP
+- Uses [eslint_d](https://github.com/mantoni/eslint_d.js/) for linting
+- Uses [prettier](https://prettier.io) for formatting
 - Requires eslint config to run linting server
 - To create config run: `npm init @eslint/config` in the root of the project
 
 ### PHP
 
 - Uses [intelephense](https://intelephense.com/) as LSP and linter
-- Uses [php-cs-fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) as formatter
+- Uses [php-cs-fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) for formatting
 - Requires PHP: `sudo dnf install php`
 - Requires .git to run linting server
 - To create .git run: `git init` in the root of the project
 
 ### Lua
 
-- Uses [lua-language-server](https://github.com/LuaLS/lua-language-server) as LSP and linter
-- Uses [stylua](https://github.com/JohnnyMorganz/StyLua) as formatter
+- Uses [lua-language-server](https://github.com/LuaLS/lua-language-server) for
+  LSP and linting
+- Uses [stylua](https://github.com/JohnnyMorganz/StyLua) for formatting
 - Uncomment Mason overrides to install the packages that don't work on ARM
 
 ### C/C++
 
-- Uses [clangd](https://clangd.llvm.org) as LSP and linter
-- Uses [clang-format](https://pypi.org/project/clang-format/) as formatter
+- Uses [clangd](https://clangd.llvm.org) for LSP and linting
+- Uses [clang-format](https://pypi.org/project/clang-format/) for formatting
 - Requires clang: `sudo dnf install clang`
 - Uncomment Mason overrides to install the packages that don't work on ARM
 
 ### Python
 
-- Uses [python-lsp-server](https://github.com/python-lsp/python-lsp-server)
-- Uses [black](https://pypi.org/project/black/) as formatter
+- Uses [python-lsp-server](https://github.com/python-lsp/python-lsp-server) for linting
+- Uses [black](https://pypi.org/project/black/) for formatting
 
 ### ChatGPT
 
 - Uses [ChatGPT.nvim](https://github.com/jackmort/chatgpt.nvim) plugin
 - Requires `api_key_cmd` configuration option passed as a setup param
-- Press `<leader>-C` for the list of quick commands or run `:ChatGPT` to see all avaliable functions
+- Press `<leader>-C` for the list of quick commands or run `:ChatGPT` to see
+  all avaliable functions
 
 ### Markdown
 
-- Uses [markdownlint](https://github.com/igorshubovych/markdownlint-cli) as linter
-- Uses [prettier](https://prettier.io) as formatter
+- Uses [markdown-preview](https://github.com/iamcco/markdown-preview.nvim) plugin
+- Uses [markdownlint](https://github.com/igorshubovych/markdownlint-cli) for linting
+- Uses [prettier](https://prettier.io) for formatting
+- Press `<leader>-M` for the list of quick commands to run or stop preview server
 
 ## Useful Links
 

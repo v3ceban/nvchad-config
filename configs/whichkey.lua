@@ -17,4 +17,9 @@ wk.register({
     r = { "<cmd>ChatGPTRun roxygen_edit<CR>", "Roxygen Edit", mode = { "n", "v" } },
     l = { "<cmd>ChatGPTRun code_readability_analysis<CR>", "Code Readability Analysis", mode = { "n", "v" } },
   },
+  M = {
+    name = "Markdown",
+    r = { "<cmd>MarkdownPreview<CR>", "Run Preview", mode = { "n" } },
+    s = { "<cmd>MarkdownPreviewStop<CR>", "Stop Preview", mode = { "n" } },
+  },
 }, { prefix = "<leader>" })
