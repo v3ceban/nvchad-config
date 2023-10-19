@@ -10,7 +10,8 @@ while adding extra features and language support specific to my personal stack.
 The configuration can be used as is and does not require any additional
 setup or configuration. Some lines for the Mason table in `configs/overrides.lua`
 are commented out because these plugins are not supported by ARM processors.
-If this issue does not apply to your case, you may want to uncomment those lines.
+If this issue does not apply to your case, you may want to uncomment those lines
+to run the `:MasonInstallAll` command more easily.
 
 ## Installation
 
