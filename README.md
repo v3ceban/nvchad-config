@@ -2,7 +2,7 @@
 
 My custom configuration for [NeoVim](https://neovim.io/) uses
 [NvChad](https://nvchad.com/) as the base and includes some additional
-plugins to enhance its basic functionality.
+plugins to enhance its core functionality.
 
 The purpose of this configuration is to retain the default NvChad settings
 while adding extra features and language support specific to my personal stack.
