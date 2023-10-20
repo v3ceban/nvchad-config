@@ -5,7 +5,6 @@ local capabilities = base.capabilities
 local lspconfig = require "lspconfig"
 
 local servers = {
-  "clangd",
   "cssls",
   "html",
   "emmet_language_server",
@@ -19,6 +18,15 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+--customized setup for clangd
+lspconfig.clangd.setup {
+  --to avoid warning "multiple different client offset_encodings detected"
+  capabilities = {
+    offsetEncoding = { "utf-16" },
+  },
+  on_attach = on_attach,
+}
 
 --customized setup for php
 lspconfig.intelephense.setup {
