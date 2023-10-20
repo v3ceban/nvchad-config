@@ -15,6 +15,7 @@ to run the `:MasonInstallAll` command more easily.
 
 ## Installation
 
+0. [Install NeoVim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 1. [Install NvChad](https://nvchad.com/docs/quickstart/install)
 2. Run: `git clone https://github.com/v3ceban/nvchad-config.git ~/.config/nvim/lua/custom`
 3. ??????
