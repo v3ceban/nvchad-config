@@ -72,6 +72,10 @@ local plugins = {
       }
     end,
   },
+  {
+    "ThePrimeagen/vim-be-good",
+    event = "VeryLazy",
+  },
 }
 
 return plugins

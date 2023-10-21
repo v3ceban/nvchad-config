@@ -58,4 +58,16 @@ M.markdown_preview = {
   },
 }
 
+M.begood = {
+  n = {
+    ["<leader>gg"] = { "<cmd>VimBeGood<CR>", "VimGetGood" },
+  },
+}
+
+M.telescope = {
+  n = {
+    ["<leader>ma"] = { "<nop>" },
+  },
+}
+
 return M
