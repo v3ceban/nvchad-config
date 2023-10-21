@@ -7,9 +7,6 @@ M.ui = {
   statusline = {
     separator_style = "arrow",
   },
-  tabufline = {
-    lazyload = false,
-  },
   nvdash = {
     load_on_startup = true,
     buttons = {

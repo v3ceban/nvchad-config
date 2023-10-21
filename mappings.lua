@@ -7,6 +7,7 @@ M.general = {
   n = {
     [";"] = { ":", "Enter command mode", opts = { nowait = true } },
     ['"'] = { "<nop>" },
+    ["'"] = { "<nop>" },
     ["<C-s>"] = { "<cmd> wa <CR>", "Save all files" },
     ["<C-q>"] = { "<cmd> qa <CR>", "Quit everything" },
     ["<leader>s"] = { [[:%s/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>]], "Search and replace" },
