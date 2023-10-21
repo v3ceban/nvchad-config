@@ -28,6 +28,7 @@ M.treesitter = {
 
     --git stuff
     "git_config",
+    "gitcommit",
     "git_rebase",
     "gitattributes",
     "gitignore",
