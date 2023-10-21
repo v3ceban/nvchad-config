@@ -3,8 +3,12 @@ local M = {}
 
 M.ui = {
   theme = "catppuccin",
+  theme_toggle = { "catppuccin", "one_light" },
   statusline = {
     separator_style = "arrow",
+  },
+  tabufline = {
+    lazyload = false,
   },
   nvdash = {
     load_on_startup = true,
