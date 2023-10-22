@@ -20,22 +20,9 @@ M.general = {
 }
 
 M.chatgpt = {
+  plugin = true,
   n = {
     ["<leader>Cc"] = { "<cmd>ChatGPT<CR>", "ChatGPT" },
-    ["<leader>Ce"] = { "<cmd>ChatGPTEditWithInstruction<CR>" },
-    ["<leader>Cg"] = { "<cmd>ChatGPTRun grammar_correction<CR>" },
-    ["<leader>Ct"] = { "<cmd>ChatGPTRun translate<CR>" },
-    ["<leader>Ck"] = { "<cmd>ChatGPTRun keywords<CR>" },
-    ["<leader>Cd"] = { "<cmd>ChatGPTRun docstring<CR>" },
-    ["<leader>Ca"] = { "<cmd>ChatGPTRun add_tests<CR>" },
-    ["<leader>Co"] = { "<cmd>ChatGPTRun optimize_code<CR>" },
-    ["<leader>Cs"] = { "<cmd>ChatGPTRun summarize<CR>" },
-    ["<leader>Cf"] = { "<cmd>ChatGPTRun fix_bugs<CR>" },
-    ["<leader>Cx"] = { "<cmd>ChatGPTRun explain_code<CR>" },
-    ["<leader>Cr"] = { "<cmd>ChatGPTRun roxygen_edit<CR>" },
-    ["<leader>Cl"] = { "<cmd>ChatGPTRun code_readability_analysis<CR>" },
-  },
-  v = {
     ["<leader>Ce"] = { "<cmd>ChatGPTEditWithInstruction<CR>", "Edit with instruction" },
     ["<leader>Cg"] = { "<cmd>ChatGPTRun grammar_correction<CR>", "Grammar Correction" },
     ["<leader>Ct"] = { "<cmd>ChatGPTRun translate<CR>", "Translate" },
@@ -58,9 +45,9 @@ M.markdown_preview = {
   },
 }
 
-M.begood = {
+M.vimbegood = {
   n = {
-    ["<leader>gg"] = { "<cmd>VimBeGood<CR>", "Vim Be Good" },
+    ["<leader>gg"] = { "<cmd>VimBeGood<CR>", "Get Good" },
   },
 }
 
