@@ -56,6 +56,13 @@ local plugins = {
     "ThePrimeagen/vim-be-good",
     event = "VeryLazy",
   },
+  {
+    "alanfortlink/blackjack.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+  },
 }
 
 return plugins

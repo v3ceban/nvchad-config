@@ -45,9 +45,10 @@ M.markdown_preview = {
   },
 }
 
-M.vimbegood = {
+M.games = {
   n = {
     ["<leader>gg"] = { "<cmd>VimBeGood<CR>", "Get good" },
+    ["<leader>gb"] = { "<cmd>BlackJackNewGame<CR>", "Black jack" },
   },
 }
 
