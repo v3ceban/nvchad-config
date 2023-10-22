@@ -7,19 +7,7 @@ M.ui = {
   statusline = {
     separator_style = "arrow",
   },
-  nvdash = {
-    load_on_startup = true,
-    buttons = {
-      { "󰙅  Open Project Tree", "<C-n>", "NvimTreeFocus" },
-      { "  VimGetGood", "Spc g g", "VimBeGood" },
-      { "  Find File", "Spc f f", "Telescope find_files" },
-      { "󰈚  Recent Files", "Spc f o", "Telescope oldfiles" },
-      { "󰈭  Find Word", "Spc f w", "Telescope live_grep" },
-      { "  Themes", "Spc t h", "Telescope themes" },
-      { "  Mappings", "Spc c h", "NvCheatsheet" },
-      { "󰩈  Exit", "<C-q>", "qa!" },
-    },
-  },
+  nvdash = require "custom.configs.nvdash",
 }
 
 M.plugins = "custom.plugins"

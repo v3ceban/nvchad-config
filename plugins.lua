@@ -49,27 +49,7 @@ local plugins = {
       "nvim-telescope/telescope.nvim",
     },
     config = function()
-      require("chatgpt").setup {
-        api_key_cmd = "pass show openai-api",
-        openai_params = {
-          max_tokens = 1500,
-        },
-        openai_edit_params = {
-          max_tokens = 3000,
-        },
-        edit_with_instructions = {
-          keymaps = {
-            close = "<C-x>",
-          },
-        },
-        chat = {
-          keymaps = {
-            close = "<C-x>",
-            stop_generating = "<C-c>",
-            select_session = "<Enter>",
-          },
-        },
-      }
+      return require "custom.configs.chatgpt"
     end,
   },
   {

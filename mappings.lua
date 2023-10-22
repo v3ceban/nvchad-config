@@ -60,7 +60,7 @@ M.markdown_preview = {
 
 M.begood = {
   n = {
-    ["<leader>gg"] = { "<cmd>VimBeGood<CR>", "VimGetGood" },
+    ["<leader>gg"] = { "<cmd>VimBeGood<CR>", "Vim Be Good" },
   },
 }
 
