@@ -8,8 +8,8 @@ M.general = {
     [";"] = { ":", "Enter command mode", opts = { nowait = true } },
     ['"'] = { "<nop>" },
     ["'"] = { "<nop>" },
-    ["<C-s>"] = { "<cmd> wa <CR>", "Save everything" },
-    ["<C-q>"] = { "<cmd> wqa! <CR>", "Save and Quit everything" },
+    ["<C-s>"] = { "<cmd> wa <CR>", "Save all files" },
+    ["<C-q>"] = { "<cmd> qa! <CR>", "Close all buffers and quit" },
     ["<leader>s"] = { [[:%s/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>]], "Search and replace" },
   },
   v = {
