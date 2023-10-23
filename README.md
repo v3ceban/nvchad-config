@@ -76,7 +76,7 @@ to run the `:MasonInstallAll` command more easily.
 ### ChatGPT
 
 - Uses [ChatGPT.nvim](https://github.com/jackmort/chatgpt.nvim) plugin
-- Requires `api_key_cmd` configuration option passed as a setup param
+- Requires `$OPENAI_API_KEY` variable to be set in .bashrc
 - Press `<leader>-C` for the list of quick commands or run `:ChatGPT` to see
   all avaliable functions
 
