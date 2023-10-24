@@ -8,10 +8,8 @@ The purpose of this configuration is to retain the default NvChad settings
 while adding extra features and language support specific to my personal stack.
 
 The configuration can be used as is and does not require any additional
-setup or configuration. Some lines for the Mason table in `configs/overrides.lua`
-are commented out because these plugins are not supported by ARM processors.
-If this issue does not apply to your case, you may want to uncomment those lines
-to run the `:MasonInstallAll` command more easily.
+setup or setup or settings. Some Mason packages aren't avaliable on ARM
+processors. Check `mason.lua` file for more info on how to get those.
 
 ## Installation
 
@@ -76,8 +74,8 @@ to run the `:MasonInstallAll` command more easily.
 ### Go
 
 - Uses [gopls](https://pkg.go.dev/golang.org/x/tools/gopls) for LSP and linting
-- Uses [gofumpt](https://pkg.go.dev/mvdan.cc/gofumpt)
-  [goimports-reviser](https://github.com/incu6us/goimports-reviser)
+- Uses [gofumpt](https://pkg.go.dev/mvdan.cc/gofumpt),
+  [goimports-reviser](https://github.com/incu6us/goimports-reviser),
   and [golines](https://github.com/segmentio/golines) for formatting
 - Requires go: `sudo dnf install go`
 

@@ -1,11 +1,11 @@
 local mason = {
   ensure_installed = {
-    --Commented out packages don't install with Mason on ARM-powered Android tablet in Termux
-    --Uncomment if unapliccable
+    --Some packages don't install with Mason on ARM-powered Android tablet in Termux
+    --Install them with info given in comment
 
     --c/cpp stuff
-    -- "clangd", --c/cpp lsp and linter ($pkg install clang)
-    -- "clang-format", --c/cpp formatter
+    "clangd", --c/cpp lsp and linter ($pkg install clang)
+    "clang-format", --c/cpp formatter (just ignore)
 
     --html/css stuff
     "prettier", --formatter for a lot of different things
@@ -22,8 +22,8 @@ local mason = {
     "php-cs-fixer", --php formatter
 
     --lua stuff
-    -- "lua-language-server", --lua lsp and linter ($pkg install lua-language-server)
-    -- "stylua", --lua formatter
+    "lua-language-server", --lua lsp and linter ($pkg install lua-language-server)
+    "stylua", --lua formatter (just ignore)
 
     --python
     "python-lsp-server", --python lsp and linter
@@ -32,7 +32,7 @@ local mason = {
     --go
     "gopls", --go lsp and linter
     "gofumpt", --go formatter
-    "goimports-reviser", --go formater for imports
+    "goimports-reviser", --go formater for imports ($go install -v github.com/incu6us/goimports-reviser/v3@latest)
     "golines", --go formatter for line length
 
     --markdown
