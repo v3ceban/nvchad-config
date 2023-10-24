@@ -1,49 +1,4 @@
-local M = {}
-
-M.treesitter = {
-  ensure_installed = {
-    --web stuff
-    "html",
-    "css",
-    "scss",
-    "javascript",
-    "json",
-    "xml",
-    "typescript",
-    "tsx",
-    "sql",
-    "php",
-    "vue",
-
-    --low lvl
-    "c",
-    "cpp",
-    "make",
-    "cmake",
-    "meson",
-    "ninja",
-
-    --high lvl
-    "python",
-
-    --git stuff
-    "git_config",
-    "gitcommit",
-    "git_rebase",
-    "gitattributes",
-    "gitignore",
-
-    --other
-    "lua",
-    "markdown",
-    "markdown_inline",
-  },
-  indent = {
-    enable = true,
-  },
-}
-
-M.mason = {
+local mason = {
   ensure_installed = {
     --Commented out packages don't install with Mason on ARM-powered Android tablet in Termux
     --Uncomment if unapliccable
@@ -79,20 +34,4 @@ M.mason = {
   },
 }
 
--- git support in nvimtree
-M.nvimtree = {
-  git = {
-    enable = true,
-  },
-
-  renderer = {
-    highlight_git = true,
-    icons = {
-      show = {
-        git = true,
-      },
-    },
-  },
-}
-
-return M
+return mason

@@ -1,12 +1,25 @@
-local overrides = require "custom.configs.overrides"
-local whichkey = require "custom.configs.whichkey"
-
 local plugins = {
+  {
+    "williamboman/mason.nvim",
+    opts = require "custom.configs.mason",
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = require "custom.configs.treesitter",
+  },
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = require "custom.configs.nvimtree",
+  },
+  {
+    "folke/which-key.nvim",
+    opts = require "custom.configs.whichkey",
+  },
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require "plugins.configs.lspconfig"
-      require "custom.configs.lspconfig"
+      require "plugins.configs.lspconfig" -- default NvChad config
+      require "custom.configs.lspconfig" -- custom config
     end,
   },
   {
@@ -15,22 +28,6 @@ local plugins = {
     opts = function()
       return require "custom.configs.null-ls"
     end,
-  },
-  {
-    "williamboman/mason.nvim",
-    opts = overrides.mason,
-  },
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = overrides.treesitter,
-  },
-  {
-    "nvim-tree/nvim-tree.lua",
-    opts = overrides.nvimtree,
-  },
-  {
-    "folke/which-key.nvim",
-    opts = whichkey,
   },
   {
     "iamcco/markdown-preview.nvim",
@@ -55,13 +52,6 @@ local plugins = {
   {
     "ThePrimeagen/vim-be-good",
     event = "VeryLazy",
-  },
-  {
-    "alanfortlink/blackjack.nvim",
-    event = "VeryLazy",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
   },
 }
 
