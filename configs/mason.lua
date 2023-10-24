@@ -5,7 +5,7 @@ local mason = {
 
     --c/cpp stuff
     "clangd", --c/cpp lsp and linter ($pkg install clang)
-    "clang-format", --c/cpp formatter (just ignore)
+    "clang-format", --c/cpp formatter (just ignore, it should work with clangd)
 
     --html/css stuff
     "prettier", --formatter for a lot of different things
@@ -23,7 +23,7 @@ local mason = {
 
     --lua stuff
     "lua-language-server", --lua lsp and linter ($pkg install lua-language-server)
-    "stylua", --lua formatter (just ignore)
+    "stylua", --lua formatter ($pkg install stylua)
 
     --python
     "python-lsp-server", --python lsp and linter
