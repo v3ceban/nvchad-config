@@ -2,7 +2,7 @@ local wk = require "which-key"
 
 wk.register({
   C = {
-    name = "ChatGPT",
+    -- name = "ChatGPT",
     c = { "<cmd>ChatGPT<CR>", "ChatGPT" },
     e = { "<cmd>ChatGPTEditWithInstruction<CR>", "Edit with instruction", mode = { "n", "v" } },
     g = { "<cmd>ChatGPTRun grammar_correction<CR>", "Grammar correction", mode = { "n", "v" } },
