@@ -33,8 +33,8 @@ M.chatgpt = {
     ["<leader>Cs"] = { "<cmd>ChatGPTRun summarize<CR>", "Summarize" },
     ["<leader>Cf"] = { "<cmd>ChatGPTRun fix_bugs<CR>", "Fix bugs" },
     ["<leader>Cx"] = { "<cmd>ChatGPTRun explain_code<CR>", "Explain code" },
-    ["<leader>Cl"] = { "<cmd>ChatGPTRun code_readability_analysis<CR>", "Code readability analysis" },
     ["<leader>Cw"] = { "<cmd>ChatGPTRun complete_code<CR>", "Complete code" },
+    ["<leader>Cl"] = { "<cmd>ChatGPTRun code_readability_analysis<CR>", "Code readability analysis" },
   },
 }
 
