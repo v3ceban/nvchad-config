@@ -48,7 +48,6 @@ M.markdown_preview = {
 M.games = {
   n = {
     ["<leader>gg"] = { "<cmd>VimBeGood<CR>", "VimBeGood" },
-    ["<leader>gb"] = { "<cmd>BlackJackNewGame<CR>", "BlackJack" },
   },
 }
 
