@@ -11,6 +11,7 @@ local servers = {
   "emmet_language_server",
   "tsserver",
   "pylsp",
+  "bashls",
 }
 
 --basic setuf for everything in servers table (line 8)

@@ -1,5 +1,6 @@
 local config = {
   require("chatgpt").setup {
+    api_key_cmd = "pass show openai-api",
     openai_params = {
       max_tokens = 1500,
     },

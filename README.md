@@ -59,6 +59,10 @@ processors. Check `mason.lua` file for more info on how to get those.
 - Uses [stylua](https://github.com/JohnnyMorganz/StyLua) for formatting
 - Uncomment Mason overrides to install the packages that don't work on ARM
 
+### Bash
+
+- Uses [bash-language-server](https://github.com/bash-lsp/bash-language-server) for LSP
+
 ### C/C++
 
 - Uses [clangd](https://clangd.llvm.org) for LSP and linting
@@ -82,7 +86,7 @@ processors. Check `mason.lua` file for more info on how to get those.
 ### ChatGPT
 
 - Uses [ChatGPT.nvim](https://github.com/jackmort/chatgpt.nvim) plugin
-- Requires `$OPENAI_API_KEY` variable to be set in .bashrc
+- Requires `api_key_cmd` configuration option to be set to your OpenAI API key
 - Press `<leader>-C` for the list of quick commands or run `:ChatGPT` to see
   all avaliable functions
 
