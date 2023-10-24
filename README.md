@@ -61,7 +61,8 @@ processors. Check `mason.lua` file for more info on how to get those.
 
 ### Bash
 
-- Uses [bash-language-server](https://github.com/bash-lsp/bash-language-server) for LSP
+- Uses [bash-language-server](https://github.com/bash-lsp/bash-language-server)
+  for LSP
 
 ### C/C++
 
