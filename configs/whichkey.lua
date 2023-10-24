@@ -14,7 +14,7 @@ wk.register({
     s = { "<cmd>ChatGPTRun summarize<CR>", "Summarize", mode = { "n", "v" } },
     f = { "<cmd>ChatGPTRun fix_bugs<CR>", "Fix bugs", mode = { "n", "v" } },
     x = { "<cmd>ChatGPTRun explain_code<CR>", "Explain code", mode = { "n", "v" } },
-    r = { "<cmd>ChatGPTRun roxygen_edit<CR>", "Roxygen edit", mode = { "n", "v" } },
+    w = { "<cmd>ChatGPTRun complete_code<CR>", "Complete code", mode = { "n", "v" } },
     l = { "<cmd>ChatGPTRun code_readability_analysis<CR>", "Code readability analysis", mode = { "n", "v" } },
   },
 }, { prefix = "<leader>" })
