@@ -73,6 +73,14 @@ to run the `:MasonInstallAll` command more easily.
 - Uses [python-lsp-server](https://github.com/python-lsp/python-lsp-server) for linting
 - Uses [black](https://pypi.org/project/black/) for formatting
 
+### Go
+
+- Uses [gopls](https://pkg.go.dev/golang.org/x/tools/gopls) for LSP and linting
+- Uses [gofumpt](https://pkg.go.dev/mvdan.cc/gofumpt)
+  [goimports-reviser](https://github.com/incu6us/goimports-reviser)
+  and [golines](https://github.com/segmentio/golines) for formatting
+- Requires go: `sudo dnf install go`
+
 ### ChatGPT
 
 - Uses [ChatGPT.nvim](https://github.com/jackmort/chatgpt.nvim) plugin

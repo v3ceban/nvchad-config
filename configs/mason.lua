@@ -29,6 +29,12 @@ local mason = {
     "python-lsp-server", --python lsp and linter
     "black", --python formatter
 
+    --go
+    "gopls", --go lsp and linter
+    "gofumpt", --go formatter
+    "goimports-reviser", --go formater for imports
+    "golines", --go formatter for line length
+
     --markdown
     "markdownlint", --markdown linter
   },

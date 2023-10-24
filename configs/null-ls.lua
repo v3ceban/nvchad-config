@@ -12,6 +12,9 @@ local opts = {
     f.phpcsfixer,
     f.black,
     l.markdownlint,
+    f.gofumpt,
+    f.goimports_reviser,
+    f.golines,
   },
   on_attach = function(client, bufnr)
     if client.supports_method "textDocument/formatting" then

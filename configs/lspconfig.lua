@@ -2,6 +2,7 @@ local base = require "plugins.configs.lspconfig"
 local on_attach = base.on_attach
 local capabilities = base.capabilities
 
+---@diagnostic disable-next-line: different-requires
 local lspconfig = require "lspconfig"
 
 local servers = {
@@ -12,6 +13,7 @@ local servers = {
   "pylsp",
 }
 
+--basic setuf for everything in servers table (line 8)
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
@@ -43,4 +45,19 @@ lspconfig.intelephense.setup {
   },
   on_attach = on_attach,
   capabilities = capabilities,
+}
+
+--customized setup for go
+lspconfig.gopls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    gopls = {
+      completeUnimported = true,
+      usePlaceholders = true,
+      analyses = {
+        unusedparams = true,
+      },
+    },
+  },
 }

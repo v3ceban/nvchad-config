@@ -23,6 +23,11 @@ local treesitter = {
 
     --high lvl
     "python",
+    "go",
+    "godot_resource",
+    "gomod",
+    "gosum",
+    "gowork",
 
     --git stuff
     "git_config",
