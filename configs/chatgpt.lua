@@ -9,12 +9,13 @@ local config = {
     },
     edit_with_instructions = {
       keymaps = {
-        close = "<leader>x",
+        close = "<C-x>",
       },
     },
     chat = {
       keymaps = {
-        close = "<leader>x",
+        close = "<C-x>",
+        stop_generating = "<C-c>",
         select_session = "<Enter>",
       },
     },
