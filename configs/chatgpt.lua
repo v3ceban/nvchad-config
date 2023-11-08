@@ -15,7 +15,6 @@ local config = {
       },
     },
     chat = {
-      loading_test = "Loading. Please wait.",
       keymaps = {
         close = "<C-x>",
         stop_generating = "<C-c>",
