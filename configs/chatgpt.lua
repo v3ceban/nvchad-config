@@ -2,10 +2,12 @@ local config = {
   require("chatgpt").setup {
     api_key_cmd = "pass show openai-api",
     openai_params = {
-      max_tokens = 1500,
+      model = "gpt-3.5-turbo-1106",
+      max_tokens = 16000,
     },
     openai_edit_params = {
-      max_tokens = 3000,
+      model = "gpt-3.5-turbo-1106",
+      max_tokens = 16000,
     },
     edit_with_instructions = {
       keymaps = {
