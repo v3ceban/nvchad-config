@@ -8,7 +8,6 @@ local lspconfig = require "lspconfig"
 local servers = {
   "cssls",
   "html",
-  "emmet_language_server",
   "tsserver",
   "pylsp",
   "bashls",
@@ -43,6 +42,30 @@ lspconfig.intelephense.setup {
         enabled = false, --no, thanks
       },
     },
+  },
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+--customized setup for emmet to enable it in php
+lspconfig.emmet_language_server.setup {
+  filetypes = {
+    --defaults
+    "astro",
+    "css",
+    "eruby",
+    "html",
+    "htmldjango",
+    "javascriptreact",
+    "less",
+    "pug",
+    "sass",
+    "scss",
+    "svelte",
+    "typescriptreact",
+    "vue",
+    --custom
+    "php",
   },
   on_attach = on_attach,
   capabilities = capabilities,
