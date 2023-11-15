@@ -3,11 +3,13 @@ local M = {}
 M.general = {
   i = {
     ["<C-s>"] = { "<cmd> wa <CR>", "Save all files" },
+    ["<C-z>"] = { "<nop>" },
   },
   n = {
     [";"] = { ":", "Enter command mode", opts = { nowait = true } },
     ['"'] = { "<nop>" },
     ["'"] = { "<nop>" },
+    ["<C-z>"] = { "<nop>" },
     ["<C-s>"] = { "<cmd> wa <CR>", "Save all files" },
     ["<C-q>"] = { "<cmd> qa! <CR>", "Close all buffers and quit" },
     ["<leader>s"] = { [[:%s/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>]], "Search and replace" },
@@ -16,6 +18,7 @@ M.general = {
     [";"] = { ":", "Enter command mode", opts = { nowait = true } },
     ["J"] = { ":m '>+1<CR>gv=gv", "Move selection down" },
     ["K"] = { ":m '<-2<CR>gv=gv", "Move selection up" },
+    ["<C-z>"] = { "<nop>" },
   },
 }
 
