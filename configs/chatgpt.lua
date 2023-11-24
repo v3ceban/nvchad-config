@@ -3,11 +3,11 @@ local config = {
     api_key_cmd = "pass show openai-api",
     openai_params = {
       model = "gpt-3.5-turbo-1106",
-      max_tokens = 1500,
+      max_tokens = 4096,
     },
     openai_edit_params = {
       model = "gpt-3.5-turbo-1106",
-      max_tokens = 3000,
+      max_tokens = 4096,
     },
     edit_with_instructions = {
       keymaps = {
