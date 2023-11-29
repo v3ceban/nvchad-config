@@ -3,6 +3,8 @@ local M = {}
 M.general = {
   i = {
     ["<C-s>"] = { "<cmd> wa <CR>", "Save all files" },
+    ["<C-q>"] = { "<cmd> qa! <CR>", "Close all buffers and quit" },
+    ["<C-w>"] = { "<cmd> q <CR>", "Close current buffer" },
     ["<C-z>"] = { "<nop>" },
   },
   n = {
@@ -12,6 +14,7 @@ M.general = {
     ["<C-z>"] = { "<nop>" },
     ["<C-s>"] = { "<cmd> wa <CR>", "Save all files" },
     ["<C-q>"] = { "<cmd> qa! <CR>", "Close all buffers and quit" },
+    ["<C-w>"] = { "<cmd> q <CR>", "Close current buffer" },
     ["<leader>s"] = { [[:%s/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>]], "Search and replace" },
   },
   v = {
@@ -19,6 +22,12 @@ M.general = {
     ["J"] = { ":m '>+1<CR>gv=gv", "Move selection down" },
     ["K"] = { ":m '<-2<CR>gv=gv", "Move selection up" },
     ["<C-z>"] = { "<nop>" },
+  },
+  t = {
+    ["<C-z>"] = { "<nop>" },
+    ["<C-s>"] = { "<cmd> wa <CR>", "Save all files" },
+    ["<C-q>"] = { "<cmd> qa! <CR>", "Close all buffers and quit" },
+    ["<C-w>"] = { "<cmd> q <CR>", "Close current buffer" },
   },
 }
 
