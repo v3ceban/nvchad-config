@@ -13,7 +13,7 @@ local servers = {
   "bashls",
 }
 
---basic setuf for everything in servers table (line 8)
+--basic setup for everything in servers table (line 8)
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
