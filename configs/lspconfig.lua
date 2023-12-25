@@ -49,24 +49,6 @@ lspconfig.intelephense.setup {
 
 --customized setup for emmet to enable it in php
 lspconfig.emmet_language_server.setup {
-  filetypes = {
-    --defaults
-    "astro",
-    "css",
-    "eruby",
-    "html",
-    "htmldjango",
-    "javascriptreact",
-    "less",
-    "pug",
-    "sass",
-    "scss",
-    "svelte",
-    "typescriptreact",
-    "vue",
-    --custom
-    "php",
-  },
   on_attach = on_attach,
   capabilities = capabilities,
 }
