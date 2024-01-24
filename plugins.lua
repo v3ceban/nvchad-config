@@ -19,7 +19,7 @@ local plugins = {
     "neovim/nvim-lspconfig",
     config = function()
       require "plugins.configs.lspconfig" -- default NvChad config
-      require "custom.configs.lspconfig" -- custom config
+      require "custom.configs.lspconfig"  -- custom config
     end,
   },
   {
@@ -51,14 +51,6 @@ local plugins = {
     },
     config = function()
       require("nvim-ts-autotag").setup()
-    end,
-  },
-  {
-    "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    ft = { "markdown" },
-    build = function()
-      vim.fn["mkdp#util#install"]()
     end,
   },
   {

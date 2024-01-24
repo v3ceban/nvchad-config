@@ -11,7 +11,6 @@ local opts = {
     l.eslint_d,
     f.phpcsfixer,
     f.black,
-    l.markdownlint,
     f.gofumpt,
     f.goimports_reviser,
     f.golines,

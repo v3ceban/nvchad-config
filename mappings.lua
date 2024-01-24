@@ -50,13 +50,6 @@ M.chatgpt = {
   },
 }
 
-M.markdown_preview = {
-  n = {
-    ["<leader>mr"] = { "<cmd>MarkdownPreview<CR>", "Markdown preview run" },
-    ["<leader>ms"] = { "<cmd>MarkdownPreviewStop<CR>", "Markdown preview stop" },
-  },
-}
-
 M.games = {
   n = {
     ["<leader>gg"] = { "<cmd>VimBeGood<CR>", "VimBeGood" },

@@ -92,13 +92,6 @@ processors. Check `mason.lua` file for more info on how to get those.
 - Press `<leader>-C` for the list of quick commands or run `:ChatGPT` to see
   all avaliable functions
 
-### Markdown
-
-- Uses [markdown-preview](https://github.com/iamcco/markdown-preview.nvim) plugin
-- Uses [markdownlint](https://github.com/igorshubovych/markdownlint-cli) for linting
-- Uses [prettier](https://prettier.io) for formatting
-- Press `<leader>-M` for the list of quick commands to run or stop preview server
-
 ## Useful Links
 
 [Null-ls builtins](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md)
