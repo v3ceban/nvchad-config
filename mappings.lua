@@ -12,6 +12,7 @@ M.general = {
     ['"'] = { "<nop>" },
     ["'"] = { "<nop>" },
     ["<C-z>"] = { "<nop>" },
+    ["Q"] = { "<nop>" },
     ["<C-s>"] = { "<cmd> wa <CR>", "Save all files" },
     ["<C-q>"] = { "<cmd> qa! <CR>", "Close all buffers and quit" },
     ["<C-w>"] = { "<cmd> q <CR>", "Close current buffer" },
@@ -22,6 +23,7 @@ M.general = {
     ["J"] = { ":m '>+1<CR>gv=gv", "Move selection down" },
     ["K"] = { ":m '<-2<CR>gv=gv", "Move selection up" },
     ["<C-z>"] = { "<nop>" },
+    ["Q"] = { "<nop>" },
   },
   t = {
     ["<C-z>"] = { "<nop>" },
