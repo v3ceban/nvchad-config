@@ -8,15 +8,15 @@ The purpose of this configuration is to retain the default NvChad settings
 while adding extra features and language support specific to my personal stack.
 
 The configuration can be used as is and does not require any additional
-setup or setup or settings. Some Mason packages aren't avaliable on ARM
-processors. Check `mason.lua` file for more info on how to get those.
+setup or setup or settings. Some Mason packages aren't avaliable on certain ARM
+processors and Android (Termux). Check `mason.lua` file for more info on how to get those.
 
 ## Installation
 
 0. [Install NeoVim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 1. [Install NvChad](https://nvchad.com/docs/quickstart/install)
 2. Run: `rm -rf ~/.config/nvim/lua/custom` to delete pregenerated config
-3. Run: `git clone https://github.com/v3ceban/nvchad-config.git ~/.config/nvim/lua/custom` to install this config
+3. Run: `git clone https://github.com/v3ceban/nvchad-config.git ~/.config/nvim/lua/custom` to install config
 4. ??????
 5. PROFIT
 
