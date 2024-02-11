@@ -66,6 +66,13 @@ local plugins = {
     end,
   },
   {
+    "Exafunction/codeium.vim",
+    event = "BufEnter",
+    config = function()
+      return require("custom.configs.codeium").setup()
+    end,
+  },
+  {
     "ThePrimeagen/vim-be-good",
     event = "VeryLazy",
   },

@@ -16,5 +16,7 @@ wk.register({
     x = { "<cmd>ChatGPTRun explain_code<CR>", "Explain code", mode = { "n", "v" } },
     w = { "<cmd>ChatGPTRun complete_code<CR>", "Complete code", mode = { "n", "v" } },
     l = { "<cmd>ChatGPTRun code_readability_analysis<CR>", "Code readability analysis", mode = { "n", "v" } },
+    D = { "<cmd>Codeium Disable<CR>", "Disable Codeium", mode = { "n", "v" } },
+    E = { "<cmd>Codeium Enable<CR>", "Enable Codeium", mode = { "n", "v" } },
   },
 }, { prefix = "<leader>" })

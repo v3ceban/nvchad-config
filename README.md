@@ -92,6 +92,13 @@ processors. Check `mason.lua` file for more info on how to get those.
 - Press `<leader>-C` for the list of quick commands or run `:ChatGPT` to see
   all avaliable functions
 
+### Codeium
+
+- Uses [Codeium](https://github.com/Exafunction/codeium) plugin
+- Run `:Codeium Auth` to authenticate
+- Press `<leader>-CD` or `<leader>-CE` to disable or enable plugin
+- Usage: `<M-l>` to accept, or `<M-j>` and `<M-k>` to cycle through suggestions
+
 ## Useful Links
 
 [Null-ls builtins](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md)

@@ -52,6 +52,19 @@ M.chatgpt = {
   },
 }
 
+M.codeium = {
+  plugin = true,
+  n = {
+    ["<leader>CD"] = { "<cmd>Codeium Disable<CR>", "Disable Codeium" },
+    ["<leader>CE"] = { "<cmd>Codeium Enable<CR>", "Enable Codeium" },
+  },
+  i = {
+    ["<M-l>"] = { "<cmd>lua require('codeium').accept()<CR>", "Accept suggestion" },
+    ["<M-j>"] = { "<cmd>lua require('codeium').cycle()<CR>", "Next suggestion" },
+    ["<M-k>"] = { "<cmd>lua require('codeium').cycle(-1)<CR>", "Previous suggestion" },
+  },
+}
+
 M.games = {
   n = {
     ["<leader>gg"] = { "<cmd>VimBeGood<CR>", "VimBeGood" },
