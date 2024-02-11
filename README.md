@@ -97,7 +97,8 @@ processors. Check `mason.lua` file for more info on how to get those.
 - Uses [Codeium](https://github.com/Exafunction/codeium) plugin
 - Run `:Codeium Auth` to authenticate
 - Press `<leader>-CD` or `<leader>-CE` to disable or enable plugin
-- Usage: `<M-l>` to accept, or `<M-j>` and `<M-k>` to cycle through suggestions
+- `<M-l>` to accept susggestion
+- `<M-j>` and `<M-k>` to cycle through suggestions
 
 ## Useful Links
 
