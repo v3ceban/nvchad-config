@@ -1,4 +1,4 @@
-local tokenNum = 3500
+local tokenNum = 3000
 
 local config = {
   require("chatgpt").setup {
