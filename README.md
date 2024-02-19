@@ -85,7 +85,7 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
   and [golines](https://github.com/segmentio/golines) for formatting
 - Requires go: `sudo dnf install go`
 
-## Extra Features
+## Extra Plugins/Features
 
 ### ChatGPT
 
@@ -101,6 +101,12 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 - Press `<leader>-CD` or `<leader>-CE` to disable or enable plugin
 - `<M-l>` to accept susggestion
 - `<M-j>` and `<M-k>` to cycle through suggestions
+
+### Nvim-ts-autotag
+
+- Uses [Nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) plugin
+- Enabled in:
+  - html, javascript, typescript, javascriptreact, typescriptreact, vue, tsx, jsx, rescript, xml, php, markdown, astro, glimmer, handlebars, hbs
 
 ## Useful Links
 
