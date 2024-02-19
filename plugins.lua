@@ -54,6 +54,10 @@ local plugins = {
     end,
   },
   {
+    "tpope/vim-surround",
+    event = "VeryLazy",
+  },
+  {
     "jackMort/ChatGPT.nvim",
     event = "VeryLazy",
     dependencies = {
