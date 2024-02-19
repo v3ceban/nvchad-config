@@ -20,7 +20,7 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 4. ??????
 5. PROFIT
 
-## Currently Supports
+## Currently Supported Languages
 
 ### HTML
 
@@ -84,6 +84,8 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
   [goimports-reviser](https://github.com/incu6us/goimports-reviser),
   and [golines](https://github.com/segmentio/golines) for formatting
 - Requires go: `sudo dnf install go`
+
+## Extra Features
 
 ### ChatGPT
 
