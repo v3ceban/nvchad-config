@@ -89,12 +89,16 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 
 ### ChatGPT
 
+Enables ChatGPT integration and quick commands
+
 - Uses [ChatGPT.nvim](https://github.com/jackmort/chatgpt.nvim) plugin
 - Requires `api_key_cmd` configuration option to be set to your OpenAI API key
 - Press `<leader>-C` for the list of quick commands or run `:ChatGPT` to see
   all avaliable functions
 
 ### Codeium
+
+Enables Codeium autocompletion
 
 - Uses [Codeium](https://github.com/Exafunction/codeium) plugin
 - Run `:Codeium Auth` to authenticate
@@ -104,6 +108,8 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 
 ### Nvim-ts-autotag
 
+Automatically closes and renames HTML tags
+
 - Uses [Nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) plugin
 - <details>
     <summary>Enabled in:</summary>
@@ -112,9 +118,18 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 
 ### Nvim-surround
 
+Great plugin for surrounding text with brackets, quotes, tags, etc
+
 - Uses [Nvim-surround](https://github.com/kylechui/nvim-surround) plugin
 - Default keybinds in visual mode changed from `S` to `s`
 - See `:h nvim-surround` or `:h nvim-surround.usage` for usage info
+
+### Vim-be-good
+
+Plugin to get better at vim commands and improve coding speed
+
+- Uses [vim-be-good](https://github.com/ThePrimeagen/vim-be-good) plugin
+- Mapped to `<leader>gg`
 
 ## Useful Links
 
