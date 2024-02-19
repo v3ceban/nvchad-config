@@ -105,8 +105,9 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 ### Nvim-ts-autotag
 
 - Uses [Nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) plugin
-<details>
-<summary>Enabled in:</summary>
+- <details>
+  <summary>Enabled in:</summary>
+
 - html
 - xml
 - javascript/react/jsx
@@ -120,6 +121,7 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 - glimmer
 - handlebars
 - hbs
+
 </details>
 
 ### Nvim-surround
