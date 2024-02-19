@@ -37,6 +37,7 @@ local plugins = {
       "typescript",
       "javascriptreact",
       "typescriptreact",
+      "svelte",
       "vue",
       "tsx",
       "jsx",

@@ -105,23 +105,28 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 ### Nvim-ts-autotag
 
 - Uses [Nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) plugin
-- Enabled in:
-  - html
-  - javascript
-  - typescript
-  - javascriptreact
-  - typescriptreact
-  - vue
-  - tsx
-  - jsx
-  - rescript
-  - xml
-  - php
-  - markdown
-  - astro
-  - glimmer
-  - handlebars
-  - hbs
+- <details>
+    <summary>Enabled in:</summary>
+      - html
+      - xml
+      - javascript/react/jsx
+      - typescript/react/tsx
+      - vue
+      - svelte
+      - php
+      - rescript
+      - markdown
+      - astro
+      - glimmer
+      - handlebars
+      - hbs
+  </details>
+
+### Nvim-surround
+
+- Uses [Nvim-surround](https://github.com/kylechui/nvim-surround) plugin
+- Default keybinds in visual mode changed from `S` to `s`
+- See `:h nvim-surround` or `:h nvim-surround.usage` for usage info
 
 ## Useful Links
 
