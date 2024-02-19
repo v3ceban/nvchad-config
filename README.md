@@ -106,7 +106,22 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 
 - Uses [Nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) plugin
 - Enabled in:
-  - html, javascript, typescript, javascriptreact, typescriptreact, vue, tsx, jsx, rescript, xml, php, markdown, astro, glimmer, handlebars, hbs
+  - html
+  - javascript
+  - typescript
+  - javascriptreact
+  - typescriptreact
+  - vue
+  - tsx
+  - jsx
+  - rescript
+  - xml
+  - php
+  - markdown
+  - astro
+  - glimmer
+  - handlebars
+  - hbs
 
 ## Useful Links
 
