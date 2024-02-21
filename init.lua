@@ -4,4 +4,4 @@ vim.opt.incsearch = true                        --allows for tricky searches lik
 vim.opt.shell = "/bin/zsh"                      --set shell to zsh
 vim.opt.foldmethod = "expr"                     --set foldmethod to expr
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()" --set foldexpr to nvim_treesitter#foldexpr()
-vim.opt.foldenable = false                      --don't fold by default
+vim.opt.foldlevel = 99                          --set foldlevel to 99
