@@ -1,14 +1,13 @@
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local null_ls = require "null-ls"
 local f = null_ls.builtins.formatting
-local l = null_ls.builtins.diagnostics
 
 local opts = {
   sources = {
+    require "none-ls.diagnostics.eslint_d",
     f.clang_format,
     f.stylua,
     f.prettier,
-    l.eslint_d,
     f.phpcsfixer,
     f.black,
     f.gofumpt,
