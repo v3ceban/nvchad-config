@@ -50,7 +50,6 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 
 - Uses [intelephense](https://intelephense.com/) as LSP and linter
 - Uses [php-cs-fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) for formatting
-- Requires PHP: `sudo dnf install php`
 - Requires .git to run linting server
 - To create .git run `git init` in the root of the project
 
