@@ -1,7 +1,6 @@
 local mason = {
   ensure_installed = {
-    --Some packages don't install with Mason on ARM-powered Android tablet in Termux
-    --Install them with info given in comment
+    --Some packages don't install with Mason on ARM devices or on Android tablets in Termux. Install them with info given in comment
 
     --c/cpp stuff
     "clangd",       --c/cpp lsp and linter ($pkg install clang)
@@ -15,7 +14,7 @@ local mason = {
 
     --javascript/nodejs stuff
     "typescript-language-server", --javascript lsp
-    "eslint_d",                   --javascript linter
+    "eslint-lsp",                 --javascript linter
 
     --php stuff
     "intelephense", --php lsp and linter
