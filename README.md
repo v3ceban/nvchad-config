@@ -15,8 +15,8 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 
 0. [Install NeoVim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 1. [Install NvChad](https://nvchad.com/docs/quickstart/install)
-2. Run: `rm -rf ~/.config/nvim/lua/custom` to delete pregenerated config
-3. Run: `git clone https://github.com/v3ceban/nvchad-config.git ~/.config/nvim/lua/custom` to install config
+2. Run `rm -rf ~/.config/nvim/lua/custom` to delete pregenerated config
+3. Run `git clone https://github.com/v3ceban/nvchad-config.git ~/.config/nvim/lua/custom` to install config
 4. ??????
 5. PROFIT
 
@@ -43,7 +43,7 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 - Uses [eslint-lsp](https://github.com/Microsoft/vscode-eslint) for linting
 - Uses [prettier](https://prettier.io) for formatting
 - Requires eslint config to run linting server
-  - To create config and install eslint run: `npm init @eslint/config` in the root of the project.
+  - To create config and install eslint run `npm init @eslint/config` in the root of the project.
   - Run `npm init` if not already done
 
 ### PHP
@@ -52,7 +52,7 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 - Uses [php-cs-fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) for formatting
 - Requires PHP: `sudo dnf install php`
 - Requires .git to run linting server
-- To create .git run: `git init` in the root of the project
+- To create .git run `git init` in the root of the project
 
 ### Lua
 
@@ -84,7 +84,6 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 - Uses [gofumpt](https://pkg.go.dev/mvdan.cc/gofumpt),
   [goimports-reviser](https://github.com/incu6us/goimports-reviser),
   and [golines](https://github.com/segmentio/golines) for formatting
-- Requires go: `sudo dnf install go`
 
 ## Extra Plugins/Features
 
@@ -112,10 +111,6 @@ Enables Codeium autocompletion
 Automatically closes and renames HTML tags
 
 - Uses [Nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) plugin
-- <details>
-    <summary>Enabled in:</summary>
-    html, xml, javascript, jsx, typescript, tsx, react, vue, svelte, php, rescript, markdown, astro, glimmer, handlebars, hbs
-  </details>
 
 ### Nvim-surround
 
