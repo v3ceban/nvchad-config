@@ -2,7 +2,6 @@ local wk = require "which-key"
 
 wk.register({
   C = {
-    -- name = "ChatGPT",
     c = { "<cmd>ChatGPT<CR>", "ChatGPT" },
     e = { "<cmd>ChatGPTEditWithInstruction<CR>", "Edit with instruction", mode = { "n", "v" } },
     g = { "<cmd>ChatGPTRun grammar_correction<CR>", "Grammar correction", mode = { "n", "v" } },
@@ -18,5 +17,14 @@ wk.register({
     l = { "<cmd>ChatGPTRun code_readability_analysis<CR>", "Code readability analysis", mode = { "n", "v" } },
     D = { "<cmd>Codeium Disable<CR>", "Disable Codeium", mode = { "n", "v" } },
     E = { "<cmd>Codeium Enable<CR>", "Enable Codeium", mode = { "n", "v" } },
+  },
+  s = {
+    f = {
+      function()
+        require("flash").treesitter()
+      end,
+      "Select function",
+      mode = { "n", "x", "o" },
+    },
   },
 }, { prefix = "<leader>" })
