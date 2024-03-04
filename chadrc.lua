@@ -3,7 +3,7 @@ local M = {}
 
 M.ui = {
   theme = "catppuccin",
-  theme_toggle = { "catppuccin", "one_light" },
+  theme_toggle = { "catppuccin", "github_light" },
   statusline = {
     separator_style = "arrow",
   },
