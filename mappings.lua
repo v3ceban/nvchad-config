@@ -15,8 +15,10 @@ M.general = {
     ["Q"] = { "<nop>" },
     ["<C-s>"] = { "<cmd> wa <CR>", "Save all files" },
     ["<C-q>"] = { "<cmd> qa! <CR>", "Close all buffers and quit" },
-    ["<C-w>"] = { "<cmd> q <CR>", "Close current buffer" },
-    ["<leader>s"] = { [[:%s/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>]], "Search and replace" },
+    ["<leader>sr"] = { [[:%s/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>]], "Search and replace word" },
+    ["<leader>sw"] = { [[:/<C-r><C-w><CR>]], "Search word" },
+    ["<leader>sh"] = { [[:split<CR><C-w>j]], "Horizontal split" },
+    ["<leader>sv"] = { [[:vsplit<CR><C-w>l]], "Vertical split" },
   },
   v = {
     [";"] = { ":", "Enter command mode", opts = { nowait = true } },
@@ -29,7 +31,6 @@ M.general = {
     ["<C-z>"] = { "<nop>" },
     ["<C-s>"] = { "<cmd> wa <CR>", "Save all files" },
     ["<C-q>"] = { "<cmd> qa! <CR>", "Close all buffers and quit" },
-    ["<C-w>"] = { "<cmd> q <CR>", "Close current buffer" },
   },
 }
 
