@@ -91,7 +91,7 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 Enables ChatGPT integration and quick commands
 
 - Uses [ChatGPT.nvim](https://github.com/jackmort/chatgpt.nvim) plugin
-- Requires `api_key_cmd` configuration option to be set to your OpenAI API key
+- Requires api key set as an environment variable called `$OPENAI_API_KEY`
 - Press `<leader>-C` for the list of quick commands or run `:ChatGPT` to see
   all avaliable functions
 

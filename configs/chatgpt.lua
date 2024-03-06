@@ -2,7 +2,6 @@ local tokenNum = 3000
 
 local config = {
   require("chatgpt").setup {
-    api_key_cmd = "pass show openai-api",
     openai_params = {
       model = "gpt-3.5-turbo",
       max_tokens = tokenNum,
