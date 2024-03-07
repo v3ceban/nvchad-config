@@ -9,13 +9,12 @@ local servers = {
   "html",                  -- html lsp
   "emmet_language_server", -- emmet
   "cssls",                 -- css lsp
-  "tsserver",              -- javascript lsp
   "eslint",                -- javascript linter
   "pylsp",                 -- python linter
   "bashls",                -- bash linter
 }
 
---basic setup for everything in servers table (line 8)
+--basic setup for everything in servers table
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
@@ -30,6 +29,17 @@ lspconfig.clangd.setup {
     offsetEncoding = { "utf-16" },
   },
   on_attach = on_attach,
+}
+
+-- customized setup for tsserver
+lspconfig.tsserver.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  init_options = {
+    preferences = {
+      disableSuggestions = true, -- eslint alerts are enough
+    },
+  },
 }
 
 --customized setup for php
