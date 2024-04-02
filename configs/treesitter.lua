@@ -11,6 +11,7 @@ local treesitter = {
     "tsx",
     "sql",
     "php",
+    "ruby",
     "vue",
 
     --low lvl
