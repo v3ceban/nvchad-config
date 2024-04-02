@@ -12,8 +12,7 @@ local servers = {
   "eslint",                -- javascript linter
   "pylsp",                 -- python linter
   "bashls",                -- bash linter
-  "rubocop",               -- ruby linter
-  "ruby_ls",               -- ruby lsp
+  "solargraph",            -- ruby lsp
 }
 
 --basic setup for everything in servers table

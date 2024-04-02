@@ -84,6 +84,10 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
   [goimports-reviser](https://github.com/incu6us/goimports-reviser),
   and [golines](https://github.com/segmentio/golines) for formatting
 
+### Ruby
+
+- Uses [solargraph](https://solargraph.org) for LSP and linting
+
 ## Extra Plugins/Features
 
 ### ChatGPT
