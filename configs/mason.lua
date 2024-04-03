@@ -34,6 +34,9 @@ local mason = {
     "goimports-reviser", --go formater for imports ($go install -v github.com/incu6us/goimports-reviser/v3@latest)
     "golines",           --go formatter for line length
 
+    --ruby
+    "solargraph", --ruby lsp and linter
+
     --bash
     "bash-language-server",
   },
