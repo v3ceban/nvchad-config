@@ -29,11 +29,12 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 - Uses [prettier](https://prettier.io) for formatting
 - Uses [emmet](https://github.com/olrtg/emmet-language-server) for LSP snippets
 
-### CSS/SCSS
+### CSS
 
 - Uses [vscode-langservers](https://github.com/hrsh7th/vscode-langservers-extracted)
   for LSP and linting
 - Uses [prettier](https://prettier.io) for formatting
+- Uses [tailwindcss-language-server](https://github.com/tailwindlabs/tailwindcss-intellisense) for Tailwind LSP
 
 ### JavaScript/TypeScript
 
@@ -43,8 +44,8 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 - Uses [eslint-lsp](https://github.com/Microsoft/vscode-eslint) for linting
 - Uses [prettier](https://prettier.io) for formatting
 - Requires eslint config to run linting server
-  - To create config and install eslint run `npm init @eslint/config` in the root of the project.
   - Run `npm init` if not already done
+  - Run `npm init @eslint/config@latest` in the root of the project
 
 ### PHP
 

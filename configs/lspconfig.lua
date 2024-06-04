@@ -8,7 +8,7 @@ local lspconfig = require "lspconfig"
 local servers = {
   "html",                  -- html lsp
   "emmet_language_server", -- emmet
-  "cssls",                 -- css lsp
+  "tailwindcss",           -- tailwindcss
   "eslint",                -- javascript linter
   "pylsp",                 -- python linter
   "bashls",                -- bash linter
@@ -70,6 +70,19 @@ lspconfig.gopls.setup {
       usePlaceholders = true,
       analyses = {
         unusedparams = true,
+      },
+    },
+  },
+}
+
+--customized setup for cssls
+lspconfig.cssls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    css = {
+      lint = {
+        unknownAtRules = "ignore",
       },
     },
   },

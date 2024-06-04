@@ -7,10 +7,11 @@ local mason = {
     "clang-format", --c/cpp formatter (just ignore, it should work with clangd)
 
     --html/css stuff
-    "prettier",              --formatter for a lot of different things
-    "emmet-language-server", --emmet snippets
-    "css-lsp",               --css lsp
-    "html-lsp",              --html lsp
+    "prettier",                    --formatter for a lot of different things
+    "emmet-language-server",       --emmet snippets
+    "css-lsp",                     --css lsp
+    "tailwindcss-language-server", --tailwindcss
+    "html-lsp",                    --html lsp
 
     --javascript/nodejs stuff
     "typescript-language-server", --javascript lsp
