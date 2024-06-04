@@ -15,7 +15,8 @@ local mason = {
 
     --javascript/nodejs stuff
     "typescript-language-server", --javascript lsp
-    "eslint-lsp",                 --javascript linter
+    -- "eslint-lsp",                 --javascript linter
+    "eslint_d",                   --javascript linter
 
     --php stuff
     "intelephense", --php lsp and linter
