@@ -4,15 +4,14 @@ local f = null_ls.builtins.formatting
 
 local opts = {
   sources = {
-    f.clang_format,                         -- c/cpp formatter
-    f.stylua,                               -- lua formatter
-    f.prettier,                             -- html/css/js formatter
-    f.phpcsfixer,                           -- php formatter
-    f.black,                                -- python formatter
-    require "none-ls.diagnostics.eslint_d", -- javascript linter
-    f.gofumpt,                              -- go formatter
-    f.goimports_reviser,                    -- go formatter
-    f.golines,                              -- go formatter
+    f.clang_format,      -- c/cpp formatter
+    f.stylua,            -- lua formatter
+    f.prettier,          -- html/css/js formatter
+    f.phpcsfixer,        -- php formatter
+    f.black,             -- python formatter
+    f.gofumpt,           -- go formatter
+    f.goimports_reviser, -- go formatter
+    f.golines,           -- go formatter
   },
   on_attach = function(client, bufnr)
     if client.supports_method "textDocument/formatting" then
