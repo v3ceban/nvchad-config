@@ -100,15 +100,12 @@ Enables ChatGPT integration and quick commands
 - Press `<leader>-C` for the list of quick commands or run `:ChatGPT` to see
   all avaliable functions
 
-### Codeium
+### Copilot
 
-Enables Codeium autocompletion
+Enables Copilot autocompletion
 
-- Uses [Codeium](https://github.com/Exafunction/codeium) plugin
-- Run `:Codeium Auth` to authenticate
-- Press `<leader>-CD` or `<leader>-CE` to disable or enable plugin
-- `<M-l>` to accept susggestion
-- `<M-j>` and `<M-k>` to cycle through suggestions
+- Uses [Copilot](https://github.com/github/copilot.vim) plugin
+- Run `:Copilot auth` to authenticate
 
 ### Nvim-ts-autotag
 
