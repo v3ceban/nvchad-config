@@ -65,4 +65,11 @@ M.telescope = {
   },
 }
 
+M.copilot = {
+  i = {
+    ["<M-l>"] = { 'copilot#Accept("\\<CR>")', opts = { expr = true, replace_keycodes = false } },
+    ["<M-j>"] = { "copilot#Next()", opts = { expr = true, silent = true } },
+    ["<M-k>"] = { "copilot#Previous()", opts = { expr = true, silent = true } },
+  },
+}
 return M

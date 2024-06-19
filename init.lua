@@ -5,3 +5,4 @@ vim.opt.shell = "/bin/zsh"                      --set shell to zsh
 vim.opt.foldmethod = "expr"                     --set foldmethod to expr
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()" --set foldexpr to nvim_treesitter#foldexpr()
 vim.opt.foldlevel = 99                          --set foldlevel to 99
+vim.g.copilot_no_tab_map = true
