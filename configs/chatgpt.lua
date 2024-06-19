@@ -1,13 +1,13 @@
-local tokenNum = 3000
+local tokenNum = 3500
 
 local config = {
   require("chatgpt").setup {
     openai_params = {
-      model = "gpt-3.5-turbo",
+      model = "gpt-4o",
       max_tokens = tokenNum,
     },
     openai_edit_params = {
-      model = "gpt-3.5-turbo",
+      model = "gpt-4o",
       max_tokens = tokenNum,
     },
     edit_with_instructions = {
