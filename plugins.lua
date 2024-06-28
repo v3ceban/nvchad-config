@@ -79,7 +79,7 @@ local plugins = {
   },
   {
     "github/copilot.vim",
-    event = "VeryLazy",
+    event = "BufRead",
   },
   {
     "ThePrimeagen/vim-be-good",
