@@ -15,16 +15,9 @@ wk.register({
     x = { "<cmd>ChatGPTRun explain_code<CR>", "Explain code", mode = { "n", "v" } },
     w = { "<cmd>ChatGPTRun complete_code<CR>", "Complete code", mode = { "n", "v" } },
     l = { "<cmd>ChatGPTRun code_readability_analysis<CR>", "Code readability analysis", mode = { "n", "v" } },
-    D = { "<cmd>Codeium Disable<CR>", "Disable Codeium", mode = { "n", "v" } },
-    E = { "<cmd>Codeium Enable<CR>", "Enable Codeium", mode = { "n", "v" } },
-  },
-  s = {
-    f = {
-      function()
-        require("flash").treesitter()
-      end,
-      "Select function",
-      mode = { "n", "x", "o" },
-    },
+    E = { "<cmd>Copilot enable<CR>", "Copilot enable", mode = { "n", "v" } },
+    D = { "<cmd>Copilot disable<CR>", "Copilot disable", mode = { "n", "v" } },
+    S = { "<cmd>Copilot status<CR>", "Copilot status", mode = { "n", "v" } },
+    R = { "<cmd>Copilot restart<CR>", "Copilot restart", mode = { "n", "v" } },
   },
 }, { prefix = "<leader>" })
