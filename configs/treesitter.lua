@@ -13,6 +13,7 @@ local treesitter = {
     "php",
     "ruby",
     "vue",
+    "prisma",
 
     --low lvl
     "c",
