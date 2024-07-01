@@ -46,6 +46,7 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 - Requires eslint config to run linting server
   - Run `npm init` if not already done
   - Run `npm init @eslint/config@latest` in the root of the project
+- Uses [prisma-language-server](https://github.com/prisma/language-tools) for LSP in Prisma files
 
 ### PHP
 
