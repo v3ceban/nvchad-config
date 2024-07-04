@@ -7,6 +7,7 @@ local opts = {
     f.clang_format,      -- c/cpp formatter
     f.stylua,            -- lua formatter
     f.prettier,          -- html/css/js formatter
+    f.rustywind,         -- tailwindcss formatter
     f.phpcsfixer,        -- php formatter
     f.black,             -- python formatter
     f.gofumpt,           -- go formatter

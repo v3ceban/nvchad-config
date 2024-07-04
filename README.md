@@ -35,6 +35,7 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
   for LSP and linting
 - Uses [prettier](https://prettier.io) for formatting
 - Uses [tailwindcss-language-server](https://github.com/tailwindlabs/tailwindcss-intellisense) for Tailwind LSP
+- Uses [rustywind](https://github.com/avencera/rustywind) for Tailwind classes organization
 
 ### JavaScript/TypeScript
 
