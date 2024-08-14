@@ -8,9 +8,6 @@ M.general = {
     ["<C-z>"] = { "<nop>" },
   },
   n = {
-    [";"] = { ":", "Enter command mode", opts = { nowait = true } },
-    ['"'] = { "<nop>" },
-    ["'"] = { "<nop>" },
     ["<C-z>"] = { "<nop>" },
     ["Q"] = { "<nop>" },
     ["<C-s>"] = { "<cmd> wa <CR>", "Save all files" },
@@ -21,7 +18,6 @@ M.general = {
     ["<leader>sv"] = { [[:vsplit<CR><C-w>l]], "Vertical split" },
   },
   v = {
-    [";"] = { ":", "Enter command mode", opts = { nowait = true } },
     ["J"] = { ":m '>+1<CR>gv=gv", "Move selection down" },
     ["K"] = { ":m '<-2<CR>gv=gv", "Move selection up" },
     ["<C-z>"] = { "<nop>" },
@@ -76,4 +72,5 @@ M.copilot = {
     ["<M-k>"] = { "copilot#Previous()", opts = { expr = true, silent = true }, "Copilot previous suggestion" },
   },
 }
+
 return M

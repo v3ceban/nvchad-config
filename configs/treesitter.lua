@@ -42,6 +42,11 @@ local treesitter = {
     "lua",
     "markdown",
     "markdown_inline",
+    "csv",
+    "psv",
+    "tsv",
+    "yaml",
+    "vimdoc",
   },
   indent = {
     enable = true,

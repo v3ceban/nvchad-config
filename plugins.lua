@@ -66,6 +66,11 @@ local plugins = {
     end,
   },
   {
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    opts = require "custom.configs.flash",
+  },
+  {
     "jackMort/ChatGPT.nvim",
     event = "VeryLazy",
     dependencies = {

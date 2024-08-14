@@ -1,23 +1,32 @@
 local wk = require "which-key"
 
-wk.register({
-  C = {
-    c = { "<cmd>ChatGPT<CR>", "ChatGPT" },
-    e = { "<cmd>ChatGPTEditWithInstruction<CR>", "Edit with instruction", mode = { "n", "v" } },
-    g = { "<cmd>ChatGPTRun grammar_correction<CR>", "Grammar correction", mode = { "n", "v" } },
-    t = { "<cmd>ChatGPTRun translate<CR>", "Translate", mode = { "n", "v" } },
-    k = { "<cmd>ChatGPTRun keywords<CR>", "Keywords", mode = { "n", "v" } },
-    d = { "<cmd>ChatGPTRun docstring<CR>", "Docstring", mode = { "n", "v" } },
-    a = { "<cmd>ChatGPTRun add_tests<CR>", "Add tests", mode = { "n", "v" } },
-    o = { "<cmd>ChatGPTRun optimize_code<CR>", "Optimize code", mode = { "n", "v" } },
-    s = { "<cmd>ChatGPTRun summarize<CR>", "Summarize", mode = { "n", "v" } },
-    f = { "<cmd>ChatGPTRun fix_bugs<CR>", "Fix bugs", mode = { "n", "v" } },
-    x = { "<cmd>ChatGPTRun explain_code<CR>", "Explain code", mode = { "n", "v" } },
-    w = { "<cmd>ChatGPTRun complete_code<CR>", "Complete code", mode = { "n", "v" } },
-    l = { "<cmd>ChatGPTRun code_readability_analysis<CR>", "Code readability analysis", mode = { "n", "v" } },
-    E = { "<cmd>Copilot enable<CR>", "Copilot enable", mode = { "n", "v" } },
-    D = { "<cmd>Copilot disable<CR>", "Copilot disable", mode = { "n", "v" } },
-    S = { "<cmd>Copilot status<CR>", "Copilot status", mode = { "n", "v" } },
-    R = { "<cmd>Copilot restart<CR>", "Copilot restart", mode = { "n", "v" } },
+wk.add {
+  {
+    mode = { "n", "v" },
+    { "<leader>CD", "<cmd>Copilot disable<CR>",                      desc = "Copilot disable" },
+    { "<leader>CE", "<cmd>Copilot enable<CR>",                       desc = "Copilot enable" },
+    { "<leader>CR", "<cmd>Copilot restart<CR>",                      desc = "Copilot restart" },
+    { "<leader>CS", "<cmd>Copilot status<CR>",                       desc = "Copilot status" },
+    { "<leader>Ca", "<cmd>ChatGPTRun add_tests<CR>",                 desc = "Add tests" },
+    { "<leader>Cd", "<cmd>ChatGPTRun docstring<CR>",                 desc = "Docstring" },
+    { "<leader>Ce", "<cmd>ChatGPTEditWithInstruction<CR>",           desc = "Edit with instruction" },
+    { "<leader>Cf", "<cmd>ChatGPTRun fix_bugs<CR>",                  desc = "Fix bugs" },
+    { "<leader>Cg", "<cmd>ChatGPTRun grammar_correction<CR>",        desc = "Grammar correction" },
+    { "<leader>Ck", "<cmd>ChatGPTRun keywords<CR>",                  desc = "Keywords" },
+    { "<leader>Cl", "<cmd>ChatGPTRun code_readability_analysis<CR>", desc = "Code readability analysis" },
+    { "<leader>Co", "<cmd>ChatGPTRun optimize_code<CR>",             desc = "Optimize code" },
+    { "<leader>Cs", "<cmd>ChatGPTRun summarize<CR>",                 desc = "Summarize" },
+    { "<leader>Ct", "<cmd>ChatGPTRun translate<CR>",                 desc = "Translate" },
+    { "<leader>Cw", "<cmd>ChatGPTRun complete_code<CR>",             desc = "Complete code" },
+    { "<leader>Cx", "<cmd>ChatGPTRun explain_code<CR>",              desc = "Explain code" },
   },
-}, { prefix = "<leader>" })
+  { "<leader>Cc", "<cmd>ChatGPT<CR>", desc = "ChatGPT" },
+}
+
+local opts = {
+  icons = {
+    mappings = false,
+  },
+}
+
+return opts
