@@ -1,4 +1,5 @@
 local opts = {
+  labels = "1234567890",
   modes = {
     search = {
       enabled = true,
