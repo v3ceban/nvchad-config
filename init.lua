@@ -6,3 +6,12 @@ vim.opt.foldmethod = "expr"                     --set foldmethod to expr
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()" --set foldexpr to nvim_treesitter#foldexpr()
 vim.opt.foldlevel = 99                          --set foldlevel to 99
 vim.g.copilot_no_tab_map = true                 --disable tab mapping for copilot
+
+-- enable wrap for json and markdown files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "json", "markdown" },
+  callback = function()
+    vim.opt_local.wrap = true
+    vim.opt_local.linebreak = true
+  end,
+})
