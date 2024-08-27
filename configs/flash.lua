@@ -4,6 +4,7 @@ local opts = {
       enabled = true,
       search = {
         multi_window = false,
+        trigger = "`",
       },
     },
     char = {
