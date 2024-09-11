@@ -146,22 +146,22 @@ local config = {
       -- The 'level' is used to index into the array using a clamp
       -- Highlight for the heading icon and extends through the entire line
       backgrounds = {
-        "RenderMarkdownH1Bg",
-        "RenderMarkdownH2Bg",
-        "RenderMarkdownH3Bg",
-        "RenderMarkdownH4Bg",
-        "RenderMarkdownH5Bg",
-        "RenderMarkdownH6Bg",
+        "RenderMarkdownHeader",
+        "RenderMarkdownHeader",
+        "RenderMarkdownHeader",
+        "RenderMarkdownHeader",
+        "RenderMarkdownHeader",
+        "RenderMarkdownHeader",
       },
       -- The 'level' is used to index into the array using a clamp
       -- Highlight for the heading and sign icons
       foregrounds = {
-        "RenderMarkdownH1",
-        "RenderMarkdownH2",
-        "RenderMarkdownH3",
-        "RenderMarkdownH4",
-        "RenderMarkdownH5",
-        "RenderMarkdownH6",
+        "RenderMarkdownHeader",
+        "RenderMarkdownHeader",
+        "RenderMarkdownHeader",
+        "RenderMarkdownHeader",
+        "RenderMarkdownHeader",
+        "RenderMarkdownHeader",
       },
     },
     code = {
@@ -248,13 +248,13 @@ local config = {
         -- Replaces '[ ]' of 'task_list_marker_unchecked'
         icon = "󰄱 ",
         -- Highlight for the unchecked icon
-        highlight = "RenderMarkdownUnchecked",
+        highlight = "RenderMarkdownTodo",
       },
       checked = {
         -- Replaces '[x]' of 'task_list_marker_checked'
         icon = "󰱒 ",
         -- Highligh for the checked icon
-        highlight = "RenderMarkdownChecked",
+        highlight = "RenderMarkdownTodo",
       },
       -- Define custom checkbox states, more involved as they are not part of the markdown grammar
       -- As a result this requires neovim >= 0.10.0 since it relies on 'inline' extmarks
