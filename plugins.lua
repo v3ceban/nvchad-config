@@ -47,7 +47,6 @@ local plugins = {
       "rescript",
       "xml",
       "php",
-      "markdown",
       "astro",
       "glimmer",
       "handlebars",
@@ -89,6 +88,15 @@ local plugins = {
   {
     "ThePrimeagen/vim-be-good",
     event = "VeryLazy",
+  },
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    opts = {},
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    event = "VeryLazy",
+    config = function()
+      return require "custom.configs.markdown"
+    end,
   },
 }
 

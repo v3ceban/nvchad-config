@@ -1,10 +1,10 @@
 local opts = {
+  labels = "1234567890",
   modes = {
     search = {
       enabled = true,
       search = {
         multi_window = false,
-        trigger = "`",
       },
     },
     char = {
