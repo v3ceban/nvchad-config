@@ -91,6 +91,10 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 
 - Uses [solargraph](https://solargraph.org) for LSP and linting
 
+### Markdown
+
+- Uses [Render Markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim) for inline markdown rendering
+
 ## Extra Plugins/Features
 
 ### ChatGPT
