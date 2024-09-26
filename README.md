@@ -14,7 +14,10 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 ## Installation
 
 0. [Install NeoVim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
-1. [Install NvChad](https://nvchad.com/docs/quickstart/install)
+1. Install and initialize NvChad v2.0 by running the following command:
+   ```sh
+   git clone -b v2.0 --single-branch https://github.com/NvChad/NvChad.git ~/.config/nvim && nvim
+   ```
 2. Run `rm -rf ~/.config/nvim/lua/custom` to delete pregenerated config
 3. Run `git clone https://github.com/v3ceban/nvchad-config.git ~/.config/nvim/lua/custom` to install config
 4. ??????
