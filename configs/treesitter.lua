@@ -47,6 +47,7 @@ local treesitter = {
     "tsv",
     "yaml",
     "vimdoc",
+    "dockerfile",
   },
   indent = {
     enable = true,
