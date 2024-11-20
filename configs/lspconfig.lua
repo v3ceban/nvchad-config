@@ -11,7 +11,6 @@ local servers = {
   "tailwindcss",           -- tailwindcss
   "eslint",                -- javascript linter
   "prismals",              -- prisma lsp
-  "pylsp",                 -- python linter
   "bashls",                -- bash linter
   "solargraph",            -- ruby lsp
 }
@@ -84,6 +83,21 @@ lspconfig.cssls.setup {
     css = {
       lint = {
         unknownAtRules = "ignore",
+      },
+    },
+  },
+}
+
+--customized setup for pylsp
+lspconfig.pylsp.setup {
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          enabled = true,
+          ignore = { "E501" },
+          maxLineLength = 120,
+        },
       },
     },
   },
