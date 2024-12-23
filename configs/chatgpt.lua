@@ -1,15 +1,12 @@
-local tokenNum = 3500
+local params = {
+  model = "gpt-4o-mini",
+  max_tokens = 3500,
+}
 
 local config = {
   require("chatgpt").setup {
-    openai_params = {
-      model = "gpt-4o-mini",
-      max_tokens = tokenNum,
-    },
-    openai_edit_params = {
-      model = "gpt-4o-mini",
-      max_tokens = tokenNum,
-    },
+    openai_params = params,
+    openai_edit_params = params,
     edit_with_instructions = {
       keymaps = {
         close = "<C-x>",
