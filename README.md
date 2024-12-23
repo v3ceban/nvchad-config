@@ -101,6 +101,11 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 
 - Uses [Render Markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim) for inline markdown rendering
 
+### Docker
+
+- Uses [Dockerfile Language Server](https://github.com/rcjsuen/dockerfile-language-server-nodejs) for LSP
+- Uses [hadolint](https://github.com/hadolint/hadolint) for linting Dockerfiles
+
 ## Extra Plugins/Features
 
 ### ChatGPT
@@ -111,6 +116,12 @@ Enables ChatGPT integration and quick commands
 - Requires api key set as an environment variable called `$OPENAI_API_KEY`
 - Press `<leader>-C` for the list of quick commands or run `:ChatGPT` to see
   all avaliable functions
+
+#### o1 and o1-mini
+
+To use `o1` or `o1-mini` models some changes needed to be made to the plugin.
+A [PR](https://github.com/jackMort/ChatGPT.nvim/pull/483) has been made to the original repository, but until it's merged,
+I made my own fork duplicating these changes.
 
 ### Copilot
 
@@ -142,8 +153,8 @@ Plugin to get better at vim commands and improve coding speed
 
 ## Useful Links
 
-[Null-ls builtins](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md)
+[None-ls builtins](https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md)
 
-[LSPconfig builtins](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md)
+[LSPconfig builtins](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md)
 
 [NvChad example config](https://github.com/NvChad/example_config/tree/v2.0)

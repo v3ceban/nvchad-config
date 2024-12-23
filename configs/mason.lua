@@ -42,6 +42,9 @@ local mason = {
 
     --bash
     "bash-language-server",
+
+    --docker
+    "dockerfile-language-server", --dockerfile lsp
   },
 }
 

@@ -13,6 +13,7 @@ local servers = {
   "prismals",              -- prisma lsp
   "bashls",                -- bash linter
   "solargraph",            -- ruby lsp
+  "dockerls",              -- dockerfile lsp
 }
 
 --basic setup for everything in servers table
