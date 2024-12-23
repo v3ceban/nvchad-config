@@ -104,7 +104,6 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 ### Docker
 
 - Uses [Dockerfile Language Server](https://github.com/rcjsuen/dockerfile-language-server-nodejs) for LSP
-- Uses [hadolint](https://github.com/hadolint/hadolint) for linting Dockerfiles
 
 ## Extra Plugins/Features
 

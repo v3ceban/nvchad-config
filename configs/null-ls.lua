@@ -1,7 +1,6 @@
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local null_ls = require "null-ls"
 local f = null_ls.builtins.formatting
-local d = null_ls.builtins.diagnostics
 
 local opts = {
   sources = {
@@ -12,9 +11,8 @@ local opts = {
     f.phpcsfixer,        -- php formatter
     f.black,             -- python formatter
     f.gofumpt,           -- go formatter
-    f.goimports_reviser, -- go formatter
-    f.golines,           -- go formatter
-    d.hadolint,          -- dockerfile linter
+    f.goimports_reviser, -- go imports organizer
+    f.golines,           -- go line formatter
   },
   on_attach = function(client, bufnr)
     if client.supports_method "textDocument/formatting" then
