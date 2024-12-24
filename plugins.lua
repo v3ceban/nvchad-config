@@ -67,7 +67,7 @@ local plugins = {
     opts = require "custom.configs.flash",
   },
   {
-    "v3ceban/ChatGPT.nvim",
+    "jackMort/ChatGPT.nvim",
     event = "VeryLazy",
     dependencies = {
       "MunifTanjim/nui.nvim",

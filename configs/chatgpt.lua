@@ -1,7 +1,6 @@
 local params = {
-  model = "o1-mini",
+  model = "gpt-4o-mini",
   max_tokens = 3500,
-  temperature = 1,
 }
 
 local config = {

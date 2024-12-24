@@ -116,12 +116,6 @@ Enables ChatGPT integration and quick commands
 - Press `<leader>-C` for the list of quick commands or run `:ChatGPT` to see
   all avaliable functions
 
-#### o1 and o1-mini
-
-To use `o1` or `o1-mini` models some changes needed to be made to the plugin.
-A [PR](https://github.com/jackMort/ChatGPT.nvim/pull/483) has been made to the original repository, but until it's merged,
-I made my own fork duplicating these changes.
-
 ### Copilot
 
 Enables Copilot autocompletion
