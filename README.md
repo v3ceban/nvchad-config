@@ -14,9 +14,15 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 
 1. [Install NeoVim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 2. Install and initialize NvChad v2.0 by running the following command:
+
    ```sh
    git clone -b v2.0 --single-branch https://github.com/NvChad/NvChad.git ~/.config/nvim && nvim
    ```
+
+   > [!NOTE]
+   > Before running this command, make sure you have NvChad dependencies installed.
+   > Check the [NvChad documentation](https://nvchad.com/docs/quickstart/install#pre-requisites) for more info.
+
 3. Run the following commands to delete pregenerated config files and install this config:
    ```sh
     rm -rf ~/.config/nvim/lua/custom
@@ -117,7 +123,7 @@ Automatically closes and renames HTML tags
 
 ### Nvim-surround
 
-Great plugin for surrounding text with brackets, quotes, tags, etc
+Great plugin for surrounding text with brackets, quotes, and tags
 
 - Uses [Nvim-surround](https://github.com/kylechui/nvim-surround) plugin
 - Default keybinds in visual mode changed from `S` to `s`
@@ -125,7 +131,7 @@ Great plugin for surrounding text with brackets, quotes, tags, etc
 
 ### Vim-be-good
 
-Plugin to get better at vim commands and improve coding speed
+Plugin to get better at vim
 
 - Uses [vim-be-good](https://github.com/ThePrimeagen/vim-be-good) plugin
 - Mapped to `<leader>gg`
