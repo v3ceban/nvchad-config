@@ -31,26 +31,9 @@ local plugins = {
   },
   {
     "windwp/nvim-ts-autotag",
-    ft = {
-      "html",
-      "javascript",
-      "typescript",
-      "javascriptreact",
-      "typescriptreact",
-      "svelte",
-      "vue",
-      "tsx",
-      "jsx",
-      "rescript",
-      "xml",
-      "php",
-      "astro",
-      "glimmer",
-      "handlebars",
-      "hbs",
-    },
+    ft = require("custom.configs.nvim-ts-autotag").ft,
     config = function()
-      require("nvim-ts-autotag").setup()
+      require("custom.configs.nvim-ts-autotag").setup()
     end,
   },
   {
@@ -67,21 +50,23 @@ local plugins = {
     opts = require "custom.configs.flash",
   },
   {
-    "jackMort/ChatGPT.nvim",
+    "razak17/tailwind-fold.nvim",
     event = "VeryLazy",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "folke/trouble.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-    config = function()
-      return require "custom.configs.chatgpt"
-    end,
+    opts = require "custom.configs.tailwind-fold",
+    ft = require("custom.configs.tailwind-fold").ft,
   },
   {
     "github/copilot.vim",
     event = "BufRead",
+  },
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    dependencies = {
+      "github/copilot.vim",
+      "nvim-lua/plenary.nvim",
+    },
+    event = "VeryLazy",
+    opts = require "custom.configs.copilot",
   },
   {
     "ThePrimeagen/vim-be-good",
@@ -89,12 +74,9 @@ local plugins = {
   },
   {
     "MeanderingProgrammer/render-markdown.nvim",
-    opts = {},
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     event = "VeryLazy",
-    config = function()
-      return require "custom.configs.markdown"
-    end,
+    opts = require "custom.configs.render-markdown",
   },
 }
 

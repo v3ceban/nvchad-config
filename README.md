@@ -1,8 +1,7 @@
 # NvChad-Config
 
-My custom configuration for [NeoVim](https://neovim.io/) uses
-[NvChad](https://nvchad.com/) as the base and includes some additional
-plugins to enhance its core functionality.
+My custom configuration for [NeoVim](https://neovim.io/) uses [NvChad](https://nvchad.com/) as the base and includes some
+additional plugins to enhance its core functionality.
 
 The purpose of this configuration is to retain the default NvChad settings
 while adding extra features and language support specific to my personal stack.
@@ -13,41 +12,38 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 
 ## Installation
 
-0. [Install NeoVim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
-1. Install and initialize NvChad v2.0 by running the following command:
+1. [Install NeoVim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+2. Install and initialize NvChad v2.0 by running the following command:
    ```sh
    git clone -b v2.0 --single-branch https://github.com/NvChad/NvChad.git ~/.config/nvim && nvim
    ```
-2. Run the following commands to delete pregenerated config files and install this config:
+3. Run the following commands to delete pregenerated config files and install this config:
    ```sh
     rm -rf ~/.config/nvim/lua/custom
     git clone https://github.com/v3ceban/nvchad-config.git ~/.config/nvim/lua/custom
    ```
-3. ??????
-4. PROFIT
+4. ??????
+5. PROFIT
 
 ## Currently Supported Languages
 
 ### HTML
 
-- Uses [vscode-langservers](https://github.com/hrsh7th/vscode-langservers-extracted)
-  for LSP and linting
+- Uses [vscode-langservers](https://github.com/hrsh7th/vscode-langservers-extracted) for LSP and linting
 - Uses [prettier](https://prettier.io) for formatting
 - Uses [emmet](https://github.com/olrtg/emmet-language-server) for LSP snippets
 
 ### CSS
 
-- Uses [vscode-langservers](https://github.com/hrsh7th/vscode-langservers-extracted)
-  for LSP and linting
+- Uses [vscode-langservers](https://github.com/hrsh7th/vscode-langservers-extracted) for LSP and linting
 - Uses [prettier](https://prettier.io) for formatting
 - Uses [tailwindcss-language-server](https://github.com/tailwindlabs/tailwindcss-intellisense) for Tailwind LSP
 - Uses [rustywind](https://github.com/avencera/rustywind) for Tailwind classes organization
+- Uses [tailwind-fold.nvim](https://github.com/razak17/tailwind-fold.nvim) plugin to conceal long Tailwind classes
 
 ### JavaScript/TypeScript
 
-- Uses
-  [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server)
-  for LSP
+- Uses [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) for LSP
 - Uses [eslint-lsp](https://github.com/Microsoft/vscode-eslint) for linting
 - Uses [prettier](https://prettier.io) for formatting
 - Requires eslint config to run linting server
@@ -64,15 +60,13 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 
 ### Lua
 
-- Uses [lua-language-server](https://github.com/LuaLS/lua-language-server) for
-  LSP and linting
+- Uses [lua-language-server](https://github.com/LuaLS/lua-language-server) for LSP and linting
 - Uses [stylua](https://github.com/JohnnyMorganz/StyLua) for formatting
 - Uncomment Mason overrides to install the packages that don't work on ARM
 
 ### Bash
 
-- Uses [bash-language-server](https://github.com/bash-lsp/bash-language-server)
-  for LSP
+- Uses [bash-language-server](https://github.com/bash-lsp/bash-language-server) for LSP
 
 ### C/C++
 
@@ -89,9 +83,7 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 ### Go
 
 - Uses [gopls](https://pkg.go.dev/golang.org/x/tools/gopls) for LSP and linting
-- Uses [gofumpt](https://pkg.go.dev/mvdan.cc/gofumpt),
-  [goimports-reviser](https://github.com/incu6us/goimports-reviser),
-  and [golines](https://github.com/segmentio/golines) for formatting
+- Uses [gofumpt](https://pkg.go.dev/mvdan.cc/gofumpt), [goimports-reviser](https://github.com/incu6us/goimports-reviser), and [golines](https://github.com/segmentio/golines) for formatting
 
 ### Ruby
 
@@ -107,21 +99,15 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 
 ## Extra Plugins/Features
 
-### ChatGPT
-
-Enables ChatGPT integration and quick commands
-
-- Uses [ChatGPT.nvim](https://github.com/jackmort/chatgpt.nvim) plugin
-- Requires api key set as an environment variable called `$OPENAI_API_KEY`
-- Press `<leader>-C` for the list of quick commands or run `:ChatGPT` to see
-  all avaliable functions
-
 ### Copilot
 
-Enables Copilot autocompletion
+Enables Copilot integration and quick commands
 
-- Uses [Copilot](https://github.com/github/copilot.vim) plugin
-- Run `:Copilot auth` to authenticate
+- Uses the [Copilot](https://github.com/github/copilot.vim) plugin for autocompletion
+- Uses the [CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim) plugin for chat functionality
+- Run `:Copilot auth` to authenticate with GitHub
+- Press `<M-l>` in insert mode to accept Copilot autocompletion suggestions
+- Press `<leader>-C` in normal or visual mode to see avaliable Copilot Chat commands
 
 ### Nvim-ts-autotag
 

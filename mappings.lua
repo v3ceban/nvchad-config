@@ -30,25 +30,6 @@ M.general = {
   },
 }
 
-M.chatgpt = {
-  plugin = true,
-  n = {
-    ["<leader>Cc"] = { "<cmd>ChatGPT<CR>", "ChatGPT" },
-    ["<leader>Ce"] = { "<cmd>ChatGPTEditWithInstruction<CR>", "Edit with instruction" },
-    ["<leader>Cg"] = { "<cmd>ChatGPTRun grammar_correction<CR>", "Grammar correction" },
-    ["<leader>Ct"] = { "<cmd>ChatGPTRun translate<CR>", "Translate" },
-    ["<leader>Ck"] = { "<cmd>ChatGPTRun keywords<CR>", "Keywords" },
-    ["<leader>Cd"] = { "<cmd>ChatGPTRun docstring<CR>", "Docstring" },
-    ["<leader>Ca"] = { "<cmd>ChatGPTRun add_tests<CR>", "Add Tests" },
-    ["<leader>Co"] = { "<cmd>ChatGPTRun optimize_code<CR>", "Optimize code" },
-    ["<leader>Cs"] = { "<cmd>ChatGPTRun summarize<CR>", "Summarize" },
-    ["<leader>Cf"] = { "<cmd>ChatGPTRun fix_bugs<CR>", "Fix bugs" },
-    ["<leader>Cx"] = { "<cmd>ChatGPTRun explain_code<CR>", "Explain code" },
-    ["<leader>Cw"] = { "<cmd>ChatGPTRun complete_code<CR>", "Complete code" },
-    ["<leader>Cl"] = { "<cmd>ChatGPTRun code_readability_analysis<CR>", "Code readability analysis" },
-  },
-}
-
 M.games = {
   n = {
     ["<leader>gg"] = { "<cmd>VimBeGood<CR>", "VimBeGood" },
@@ -70,6 +51,21 @@ M.copilot = {
     },
     ["<M-j>"] = { "copilot#Next()", opts = { expr = true, silent = true }, "Copilot next suggestion" },
     ["<M-k>"] = { "copilot#Previous()", opts = { expr = true, silent = true }, "Copilot previous suggestion" },
+  },
+  n = {
+    ["<leader>CD"] = { "<cmd>Copilot disable<CR>", "Copilot disable" },
+    ["<leader>CE"] = { "<cmd>Copilot enable<CR>", "Copilot enable" },
+    ["<leader>CR"] = { "<cmd>Copilot restart<CR>", "Copilot restart" },
+    ["<leader>CS"] = { "<cmd>Copilot status<CR>", "Copilot status" },
+    ["<leader>Cc"] = { "<cmd>CopilotChat<CR>", "Copilot chat" },
+    ["<leader>Cd"] = { "<cmd>CopilotChatDocs<CR>", "Write documentation" },
+    ["<leader>Cf"] = { "<cmd>CopilotChatFix<CR>", "Fix bugs" },
+    ["<leader>Cg"] = { "<cmd>CopilotChatGrammar<CR>", "Fix grammar" },
+    ["<leader>Co"] = { "<cmd>CopilotChatOptimize<CR>", "Optimize code" },
+    ["<leader>Cr"] = { "<cmd>CopilotChatReview<CR>", "Review code" },
+    ["<leader>Ct"] = { "<cmd>CopilotChatTests<CR>", "Generate tests" },
+    ["<leader>Cx"] = { "<cmd>CopilotChatExplain<CR>", "Explain code" },
+    ["<leader>CC"] = { "<cmd>CopilotChatCommit<CR>", "Write commit message" },
   },
 }
 
