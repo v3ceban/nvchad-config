@@ -14,15 +14,9 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 
 1. [Install NeoVim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 2. Install and initialize NvChad v2.0 by running the following command:
-
    ```sh
    git clone -b v2.0 --single-branch https://github.com/NvChad/NvChad.git ~/.config/nvim && nvim
    ```
-
-   > [!NOTE]
-   > Before running this command, make sure you have NvChad dependencies installed.
-   > Check the [NvChad documentation](https://nvchad.com/docs/quickstart/install#pre-requisites) for more info.
-
 3. Run the following commands to delete pregenerated config files and install this config:
    ```sh
     rm -rf ~/.config/nvim/lua/custom
@@ -61,7 +55,7 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 
 - Uses [intelephense](https://intelephense.com/) as LSP and linter
 - Uses [php-cs-fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) for formatting
-- Requires .git to run linting server
+- Requires .git file to run linting server
 - To create .git run `git init` in the root of the project
 
 ### Lua
