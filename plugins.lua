@@ -50,12 +50,6 @@ local plugins = {
     opts = require "custom.configs.flash",
   },
   {
-    "razak17/tailwind-fold.nvim",
-    event = "VeryLazy",
-    opts = require "custom.configs.tailwind-fold",
-    ft = require("custom.configs.tailwind-fold").ft,
-  },
-  {
     "github/copilot.vim",
     event = "BufRead",
   },
