@@ -9,7 +9,6 @@ local servers = {
   "html",                  -- html lsp
   "emmet_language_server", -- emmet
   "tailwindcss",           -- tailwindcss
-  "eslint",                -- javascript linter
   "prismals",              -- prisma lsp
   "bashls",                -- bash linter
   "solargraph",            -- ruby lsp

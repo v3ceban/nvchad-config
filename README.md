@@ -43,7 +43,7 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 ### JavaScript/TypeScript
 
 - Uses [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) for LSP
-- Uses [eslint-lsp](https://github.com/Microsoft/vscode-eslint) for linting
+- Uses [eslint_d](https://github.com/mantoni/eslint_d.js) for linting
 - Uses [prettier](https://prettier.io) for formatting
 - Requires eslint config to run linting server
   - Run `npm init` if not already done
