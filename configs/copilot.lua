@@ -47,31 +47,31 @@ local opts = {
 
   prompts = {
     Explain = {
-      prompt = "> /COPILOT_EXPLAIN\n\nPlease write an explanation for the selected code as paragraphs of text.",
+      prompt = "/COPILOT_EXPLAIN\n\nPlease write an explanation for the selected code as paragraphs of text.",
     },
     Review = {
-      prompt = "> /COPILOT_REVIEW\n\nPlease review the selected code.",
+      prompt = "/COPILOT_REVIEW\n\nPlease review the selected code.",
     },
     Fix = {
       prompt =
-      "> /COPILOT_GENERATE\n\nThere may be one or more problems in this code. Please rewrite the code to show it with all the bugs fixed.",
+      "/COPILOT_GENERATE\n\nThere may be one or more problems in this code. Please rewrite the code to show it with all the bugs fixed.",
     },
     Optimize = {
-      prompt = "> /COPILOT_GENERATE\n\nOptimize the selected code to improve performance and readability.",
+      prompt = "/COPILOT_GENERATE\n\nOptimize the selected code to improve performance and readability.",
     },
     Docs = {
-      prompt = "> /COPILOT_GENERATE\n\nPlease add documentation comments to the selected code.",
+      prompt = "/COPILOT_GENERATE\n\nPlease add documentation comments to the selected code.",
     },
     Tests = {
-      prompt = "> /COPILOT_GENERATE\n\nPlease generate tests for my code.",
+      prompt = "/COPILOT_GENERATE\n\nPlease generate tests for my code.",
     },
     Commit = {
       prompt =
-      "> #git:staged\n\nPlease write commit message for the change with commitizen convention. Make sure the title has maximum 50 characters and message is wrapped at 72 characters. Wrap the whole message in code block with language gitcommit.",
+      "#git:staged\n\nPlease write commit message for the change with commitizen convention. Make sure the title has maximum 50 characters and message is wrapped at 72 characters. Wrap the whole message in code block with language gitcommit.",
     },
     Grammar = {
       prompt =
-      "> /COPILOT_INSTRUCTIONS\n\nPlease correct the grammar in the selected code, following US English grammar rules. Ensure that no code (such as tags, keywords, or language syntax) is altered. Preserve word choices unless changes are strictly required by grammar rules. Your output should include everything from the selection, retaining the original syntax and content structure, with only the grammar corrected and no line numbers.",
+      "/COPILOT_INSTRUCTIONS\n\nPlease correct the grammar in the selected code, following US English grammar rules. Ensure that no code (such as tags, keywords, or language syntax) is altered. Preserve word choices unless changes are strictly required by grammar rules. Your output should include everything from the selection, retaining the original syntax and content structure, with only the grammar corrected and no line numbers.",
     },
   },
 
