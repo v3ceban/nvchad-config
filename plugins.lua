@@ -24,7 +24,6 @@ local plugins = {
   },
   {
     "nvimtools/none-ls.nvim",
-    event = "VeryLazy",
     dependencies = {
       "nvimtools/none-ls-extras.nvim",
     },
@@ -34,6 +33,7 @@ local plugins = {
   },
   {
     "windwp/nvim-ts-autotag",
+    event = "VeryLazy",
     ft = require("custom.configs.nvim-ts-autotag").ft,
     config = function()
       require("custom.configs.nvim-ts-autotag").setup()
