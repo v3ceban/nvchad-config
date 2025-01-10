@@ -73,7 +73,7 @@ local opts = {
   -- Only intended to be used for plugin development / debugging
   log_level = "error",
   -- Filetypes this plugin will run on
-  file_types = { "markdown", "copilot-chat" },
+  file_types = { "markdown", "copilot-chat", "Avante" },
   -- Out of the box language injections for known filetypes that allow markdown to be
   -- interpreted in specified locations, see :h treesitter-language-injections
   -- Set enabled to false in order to disable

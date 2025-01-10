@@ -108,6 +108,12 @@ Enables Copilot integration and quick commands
 - Press `<M-l>` in insert mode to accept Copilot autocompletion suggestions
 - Press `<leader>-C` in normal or visual mode to see avaliable Copilot Chat commands
 
+### Avante
+
+This is still work in progress, and [Avante](https://github.com/yetone/avante.nvim) can be disabled by commenting
+the corresponding lines in `plugins.lua`. As plugin matures it can
+potentially replace [CopilotChat](https://github.com/CopilotC-Nvim/CopilotChat.nvim) and, possibly, [Copilot](https://github.com/github/copilot.vim) itself.
+
 ### Nvim-ts-autotag
 
 Automatically closes and renames HTML tags
@@ -120,7 +126,15 @@ Great plugin for surrounding text with brackets, quotes, and tags
 
 - Uses [Nvim-surround](https://github.com/kylechui/nvim-surround) plugin
 - Default keybinds in visual mode changed from `S` to `s`
-- See `:h nvim-surround` or `:h nvim-surround.usage` for usage info
+- See `:h nvim-surround` for usage info
+
+### Git-conflict
+
+Plugin to resolve git conflicts
+
+- Uses [git-conflict](https://github.com/akinsho/git-conflict.nvim) plugin
+- Mapped to `<leader>cX`, where `X` is the conflict resolution option
+- See `:h git-conflict` for usage info
 
 ### Vim-be-good
 

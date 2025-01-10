@@ -69,4 +69,15 @@ M.copilot = {
   },
 }
 
+M.gitconflict = {
+  n = {
+    ["<leader>co"] = { "<cmd>GitConflictChooseOurs<CR>", "Choose our commit" },
+    ["<leader>ct"] = { "<cmd>GitConflictChooseTheirs<CR>", "Choose theirs commit" },
+    ["<leader>cn"] = { "<cmd>GitConflictChooseNone<CR>", "Choose none commits" },
+    ["<leader>cb"] = { "<cmd>GitConflictChooseBoth<CR>", "Choose both commits" },
+    ["<leader>cj"] = { "<cmd>GitConflictNextConflict<CR>", "Go to next conflict" },
+    ["<leader>ck"] = { "<cmd>GitConflictPrevConflict<CR>", "Go to previous conflict" },
+  },
+}
+
 return M

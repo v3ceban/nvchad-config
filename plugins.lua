@@ -42,11 +42,17 @@ local plugins = {
   },
   {
     "kylechui/nvim-surround",
-    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    version = "*",
     event = "VeryLazy",
     config = function()
       return require("custom.configs.nvim-surround").setup()
     end,
+  },
+  {
+    "akinsho/git-conflict.nvim",
+    event = "VeryLazy",
+    version = "*",
+    config = require "custom.configs.git-conflict",
   },
   {
     "folke/flash.nvim",
@@ -67,6 +73,21 @@ local plugins = {
     opts = require "custom.configs.copilot",
   },
   {
+    "yetone/avante.nvim",
+    event = "VeryLazy",
+    lazy = false,
+    version = false,
+    opts = require "custom.configs.avante",
+    build = "make",
+    dependencies = {
+      -- "stevearc/dressing.nvim",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      "hrsh7th/nvim-cmp",
+      "nvim-tree/nvim-web-devicons",
+    },
+  },
+  {
     "ThePrimeagen/vim-be-good",
     event = "VeryLazy",
   },
@@ -75,6 +96,13 @@ local plugins = {
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     event = "VeryLazy",
     opts = require "custom.configs.render-markdown",
+  },
+  {
+    "antonk52/markdowny.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("markdowny").setup()
+    end,
   },
 }
 
