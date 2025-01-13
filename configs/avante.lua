@@ -1,13 +1,13 @@
 local opts = {
   provider = "copilot", -- "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot"
-  auto_suggestions_provider = "copilot",
+  auto_suggestions_provider = "openai",
   openai = {
-    model = "o1-mini",
+    model = "gpt-4o-mini",
     temperature = 0,
     max_tokens = 4096,
   },
   copilot = {
-    model = "gpt-4o",
+    model = "claude-3.5-sonnet",
     temperature = 0,
     max_tokens = 4096,
   },
