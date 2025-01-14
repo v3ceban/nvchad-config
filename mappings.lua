@@ -66,6 +66,7 @@ M.copilot = {
     ["<leader>Ct"] = { "<cmd>CopilotChatTests<CR>", "Generate tests" },
     ["<leader>Cx"] = { "<cmd>CopilotChatExplain<CR>", "Explain code" },
     ["<leader>CC"] = { "<cmd>CopilotChatCommit<CR>", "Write commit message" },
+    ["<M-c>"] = { "<cmd>CopilotChatToggle<CR>", "Toggle copilot chat" },
   },
 }
 
