@@ -91,6 +91,11 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 ### Markdown
 
 - Uses [Render Markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim) for inline markdown rendering
+- Uses [markdowny.nvim](https://github.com/antonk52/markdowny.nvim) for some markdown features in **Visual** mode
+  - `<C-k>` to add a link
+  - `<C-b>` to make text bold
+  - `<C-i>` to make text italic
+  - `<C-e>` to make text inline code or code block in **V-Line** mode
 
 ### Docker
 
