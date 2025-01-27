@@ -84,10 +84,6 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 - Uses [gopls](https://pkg.go.dev/golang.org/x/tools/gopls) for LSP and linting
 - Uses [gofumpt](https://pkg.go.dev/mvdan.cc/gofumpt), [goimports-reviser](https://github.com/incu6us/goimports-reviser), and [golines](https://github.com/segmentio/golines) for formatting
 
-### Ruby
-
-- Uses [solargraph](https://solargraph.org) for LSP and linting
-
 ### Markdown
 
 - Uses [Render Markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim) for inline markdown rendering

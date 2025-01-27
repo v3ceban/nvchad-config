@@ -6,7 +6,7 @@ local opts = {
   sources = {
     f.clang_format,                          -- c/cpp formatter
     f.stylua,                                -- lua formatter
-    f.prettier,                              -- html/css/js formatter
+    f.prettierd,                             -- html/css/js formatter
     require "none-ls.code_actions.eslint_d", -- eslint_d code actions
     require "none-ls.diagnostics.eslint_d",  -- eslint_d diagnostics
     f.rustywind,                             -- tailwindcss formatter

@@ -10,6 +10,11 @@ local opts = {
     model = "claude-3.5-sonnet", -- claude-3.5-sonnet | gpt-4o | (o1 and o1-mini are too slow)
   },
   vendors = {
+    ["copilot-gpt"] = {
+      __inherited_from = "copilot",
+      endpoint = "https://api.githubcopilot.com",
+      model = "gpt-4o",
+    },
     deepseek = {
       __inherited_from = "openai",
       endpoint = "https://api.deepseek.com/v1",

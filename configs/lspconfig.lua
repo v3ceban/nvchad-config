@@ -6,12 +6,10 @@ local capabilities = base.capabilities
 local lspconfig = require "lspconfig"
 
 local servers = {
-  "html",                  -- html lsp
-  "emmet_language_server", -- emmet
-  "tailwindcss",           -- tailwindcss
-  "prismals",              -- prisma lsp
   "bashls",                -- bash linter
-  "solargraph",            -- ruby lsp
+  "emmet_language_server", -- emmet
+  "html",                  -- html lsp
+  "prismals",              -- prisma lsp
 }
 
 --basic setup for everything in servers table
@@ -99,6 +97,63 @@ lspconfig.pylsp.setup {
         },
       },
     },
+  },
+}
+
+--customized setup for tailwindcss
+lspconfig.tailwindcss.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {
+    "aspnetcorerazor",
+    "astro",
+    "astro-markdown",
+    "blade",
+    "clojure",
+    "django-html",
+    "htmldjango",
+    "edge",
+    "eelixir",
+    "elixir",
+    "ejs",
+    "erb",
+    "eruby",
+    "gohtml",
+    "gohtmltmpl",
+    "haml",
+    "handlebars",
+    "hbs",
+    "html",
+    "htmlangular",
+    "html-eex",
+    "heex",
+    "jade",
+    "leaf",
+    "liquid",
+    "mdx",
+    "mustache",
+    "njk",
+    "nunjucks",
+    "php",
+    "razor",
+    "slim",
+    "twig",
+    "css",
+    "less",
+    "postcss",
+    "sass",
+    "scss",
+    "stylus",
+    "sugarss",
+    "javascript",
+    "javascriptreact",
+    "reason",
+    "rescript",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "svelte",
+    "templ",
   },
 }
 
