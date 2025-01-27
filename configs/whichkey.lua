@@ -15,8 +15,7 @@ wk.add {
   },
   {
     mode = { "n", "i" },
-    { "<M-a>", "<cmd>AvanteToggle<CR>",      desc = "avante: toggle" },
-    { "<M-c>", "<cmd>CopilotChatToggle<CR>", desc = "Toggle copilot chat" },
+    { "<M-a>", "<cmd>AvanteToggle<CR>", desc = "avante: toggle" },
   },
 }
 

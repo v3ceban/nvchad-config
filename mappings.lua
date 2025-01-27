@@ -66,18 +66,17 @@ M.copilot = {
     ["<leader>Ct"] = { "<cmd>CopilotChatTests<CR>", "Generate tests" },
     ["<leader>Cx"] = { "<cmd>CopilotChatExplain<CR>", "Explain code" },
     ["<leader>CC"] = { "<cmd>CopilotChatCommit<CR>", "Write commit message" },
-    ["<M-c>"] = { "<cmd>CopilotChatToggle<CR>", "Toggle copilot chat" },
   },
 }
 
 M.gitconflict = {
   n = {
-    ["<leader>co"] = { "<cmd>GitConflictChooseOurs<CR>", "Choose our commit" },
-    ["<leader>ct"] = { "<cmd>GitConflictChooseTheirs<CR>", "Choose theirs commit" },
-    ["<leader>cn"] = { "<cmd>GitConflictChooseNone<CR>", "Choose none commits" },
-    ["<leader>cb"] = { "<cmd>GitConflictChooseBoth<CR>", "Choose both commits" },
-    ["<leader>cj"] = { "<cmd>GitConflictNextConflict<CR>", "Go to next conflict" },
-    ["<leader>ck"] = { "<cmd>GitConflictPrevConflict<CR>", "Go to previous conflict" },
+    ["<leader>gco"] = { "<cmd>GitConflictChooseOurs<CR>", "Choose our commit" },
+    ["<leader>gct"] = { "<cmd>GitConflictChooseTheirs<CR>", "Choose theirs commit" },
+    ["<leader>gcn"] = { "<cmd>GitConflictChooseNone<CR>", "Choose none commits" },
+    ["<leader>gcb"] = { "<cmd>GitConflictChooseBoth<CR>", "Choose both commits" },
+    ["<leader>gcj"] = { "<cmd>GitConflictNextConflict<CR>", "Go to next conflict" },
+    ["<leader>gck"] = { "<cmd>GitConflictPrevConflict<CR>", "Go to previous conflict" },
   },
 }
 
