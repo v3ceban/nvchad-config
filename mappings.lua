@@ -4,29 +4,32 @@ M.general = {
   i = {
     ["<C-s>"] = { "<cmd> wa <CR>", "Save all files" },
     ["<C-q>"] = { "<cmd> qa! <CR>", "Close all buffers and quit" },
-    ["<C-w>"] = { "<cmd> q <CR>", "Close current buffer" },
     ["<C-z>"] = { "<nop>" },
   },
   n = {
-    ["<C-z>"] = { "<nop>" },
-    ["Q"] = { "<nop>" },
     ["<C-s>"] = { "<cmd> wa <CR>", "Save all files" },
     ["<C-q>"] = { "<cmd> qa! <CR>", "Close all buffers and quit" },
+    ["<C-z>"] = { "<nop>" },
+    ["Q"] = { "<nop>" },
     ["<leader>sr"] = { [[:%s/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>]], "Search and replace word" },
-    ["<leader>sw"] = { [[:/<C-r><C-w><CR>]], "Search word" },
-    ["<leader>sh"] = { [[:split<CR><C-w>j]], "Horizontal split" },
-    ["<leader>sv"] = { [[:vsplit<CR><C-w>l]], "Vertical split" },
   },
   v = {
-    ["J"] = { ":m '>+1<CR>gv=gv", "Move selection down" },
-    ["K"] = { ":m '<-2<CR>gv=gv", "Move selection up" },
-    ["<C-z>"] = { "<nop>" },
-    ["Q"] = { "<nop>" },
-  },
-  t = {
-    ["<C-z>"] = { "<nop>" },
     ["<C-s>"] = { "<cmd> wa <CR>", "Save all files" },
     ["<C-q>"] = { "<cmd> qa! <CR>", "Close all buffers and quit" },
+    ["<C-z>"] = { "<nop>" },
+    ["Q"] = { "<nop>" },
+    ["<leader>sr"] = {
+      [[y:%s/<C-r>"/<C-r>"/gc<Left><Left><Left>]],
+      "Search and replace selection",
+      mode = "v",
+    },
+    ["J"] = { ":m '>+1<CR>gv=gv", "Move selection down" },
+    ["K"] = { ":m '<-2<CR>gv=gv", "Move selection up" },
+  },
+  t = {
+    ["<C-s>"] = { "<cmd> wa <CR>", "Save all files" },
+    ["<C-q>"] = { "<cmd> qa! <CR>", "Close all buffers and quit" },
+    ["<C-z>"] = { "<nop>" },
   },
 }
 
