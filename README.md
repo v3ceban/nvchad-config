@@ -3,27 +3,44 @@
 My custom configuration for [NeoVim](https://neovim.io/) uses [NvChad](https://nvchad.com/) as the base and includes some
 additional plugins to enhance its core functionality.
 
-The purpose of this configuration is to retain the default NvChad settings
-while adding extra features and language support specific to my personal stack.
+This config transforms NeoVim into a full-fledged IDE with LSP support, linting, formatting,
+autocompletion, AI-powered code suggestions, and more. It also includes some quality of life
+improvements and additional features to make coding more enjoyable.
 
-The configuration can be used as is and does not require any additional
-setup or setup or settings. Some Mason packages aren't avaliable on certain ARM
-processors and Android (Termux). Check `mason.lua` file for more info on how to get those.
+The configuration can be used as is and doesn't require any further setup.
+
+> [!NOTE]
+> Some Mason packages aren't avaliable on certain ARM processors. Watch out for
+> errors and install them manually if needed.
 
 ## Installation
 
 1. [Install NeoVim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
-2. Install and initialize NvChad v2.0 by running the following command:
+2. Install NvChad v2.5 dependencies (Git, Nerd Font, GCC, Make, Ripgrep)
+3. Run the following commands to delete or move out of the way any old
+   config files:
+
    ```sh
-   git clone -b v2.0 --single-branch https://github.com/NvChad/NvChad.git ~/.config/nvim && nvim
+    # Backup if you want to keep the old config
+    mv ~/.config/nvim{,.bak}
+    mv ~/.local/share/nvim{,.bak}
+    mv ~/.local/state/nvim{,.bak}
+
+    # Delete if you don't want to keep the old config
+    rm -rf ~/.config/nvim
+    rm -rf ~/.local/state/nvim
+    rm -rf ~/.local/share/nvim
    ```
-3. Run the following commands to delete pregenerated config files and install this config:
+
+4. Clone this repository into `~/.config/nvim`:
+
    ```sh
-    rm -rf ~/.config/nvim/lua/custom
-    git clone https://github.com/v3ceban/nvchad-config.git ~/.config/nvim/lua/custom
+    # Clone this repo
+    git clone https://github.com/v3ceban/nvchad-config.git ~/.config/nvim
    ```
-4. ??????
-5. PROFIT
+
+5. ??????
+6. PROFIT
 
 ## Currently Supported Languages
 
@@ -54,7 +71,7 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 
 - Uses [intelephense](https://intelephense.com/) as LSP and linter
 - Uses [php-cs-fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) for formatting
-- Requires .git file to run linting server
+- Requires a git repo to run linting server
 - To create .git run `git init` in the root of the project
 
 ### Lua
@@ -66,18 +83,18 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 ### Bash
 
 - Uses [bash-language-server](https://github.com/bash-lsp/bash-language-server) for LSP
+- Uses [beautysh](https://github.com/lovesegfault/beautysh) for formatting
 
 ### C/C++
 
 - Uses [clangd](https://clangd.llvm.org) for LSP and linting
 - Uses [clang-format](https://pypi.org/project/clang-format/) for formatting
 - Requires clang: `sudo dnf install clang`
-- Uncomment Mason overrides to install the packages that don't work on ARM
 
 ### Python
 
-- Uses [python-lsp-server](https://github.com/python-lsp/python-lsp-server) for linting
-- Uses [black](https://pypi.org/project/black/) for formatting
+- Uses [python-lsp-server](https://github.com/python-lsp/python-lsp-server) for LSP and linting
+- Uses [black](https://pypi.org/project/black/) and [isort](https://pycqa.github.io/isort/) for formatting
 
 ### Go
 
@@ -95,7 +112,8 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 
 ### Docker
 
-- Uses [Dockerfile Language Server](https://github.com/rcjsuen/dockerfile-language-server-nodejs) for LSP
+- Uses [Dockerfile Language Server](https://github.com/rcjsuen/dockerfile-language-server-nodejs) for LSP in Dockerfiles
+- Uses [Docker Compose Language Service](https://github.com/microsoft/compose-language-service) for LSP in Docker Compose files
 
 ## Extra Plugins/Features
 
@@ -114,6 +132,8 @@ Enables Copilot integration and quick commands
 This is still work in progress, and [Avante](https://github.com/yetone/avante.nvim) can be disabled by commenting
 the corresponding lines in `plugins.lua`. As plugin matures it can
 potentially replace [CopilotChat](https://github.com/CopilotC-Nvim/CopilotChat.nvim) and, possibly, [Copilot](https://github.com/github/copilot.vim) itself.
+To use with anything other than Copilot, API keys need to be set in
+environment variables (e.g. `OPENAI_API_KEY="your key"`).
 
 ### Nvim-ts-autotag
 
@@ -146,8 +166,12 @@ Plugin to get better at vim
 
 ## Useful Links
 
-[None-ls builtins](https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md)
+[NvChad repository](https://github.com/NvChad/NvChad)
+
+[Null-ls builtins](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md)
+
+[Conform.nvim formatters](https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters)
+
+[Nvim-lint linters](https://github.com/mfussenegger/nvim-lint)
 
 [LSPconfig builtins](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md)
-
-[NvChad example config](https://github.com/NvChad/example_config/tree/v2.0)

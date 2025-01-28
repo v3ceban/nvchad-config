@@ -1,65 +1,66 @@
-local base = require "plugins.configs.lspconfig"
-local on_attach = base.on_attach
-local capabilities = base.capabilities
+require("nvchad.configs.lspconfig").defaults()
 
----@diagnostic disable-next-line: different-requires
 local lspconfig = require "lspconfig"
+local nvlsp = require "nvchad.configs.lspconfig"
+local init = nvlsp.on_init
+local attach = nvlsp.on_attach
+local capabilities = nvlsp.capabilities
 
 local servers = {
-  "bashls",                -- bash linter
-  "emmet_language_server", -- emmet
-  "html",                  -- html lsp
-  "prismals",              -- prisma lsp
+  "bashls",
+  "emmet_language_server",
+  "html",
+  "prismals",
+  "dockerls",
+  "docker_compose_language_service",
 }
 
---basic setup for everything in servers table
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
-    on_attach = on_attach,
+    on_init = init,
+    on_attach = attach,
     capabilities = capabilities,
   }
 end
 
---customized setup for clangd
 lspconfig.clangd.setup {
-  --to avoid warning "multiple different client offset_encodings detected"
+  on_init = init,
+  on_attach = attach,
   capabilities = {
     offsetEncoding = { "utf-16" },
   },
-  on_attach = on_attach,
 }
 
--- customized setup for ts_ls
 lspconfig.ts_ls.setup {
-  on_attach = on_attach,
+  on_init = init,
+  on_attach = attach,
   capabilities = capabilities,
   init_options = {
     preferences = {
-      disableSuggestions = true, -- eslint alerts are enough
+      disableSuggestions = true,
     },
   },
 }
 
---customized setup for php
 lspconfig.intelephense.setup {
+  on_init = init,
+  on_attach = attach,
+  capabilities = capabilities,
   init_options = {
-    globalStoragePath = ".intelephense", --creates .intelephense directory inside project folder, without this setting it creates one at ~/intelephense
-    -- licenceKey = "LICENSE_KEY", --if you have one
+    globalStoragePath = ".intelephense",
   },
   settings = {
     intelephense = {
       telemerty = {
-        enabled = false, --no, thanks
+        enabled = false,
       },
     },
   },
-  on_attach = on_attach,
-  capabilities = capabilities,
 }
 
---customized setup for go
 lspconfig.gopls.setup {
-  on_attach = on_attach,
+  on_init = init,
+  on_attach = attach,
   capabilities = capabilities,
   settings = {
     gopls = {
@@ -72,9 +73,9 @@ lspconfig.gopls.setup {
   },
 }
 
---customized setup for cssls
 lspconfig.cssls.setup {
-  on_attach = on_attach,
+  on_init = init,
+  on_attach = attach,
   capabilities = capabilities,
   settings = {
     css = {
@@ -85,8 +86,10 @@ lspconfig.cssls.setup {
   },
 }
 
---customized setup for pylsp
 lspconfig.pylsp.setup {
+  on_init = init,
+  on_attach = attach,
+  capabilities = capabilities,
   settings = {
     pylsp = {
       plugins = {
@@ -100,9 +103,9 @@ lspconfig.pylsp.setup {
   },
 }
 
---customized setup for tailwindcss
 lspconfig.tailwindcss.setup {
-  on_attach = on_attach,
+  on_init = init,
+  on_attach = attach,
   capabilities = capabilities,
   filetypes = {
     "aspnetcorerazor",

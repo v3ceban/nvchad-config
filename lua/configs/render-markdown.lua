@@ -1,8 +1,3 @@
--- colors
-vim.api.nvim_set_hl(0, "RenderMarkdownHeader", { fg = "#89b4fa" })
-vim.api.nvim_set_hl(0, "RenderMarkdownTodo", { fg = "#f38ba8" })
-vim.api.nvim_set_hl(0, "RenderMarkdownCodeInline", { fg = "#fab387" })
-
 local opts = {
   -- Whether Markdown should be rendered by default or not
   enabled = true,

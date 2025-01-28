@@ -1,8 +1,8 @@
-local treesitter = {
+local opts = {
   ensure_installed = "all",
   indent = {
     enable = true,
   },
 }
 
-return treesitter
+return opts
