@@ -20,7 +20,7 @@ processors and Android (Termux). Check `mason.lua` file for more info on how to 
 3. Run the following commands to delete pregenerated config files and install this config:
    ```sh
     rm -rf ~/.config/nvim/lua/custom
-    git clone https://github.com/v3ceban/nvchad-config.git ~/.config/nvim/lua/custom
+    git clone -b v2.0 --single-branch https://github.com/v3ceban/nvchad-config.git ~/.config/nvim/lua/custom
    ```
 4. ??????
 5. PROFIT
