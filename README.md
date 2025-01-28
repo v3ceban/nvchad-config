@@ -17,7 +17,7 @@ The configuration can be used as is and doesn't require any further setup.
 
 > [!IMPORTANT]
 > This configuration is now on version 2.5 and requires a fresh install to work properly.
-> The old configuration can be accessed on "v2" branch.
+> The old configuration can be accessed on "v2.0" branch. It will not be updated.
 
 1. [Install NeoVim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 2. Install NvChad v2.5 dependencies (Git, Nerd Font, GCC, Make, Ripgrep)
