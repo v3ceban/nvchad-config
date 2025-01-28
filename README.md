@@ -3,12 +3,17 @@
 My custom configuration for [NeoVim](https://neovim.io/) uses [NvChad](https://nvchad.com/) as the base and includes some
 additional plugins to enhance its core functionality.
 
-The purpose of this configuration is to retain the default NvChad settings
-while adding extra features and language support specific to my personal stack.
+This config transforms NeoVim into a full-fledged IDE with LSP support, linting, formatting, autocompletion, AI-powered code suggestions, and more. It also includes some quality of life improvements and additional features to make coding more enjoyable.
 
-The configuration can be used as is and does not require any additional
-setup or setup or settings. Some Mason packages aren't avaliable on certain ARM
-processors and Android (Termux). Check `mason.lua` file for more info on how to get those.
+The configuration can be used as is and doesn't require any further setup.
+
+> [!NOTE]
+> Some Mason packages aren't avaliable on certain ARM processors. Watch out for
+> errors and install them manually if needed.
+
+> [!WARNING]
+> This branch will forever stay on "v2.0" of NvChad and will be available for as long as [siduck](https://github.com/siduck) keeps it online.
+> Please note that this configuration branch is officially archived and will not receive maintenance or updates for new features.
 
 ## Installation
 
