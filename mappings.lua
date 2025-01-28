@@ -21,7 +21,6 @@ M.general = {
     ["<leader>sr"] = {
       [[y:%s/<C-r>"/<C-r>"/gc<Left><Left><Left>]],
       "Search and replace selection",
-      mode = "v",
     },
     ["J"] = { ":m '>+1<CR>gv=gv", "Move selection down" },
     ["K"] = { ":m '<-2<CR>gv=gv", "Move selection up" },
