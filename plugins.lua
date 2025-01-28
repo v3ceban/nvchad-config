@@ -74,7 +74,6 @@ local plugins = {
   },
   {
     "yetone/avante.nvim",
-    event = "VeryLazy",
     lazy = false,
     version = false,
     opts = require "custom.configs.avante",
@@ -103,6 +102,24 @@ local plugins = {
     config = function()
       require("markdowny").setup()
     end,
+  },
+  {
+    "NvChad/nvim-colorizer.lua",
+    opts = {
+      user_default_options = require "custom.configs.colorizer",
+    },
+  },
+  {
+    "luckasRanarison/tailwind-tools.nvim",
+    name = "tailwind-tools",
+    event = "VeryLazy",
+    build = ":UpdateRemotePlugins",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-telescope/telescope.nvim",
+      "neovim/nvim-lspconfig",
+    },
+    opts = require "custom.configs.tailwind-tools",
   },
 }
 

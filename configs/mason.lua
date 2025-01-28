@@ -11,7 +11,6 @@ local mason = {
     "emmet-language-server",       --emmet snippets
     "css-lsp",                     --css lsp
     "tailwindcss-language-server", --tailwindcss
-    "rustywind",                   --tailwindcss formatter
     "html-lsp",                    --html lsp
 
     --javascript/nodejs stuff

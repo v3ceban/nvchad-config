@@ -9,7 +9,6 @@ local opts = {
     f.prettierd,                             -- html/css/js formatter
     require "none-ls.code_actions.eslint_d", -- eslint_d code actions
     require "none-ls.diagnostics.eslint_d",  -- eslint_d diagnostics
-    f.rustywind,                             -- tailwindcss formatter
     f.phpcsfixer,                            -- php formatter
     f.black,                                 -- python formatter
     f.gofumpt,                               -- go formatter
