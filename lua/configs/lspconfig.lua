@@ -8,7 +8,6 @@ local capabilities = nvlsp.capabilities
 
 local servers = {
   "bashls",
-  "emmet_language_server",
   "html",
   "prismals",
   "dockerls",
@@ -28,6 +27,26 @@ lspconfig.clangd.setup {
   on_attach = attach,
   capabilities = {
     offsetEncoding = { "utf-16" },
+  },
+}
+
+lspconfig.emmet_language_server.setup {
+  on_init = init,
+  on_attach = attach,
+  capabilities = capabilities,
+  filetypes = {
+    "css",
+    "eruby",
+    "html",
+    "htmldjango",
+    "javascriptreact",
+    "less",
+    "pug",
+    "sass",
+    "scss",
+    "typescriptreact",
+    "htmlangular",
+    "php",
   },
 }
 

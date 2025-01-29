@@ -174,6 +174,8 @@ Plugin to get better at vim
 
 [Null-ls builtins](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md)
 
+[None-ls builtins](https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md)
+
 [Conform.nvim formatters](https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters)
 
 [Nvim-lint linters](https://github.com/mfussenegger/nvim-lint)
