@@ -25,8 +25,10 @@ map(
   [[y:%s/<C-r>"/<C-r>"/gc<Left><Left><Left>]],
   { desc = "Search and replace selection", noremap = true }
 )
-map({ "v" }, "J", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
-map({ "v" }, "K", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
+map({ "v" }, "J", ":m '>+1<CR>gv=gv", { desc = "Move selection down", silent = true })
+map({ "v" }, "K", ":m '<-2<CR>gv=gv", { desc = "Move selection up", silent = true })
+map({ "v" }, ">", ">gv", { desc = "Indent selection right", silent = true })
+map({ "v" }, "<", "<gv", { desc = "Indent selection left", silent = true })
 -- Git conflict
 map({ "n" }, "<leader>gco", "<cmd>GitConflictChooseOurs<CR>", { desc = "Git Choose our commit" })
 map({ "n" }, "<leader>gct", "<cmd>GitConflictChooseTheirs<CR>", { desc = "Git Choose theirs commit" })
