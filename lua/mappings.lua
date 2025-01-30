@@ -33,6 +33,10 @@ map({ "v" }, "K", ":m '<-2<CR>gv=gv", { desc = "Move selection up", silent = tru
 map({ "v" }, ">", ">gv", { desc = "Indent selection right", silent = true })
 map({ "v" }, "<", "<gv", { desc = "Indent selection left", silent = true })
 map({ "t" }, "<Esc>", "<C-\\><C-N>", { desc = "terminal escape terminal mode" })
+map({ "n", "t" }, "<C-Up>", "<C-w>+", { desc = "Resize increase window height" })
+map({ "n", "t" }, "<C-Down>", "<C-w>-", { desc = "Resize decrease window height" })
+map({ "n", "t" }, "<C-Right>", "<C-w>>", { desc = "Resize increase window width" })
+map({ "n", "t" }, "<C-Left>", "<C-w><", { desc = "Resize decrease window width" })
 -- Diagnostics
 map({ "n" }, "[d", function()
   vim.diagnostic.goto_prev { border = "rounded" }
@@ -69,3 +73,7 @@ map({ "n", "v" }, "<leader>Cr", "<cmd>CopilotChatReview<CR>", { desc = "Copilot 
 map({ "n", "v" }, "<leader>Ct", "<cmd>CopilotChatTests<CR>", { desc = "Copilot Generate tests" })
 map({ "n", "v" }, "<leader>Cx", "<cmd>CopilotChatExplain<CR>", { desc = "Copilot Explain code" })
 map({ "n", "v" }, "<leader>CC", "<cmd>CopilotChatCommit<CR>", { desc = "Copilot Write commit message" })
+-- Flash.nvim
+map({ "n" }, "<leader>st", function()
+  require("flash").treesitter()
+end, { desc = "Search select treesitter node" })

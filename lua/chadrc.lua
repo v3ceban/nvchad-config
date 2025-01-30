@@ -24,6 +24,12 @@ M.ui = {
     },
     bufwidth = 21,
   },
+
+  cmp = {
+    format_colors = {
+      tailwind = true,
+    },
+  },
 }
 
 M.nvdash = {
@@ -86,7 +92,7 @@ M.cheatsheet = {
     "Save (v)",
     "toggle (v)",
     "Toggle (x)",
-    "avante:",
+    "Resize (t)",
   },
 }
 

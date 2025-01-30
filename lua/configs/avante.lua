@@ -71,13 +71,16 @@ local opts = {
     ask = "<leader>aa",
     edit = "<leader>ae",
     refresh = "<leader>ar",
-    focus = "<nop>",
+    -- <leader>sr map is set in mappings.lua as noremap
+    -- setting avante maps to this key will effectively disable it
+    -- and hide it from nvchad cheatsheet
+    focus = "<leader>sr", -- disabled
     toggle = {
       default = "<M-a>",
-      debug = "<nop>",
-      hint = "<nop>",
-      suggestion = "<nop>",
-      repomap = "<nop>",
+      debug = "<leader>sr", -- disabled
+      hint = "<leader>sr", -- disabled
+      suggestion = "<leader>sr", -- disabled
+      repomap = "<leader>sr", -- disabled
     },
     sidebar = {
       apply_all = "A",
@@ -90,6 +93,9 @@ local opts = {
     files = {
       add_current = "<leader>af",
     },
+  },
+  diff = {
+    autojump = false,
   },
   hints = { enabled = false },
   highlights = {

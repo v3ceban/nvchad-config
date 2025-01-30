@@ -1,5 +1,7 @@
+local labels = "1234567890"
+
 local opts = {
-  labels = "1234567890",
+  labels = labels,
   modes = {
     search = {
       enabled = true,
@@ -15,6 +17,12 @@ local opts = {
         backdrop = false,
       },
     },
+    treesitter = {
+      labels = labels,
+    },
+  },
+  prompt = {
+    prefix = { { "", "" } },
   },
 }
 
