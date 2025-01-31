@@ -1,5 +1,9 @@
 return {
   {
+    "tpope/vim-abolish",
+    event = "VeryLazy",
+  },
+  {
     "yetone/avante.nvim",
     lazy = false,
     version = false,
@@ -56,6 +60,10 @@ return {
     end,
   },
   {
+    "airblade/vim-matchquote",
+    event = "VeryLazy",
+  },
+  {
     "antonk52/markdowny.nvim",
     event = "VeryLazy",
     config = function()
@@ -67,6 +75,10 @@ return {
     dependencies = { "nvim-treesitter/nvim-treesitter" },
     event = "VeryLazy",
     opts = require "configs.render-markdown",
+  },
+  {
+    "christoomey/vim-sort-motion",
+    event = "VeryLazy",
   },
   {
     "kylechui/nvim-surround",

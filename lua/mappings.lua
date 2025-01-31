@@ -18,13 +18,13 @@ map({ "n", "v" }, "Q", "q")
 map(
   { "n" },
   "<leader>sr",
-  [[:%s/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>]],
+  [[:%Subvert/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>]],
   { desc = "Search replace word", noremap = true }
 )
 map(
   { "v" },
   "<leader>sr",
-  [[y:%s/<C-r>"/<C-r>"/gc<Left><Left><Left>]],
+  [[y:%Subvert/<C-r>"/<C-r>"/gc<Left><Left><Left>]],
   { desc = "Search replace selection", noremap = true }
 )
 map({ "v" }, "J", ":m '>+1<CR>gv=gv", { desc = "Move selection down", silent = true })
@@ -43,6 +43,10 @@ end, { desc = "LSP Jump to the previous diagnostic", silent = true })
 map({ "n" }, "]d", function()
   vim.diagnostic.goto_next { border = "rounded" }
 end, { desc = "LSP Jump to the next diagnostic", silent = true })
+-- Gitsigns
+map({ "n" }, "<leader>gb", "<cmd>lua require('gitsigns').blame_line()<CR>", { desc = "Git Blame line" })
+map({ "n" }, "[h", "<cmd>lua require('gitsigns').prev_hunk()<CR>", { desc = "Git Previous hunk" })
+map({ "n" }, "]h", "<cmd>lua require('gitsigns').next_hunk()<CR>", { desc = "Git Next hunk" })
 -- Git conflict
 map({ "n" }, "<leader>gco", "<cmd>GitConflictChooseOurs<CR>", { desc = "Git Choose our commit" })
 map({ "n" }, "<leader>gct", "<cmd>GitConflictChooseTheirs<CR>", { desc = "Git Choose theirs commit" })
