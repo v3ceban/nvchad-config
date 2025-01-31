@@ -51,13 +51,13 @@ The configuration can be used as is and doesn't require any further setup.
 ### HTML
 
 - Uses [vscode-langservers](https://github.com/hrsh7th/vscode-langservers-extracted) for LSP and linting
-- Uses [prettier](https://prettier.io) for formatting
+- Uses [prettierd](https://github.com/fsouza/prettierd) for formatting
 - Uses [emmet](https://github.com/olrtg/emmet-language-server) for LSP snippets
 
 ### CSS
 
 - Uses [vscode-langservers](https://github.com/hrsh7th/vscode-langservers-extracted) for LSP and linting
-- Uses [prettier](https://prettier.io) for formatting
+- Uses [prettierd](https://github.com/fsouza/prettierd) for formatting
 - Uses [tailwindcss-language-server](https://github.com/tailwindlabs/tailwindcss-intellisense) for Tailwind LSP
 - Uses [rustywind](https://github.com/avencera/rustywind) for Tailwind classes organization
 
@@ -65,7 +65,7 @@ The configuration can be used as is and doesn't require any further setup.
 
 - Uses [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) for LSP
 - Uses [eslint_d](https://github.com/mantoni/eslint_d.js) for linting
-- Uses [prettier](https://prettier.io) for formatting
+- Uses [prettierd](https://github.com/fsouza/prettierd) for formatting
 - Requires eslint config to run linting server
   - Run `npm init` if not already done
   - Run `npm init @eslint/config@latest` in the root of the project
@@ -76,13 +76,12 @@ The configuration can be used as is and doesn't require any further setup.
 - Uses [intelephense](https://intelephense.com/) as LSP and linter
 - Uses [php-cs-fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) for formatting
 - Requires a git repo to run linting server
-- To create .git run `git init` in the root of the project
+  - To create .git run `git init` in the root of the project
 
 ### Lua
 
 - Uses [lua-language-server](https://github.com/LuaLS/lua-language-server) for LSP and linting
 - Uses [stylua](https://github.com/JohnnyMorganz/StyLua) for formatting
-- Uncomment Mason overrides to install the packages that don't work on ARM
 
 ### Bash
 
@@ -93,7 +92,6 @@ The configuration can be used as is and doesn't require any further setup.
 
 - Uses [clangd](https://clangd.llvm.org) for LSP and linting
 - Uses [clang-format](https://pypi.org/project/clang-format/) for formatting
-- Requires clang: `sudo dnf install clang`
 
 ### Python
 
@@ -160,13 +158,6 @@ Plugin to resolve git conflicts
 - Uses [git-conflict](https://github.com/akinsho/git-conflict.nvim) plugin
 - Mapped to `<leader>cX`, where `X` is the conflict resolution option
 - See `:h git-conflict` for usage info
-
-### Vim-be-good
-
-Plugin to get better at vim
-
-- Uses [vim-be-good](https://github.com/ThePrimeagen/vim-be-good) plugin
-- Mapped to `<leader>gg`
 
 ## Useful Links
 

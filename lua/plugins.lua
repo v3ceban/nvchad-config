@@ -89,10 +89,6 @@ return {
     end,
   },
   {
-    "ThePrimeagen/vim-be-good",
-    event = "VeryLazy",
-  },
-  {
     "folke/which-key.nvim",
     opts = require "configs.which-key",
   },

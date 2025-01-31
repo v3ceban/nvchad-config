@@ -55,7 +55,6 @@ M.nvdash = {
     { txt = "  Recent Files", keys = "Spc fo", cmd = "Telescope oldfiles" },
     { txt = "󱥚  Themes", keys = "Spc th", cmd = ":lua require('nvchad.themes').open()" },
     { txt = "  Mappings", keys = "Spc ch", cmd = "NvCheatsheet" },
-    { txt = "  Vim Be Good", keys = "Spc gg", cmd = "VimBeGood" },
     { txt = "─", hl = "NvDashFooter", no_gap = true, rep = true },
     {
       txt = function()

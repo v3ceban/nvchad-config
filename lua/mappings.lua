@@ -21,7 +21,6 @@ map(
   [[:%s/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>]],
   { desc = "Search replace word", noremap = true }
 )
-map({ "n" }, "<leader>gg", "<cmd>VimBeGood<CR>", { desc = "Game Get good at vim motions" })
 map(
   { "v" },
   "<leader>sr",
