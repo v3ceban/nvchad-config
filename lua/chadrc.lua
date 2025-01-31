@@ -72,10 +72,6 @@ M.nvdash = {
 M.cheatsheet = {
   theme = "simple",
   excluded_groups = {
-    "terminal (t)",
-    "autopairs",
-    "Nvim",
-    "Opens",
     ":help",
     "Add",
     "Change",
@@ -86,12 +82,17 @@ M.cheatsheet = {
     "Delete",
     "Indent (v)",
     "LSP (v)",
+    "Nvim",
+    "Opens",
+    "Resize (t)",
     "Save (i)",
     "Save (t)",
     "Save (v)",
-    "toggle (v)",
     "Toggle (x)",
-    "Resize (t)",
+    "Treesitter (v)",
+    "autopairs",
+    "terminal (t)",
+    "toggle (v)",
   },
 }
 

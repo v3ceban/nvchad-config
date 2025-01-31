@@ -1,9 +1,7 @@
-local labels = "1234567890"
-
 local opts = {
-  labels = labels,
   modes = {
     search = {
+      labels = "1234567890",
       enabled = true,
       search = {
         multi_window = false,
@@ -16,9 +14,6 @@ local opts = {
       highlight = {
         backdrop = false,
       },
-    },
-    treesitter = {
-      labels = labels,
     },
   },
   prompt = {
