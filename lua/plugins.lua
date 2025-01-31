@@ -1,7 +1,7 @@
 return {
   {
     "tpope/vim-abolish",
-    event = "VeryLazy",
+    event = "BufRead",
   },
   {
     "yetone/avante.nvim",
@@ -61,7 +61,7 @@ return {
   },
   {
     "airblade/vim-matchquote",
-    event = "VeryLazy",
+    event = "BufRead",
   },
   {
     "antonk52/markdowny.nvim",
