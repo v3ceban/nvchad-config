@@ -18,14 +18,26 @@ map({ "n", "v" }, "Q", "q")
 map(
   { "n" },
   "<leader>sr",
-  [[:%Subvert/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>]],
+  [[:%s/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>]],
   { desc = "Search replace word", noremap = true }
+)
+map(
+  { "n" },
+  "<leader>ss",
+  [[:%Subvert/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>]],
+  { desc = "Search subvert word", noremap = true }
 )
 map(
   { "v" },
   "<leader>sr",
-  [[y:%Subvert/<C-r>"/<C-r>"/gc<Left><Left><Left>]],
+  [[y:%s/<C-r>"/<C-r>"/gc<Left><Left><Left>]],
   { desc = "Search replace selection", noremap = true }
+)
+map(
+  { "v" },
+  "<leader>ss",
+  [[y:%Subvert/<C-r>"/<C-r>"/gc<Left><Left><Left>]],
+  { desc = "Search subvert selection", noremap = true }
 )
 map({ "v" }, "J", ":m '>+1<CR>gv=gv", { desc = "Move selection down", silent = true })
 map({ "v" }, "K", ":m '<-2<CR>gv=gv", { desc = "Move selection up", silent = true })
@@ -77,42 +89,6 @@ map({ "n", "v" }, "<leader>Ct", "<cmd>CopilotChatTests<CR>", { desc = "Copilot G
 map({ "n", "v" }, "<leader>Cx", "<cmd>CopilotChatExplain<CR>", { desc = "Copilot Explain code" })
 map({ "n", "v" }, "<leader>CC", "<cmd>CopilotChatCommit<CR>", { desc = "Copilot Write commit message" })
 -- Flash.nvim
-map({ "n", "v", "o" }, "<leader>san", function()
+map({ "n", "o" }, "<leader>sn", function()
   require("flash").treesitter()
-end, { desc = "Treesitter select around treesitter node" })
-map({ "n", "v", "o" }, "<leader>sn", function()
-  require("flash").treesitter {
-    filter = function(matches)
-      local seen = {}
-      return vim.tbl_filter(function(m)
-        local node_end = { m.node:end_() }
-        local key = string.format("%d,%d", node_end[1], node_end[2])
-        if seen[key] then
-          return false
-        end
-        seen[key] = true
-        return true
-      end, matches)
-    end,
-    jump = { pos = "end" },
-    label = { before = false, after = true },
-  }
-end, { desc = "Treesitter end of treesitter node" })
-map({ "n", "v", "o" }, "<leader>sN", function()
-  require("flash").treesitter {
-    filter = function(matches)
-      local seen = {}
-      return vim.tbl_filter(function(m)
-        local node_start = { m.node:start() }
-        local key = string.format("%d,%d", node_start[1], node_start[2])
-        if seen[key] then
-          return false
-        end
-        seen[key] = true
-        return true
-      end, matches)
-    end,
-    jump = { pos = "start" },
-    label = { before = true, after = false },
-  }
-end, { desc = "Treesitter start of treesitter node" })
+end, { desc = "Search select treesitter node" })

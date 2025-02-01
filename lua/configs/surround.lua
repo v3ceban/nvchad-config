@@ -6,6 +6,14 @@ M.setup = function()
       visual = "s",
       visual_line = "S",
     },
+    aliases = {
+      ["b"] = { "}", "]", ")" }, -- brackets
+      ["B"] = { "}", "]", ")", ">" }, -- all brackets
+      ["q"] = { '"', "'", "`" }, -- quotes
+      ["s"] = { "}", "]", ")", ">", '"', "'", "`" }, -- surroundings
+      ["r"] = {}, -- disabled default keymap
+      ["a"] = {}, -- disabled default keymap
+    },
   }
 end
 

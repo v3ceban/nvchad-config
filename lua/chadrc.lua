@@ -6,7 +6,6 @@ local M = {}
 
 M.base46 = {
   theme = "catppuccin",
-  theme_toggle = { "catppuccin", "catppuccin" },
 }
 
 M.ui = {
@@ -89,7 +88,6 @@ M.cheatsheet = {
     "Save (t)",
     "Save (v)",
     "Toggle (x)",
-    "Treesitter (v)",
     "autopairs",
     "terminal (t)",
     "toggle (v)",
