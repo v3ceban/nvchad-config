@@ -2,6 +2,7 @@ require "nvchad.options"
 local o = vim.opt
 local g = vim.g
 local a = vim.api
+local bo = vim.bo
 
 o.relativenumber = true
 o.wrap = false
@@ -26,7 +27,7 @@ a.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     "*docker-compose.yaml",
   },
   callback = function()
-    vim.bo.filetype = "yaml.docker-compose"
+    bo.filetype = "yaml.docker-compose"
   end,
 })
 
@@ -36,6 +37,12 @@ a.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
     ".env.*",
   },
   callback = function()
-    vim.bo.filetype = "bash"
+    bo.filetype = "bash"
+  end,
+})
+a.nvim_create_autocmd("FileType", {
+  pattern = "qf",
+  callback = function()
+    a.nvim_buf_set_keymap(0, "n", "<CR>", "<CR>:cclose<CR>", { noremap = true, silent = true })
   end,
 })
