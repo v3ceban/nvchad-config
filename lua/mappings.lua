@@ -15,6 +15,7 @@ map({ "n", "i", "v", "t" }, "<C-s>", "<cmd>wa<CR>", { desc = "Save all files" })
 map({ "n", "i", "v", "t" }, "<C-q>", "<cmd>qa!<CR>", { desc = "Close all buffers and quit" })
 map({ "n", "i", "v", "t" }, "<C-z>", "<nop>")
 map({ "n", "v" }, "Q", "q")
+map({ "n" }, "<leader>sw", [[:/<C-r><C-w><CR>]], { desc = "Search word", noremap = true })
 map(
   { "n" },
   "<leader>sr",
@@ -27,16 +28,17 @@ map(
   [[:%Subvert/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>]],
   { desc = "Search subvert word", noremap = true }
 )
+map({ "v" }, "<leader>sw", [["zy:/<C-r>z<CR>]], { desc = "Search selection", noremap = true })
 map(
   { "v" },
   "<leader>sr",
-  [[y:%s/<C-r>"/<C-r>"/gc<Left><Left><Left>]],
+  [["zy:%s/<C-r>z/<C-r>z/gc<Left><Left><Left>]],
   { desc = "Search replace selection", noremap = true }
 )
 map(
   { "v" },
   "<leader>ss",
-  [[y:%Subvert/<C-r>"/<C-r>"/gc<Left><Left><Left>]],
+  [["zy:%Subvert/<C-r>z/<C-r>z/gc<Left><Left><Left>]],
   { desc = "Search subvert selection", noremap = true }
 )
 map({ "v" }, "J", ":m '>+1<CR>gv=gv", { desc = "Move selection down", silent = true })
@@ -89,6 +91,6 @@ map({ "n", "v" }, "<leader>Ct", "<cmd>CopilotChatTests<CR>", { desc = "Copilot G
 map({ "n", "v" }, "<leader>Cx", "<cmd>CopilotChatExplain<CR>", { desc = "Copilot Explain code" })
 map({ "n", "v" }, "<leader>CC", "<cmd>CopilotChatCommit<CR>", { desc = "Copilot Write commit message" })
 -- Flash.nvim
-map({ "n", "o" }, "<leader>sn", function()
+map({ "v", "o" }, "n", function()
   require("flash").treesitter()
-end, { desc = "Search select treesitter node" })
+end, { desc = "Select treesitter node" })

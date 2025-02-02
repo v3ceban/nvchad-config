@@ -1,7 +1,7 @@
 local opts = {
+  labels = "1234567890",
   modes = {
     search = {
-      labels = "1234567890",
       enabled = true,
       search = {
         multi_window = false,
@@ -15,9 +15,6 @@ local opts = {
         backdrop = false,
       },
     },
-  },
-  prompt = {
-    prefix = { { "", "" } },
   },
 }
 
