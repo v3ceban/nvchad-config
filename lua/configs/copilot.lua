@@ -76,16 +76,16 @@ local opts = {
       insert = "",
     },
     jump_to_diff = {
-      normal = "<leader>j",
+      normal = "",
     },
     quickfix_answers = {
-      normal = "<leader>qa",
+      normal = "",
     },
     quickfix_diffs = {
-      normal = "<leader>qd",
+      normal = "",
     },
     yank_diff = {
-      normal = "<leader>y",
+      normal = "",
       register = '"',
     },
     show_diff = {
