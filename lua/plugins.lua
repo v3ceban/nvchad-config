@@ -4,20 +4,6 @@ return {
     event = "BufRead",
   },
   {
-    "yetone/avante.nvim",
-    lazy = false,
-    version = false,
-    opts = require "configs.avante",
-    build = "make",
-    dependencies = {
-      -- "stevearc/dressing.nvim",
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-      "hrsh7th/nvim-cmp",
-      "nvim-tree/nvim-web-devicons",
-    },
-  },
-  {
     "stevearc/conform.nvim",
     event = "BufWritePre",
     opts = require "configs.conform",

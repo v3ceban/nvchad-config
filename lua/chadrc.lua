@@ -94,4 +94,10 @@ M.cheatsheet = {
   },
 }
 
+M.term = {
+  float = {
+    border = "rounded",
+  },
+}
+
 return M

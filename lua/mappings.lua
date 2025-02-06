@@ -73,23 +73,18 @@ map(
   { "i" },
   "<M-l>",
   [[copilot#Accept("\\<CR>")]],
-  { desc = "Copilot Accept suggestion", expr = true, replace_keycodes = false, silent = true }
+  { desc = "Copilot accept suggestion", expr = true, replace_keycodes = false, silent = true }
 )
-map({ "i" }, "<M-j>", "copilot#Next()", { desc = "Copilot Next suggestion", expr = true, silent = true })
-map({ "i" }, "<M-k>", "copilot#Previous()", { desc = "Copilot Previous suggestion", expr = true, silent = true })
-map({ "n" }, "<leader>CD", "<cmd>Copilot disable<CR>", { desc = "Copilot Disable suggestions" })
-map({ "n" }, "<leader>CE", "<cmd>Copilot enable<CR>", { desc = "Copilot Enable suggestions" })
-map({ "n" }, "<leader>CR", "<cmd>Copilot restart<CR>", { desc = "Copilot Restart plugin" })
-map({ "n" }, "<leader>CS", "<cmd>Copilot status<CR>", { desc = "Copilot View status" })
-map({ "n", "v" }, "<leader>Cc", "<cmd>CopilotChat<CR>", { desc = "Copilot Open chat" })
-map({ "n", "v" }, "<leader>Cd", "<cmd>CopilotChatDocs<CR>", { desc = "Copilot Write documentation" })
-map({ "n", "v" }, "<leader>Cf", "<cmd>CopilotChatFix<CR>", { desc = "Copilot Fix bugs" })
-map({ "n", "v" }, "<leader>Cg", "<cmd>CopilotChatGrammar<CR>", { desc = "Copilot Fix grammar" })
-map({ "n", "v" }, "<leader>Co", "<cmd>CopilotChatOptimize<CR>", { desc = "Copilot Optimize code" })
-map({ "n", "v" }, "<leader>Cr", "<cmd>CopilotChatReview<CR>", { desc = "Copilot Review code" })
-map({ "n", "v" }, "<leader>Ct", "<cmd>CopilotChatTests<CR>", { desc = "Copilot Generate tests" })
-map({ "n", "v" }, "<leader>Cx", "<cmd>CopilotChatExplain<CR>", { desc = "Copilot Explain code" })
-map({ "n", "v" }, "<leader>CC", "<cmd>CopilotChatCommit<CR>", { desc = "Copilot Write commit message" })
+map({ "i" }, "<M-j>", "copilot#Next()", { desc = "Copilot next suggestion", expr = true, silent = true })
+map({ "i" }, "<M-k>", "copilot#Previous()", { desc = "Copilot previous suggestion", expr = true, silent = true })
+map({ "n" }, "<M-a>", "<cmd>CopilotChatToggle<CR>", { desc = "Copilot toggle chat window" })
+map({ "n" }, "<leader>cc", "<cmd>CopilotChat<CR>", { desc = "Copilot open chat window" })
+map({ "n", "v" }, "<leader>cd", "<cmd>CopilotChatDocs<CR>", { desc = "Copilot add documentation" })
+map({ "n", "v" }, "<leader>cf", "<cmd>CopilotChatFix<CR>", { desc = "Copilot fix code" })
+map({ "n", "v" }, "<leader>cg", "<cmd>CopilotChatGrammar<CR>", { desc = "Copilot correct grammar" })
+map({ "n", "v" }, "<leader>co", "<cmd>CopilotChatOptimize<CR>", { desc = "Copilot optimize code" })
+map({ "n", "v" }, "<leader>cr", "<cmd>CopilotChatReview<CR>", { desc = "Copilot review code" })
+map({ "n", "v" }, "<leader>cx", "<cmd>CopilotChatExplain<CR>", { desc = "Copilot explain code" })
 -- Flash.nvim
 map({ "v", "o" }, "n", function()
   require("flash").treesitter()
