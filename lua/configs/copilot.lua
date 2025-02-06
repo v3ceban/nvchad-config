@@ -1,17 +1,16 @@
 -- Copilot Chat configuration
 local opts = {
-  model = "claude-3.5-sonnet", -- :CopilotChatModels - show available models ($)
-  agent = "copilot", -- :CopilotChatAgents for available agents (@)
-  context = nil, -- Default context or array of contexts to use (#)
+  model = "claude-3.5-sonnet",
+  agent = "copilot",
   temperature = 0,
+  context = "buffer",
 
   window = {
-    layout = "float", -- 'vertical', 'horizontal', 'float', 'replace'
+    layout = "float", -- vertical | horizontal | float | replace
     width = 0.6,
     height = 0.5,
-    -- Options below only apply to floating windows
-    relative = "editor", -- 'editor', 'win', 'cursor', 'mouse'
-    border = "rounded", -- 'none', single', 'double', 'rounded', 'solid', 'shadow'
+    relative = "editor", -- editor | win | cursor | mouse
+    border = "rounded", -- none | single | double | rounded | solid | shadow
     title = "",
   },
 
@@ -23,31 +22,17 @@ local opts = {
   auto_insert_mode = false,
   insert_at_end = false,
   clear_chat_on_new_prompt = false,
-  chat_autocomplete = false,
+  chat_autocomplete = true,
 
   question_header = "> [!USER] User ",
   answer_header = "> [!COPILOT] Copilot ",
   error_header = "> [!ERROR] Error ",
   separator = "",
 
+  -- extends default prompts
   prompts = {
-    Docs = {
-      prompt = "/COPILOT_GENERATE\n\nPlease add documentation comments to the selected code.",
-    },
-    Explain = {
-      prompt = "/COPILOT_EXPLAIN\n\nPlease write an explanation for the selected code as paragraphs of text.",
-    },
-    Fix = {
-      prompt = "/COPILOT_GENERATE\n\nThere may be one or more problems in selected code. Please rewrite the code to show it with all the bugs fixed.",
-    },
     Grammar = {
-      prompt = "/COPILOT_INSTRUCTIONS\n\nPlease correct the grammar in the selected code, following US English grammar rules. Ensure that no code (such as tags, keywords, or language syntax) is altered. Preserve word choices unless changes are strictly required by grammar rules. Your output should include everything from the selection, retaining the original syntax and content structure, with only the grammar corrected and no line numbers.",
-    },
-    Optimize = {
-      prompt = "/COPILOT_GENERATE\n\nOptimize the selected code to improve performance and readability.",
-    },
-    Review = {
-      prompt = "/COPILOT_REVIEW\n\nPlease review the selected code.",
+      prompt = "> /COPILOT_INSTRUCTIONS\n\nPlease correct the grammar in the selected code, following US English grammar rules. Ensure that no code (such as tags, keywords, or language syntax) is altered. Preserve word choices unless changes are strictly required by grammar rules. Your output should include everything from the selection, retaining the original syntax and content structure, with only the grammar corrected and no line numbers.",
     },
   },
 
@@ -104,15 +89,15 @@ local opts = {
 }
 
 vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = "copilot-*",
+  pattern = "copilot-chat",
   callback = function()
-    vim.opt.completeopt = vim.opt.completeopt + "noinsert" + "noselect"
+    vim.opt.completeopt = vim.opt.completeopt + "noinsert" + "noselect" + "popup"
   end,
 })
 vim.api.nvim_create_autocmd("BufLeave", {
-  pattern = "copilot-*",
+  pattern = "copilot-chat",
   callback = function()
-    vim.opt.completeopt = vim.opt.completeopt - "noinsert" - "noselect"
+    vim.opt.completeopt = vim.opt.completeopt - "noinsert" - "noselect" - "popup"
   end,
 })
 
