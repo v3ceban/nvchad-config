@@ -92,7 +92,7 @@ map({ "n", "v" }, "<leader>ac", function()
     context = "buffer",
   }
 end, { desc = "Copilot open chat window" })
-map({ "n" }, "<leader>ar", function()
+map({ "n" }, "<leader>aa", function()
   local actions = require "CopilotChat.actions"
   require("CopilotChat.integrations.telescope").pick(actions.prompt_actions {
     selection = false,
@@ -117,7 +117,7 @@ map({ "v" }, "<leader>ae", function()
     )
   end
 end, { desc = "Copilot edit selection" })
-map({ "n" }, "<leader>aa", function()
+map({ "n" }, "<leader>as", function()
   local input = vim.fn.input "Perplexity: "
   if input ~= "" then
     require("CopilotChat").ask(input, {
@@ -126,7 +126,7 @@ map({ "n" }, "<leader>aa", function()
       context = false,
     })
   end
-end, { desc = "Copilot ask perplexity" })
+end, { desc = "Copilot search perplexity" })
 -- Flash.nvim
 map({ "v", "o" }, "n", function()
   require("flash").treesitter()
