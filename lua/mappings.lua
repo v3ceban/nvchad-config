@@ -69,6 +69,7 @@ map({ "n" }, "<leader>gcb", "<cmd>GitConflictChooseBoth<CR>", { desc = "Git Choo
 map({ "n" }, "<leader>gcj", "<cmd>GitConflictNextConflict<CR>", { desc = "Git Next conflict" })
 map({ "n" }, "<leader>gck", "<cmd>GitConflictPrevConflict<CR>", { desc = "Git Previous conflict" })
 -- Github Copilot
+local CopilotSelection = require "CopilotChat.select"
 map(
   { "i" },
   "<M-l>",
@@ -77,23 +78,43 @@ map(
 )
 map({ "i" }, "<M-j>", "copilot#Next()", { desc = "Copilot next suggestion", expr = true, silent = true })
 map({ "i" }, "<M-k>", "copilot#Previous()", { desc = "Copilot previous suggestion", expr = true, silent = true })
-map({ "n" }, "<M-a>", "<cmd>CopilotChatToggle<CR>", { desc = "Copilot toggle chat window" })
-map({ "n", "v" }, "<leader>ac", "<cmd>CopilotChat<CR>", { desc = "Copilot open chat window" })
-map({ "n", "v" }, "<leader>ar", function()
-  local actions = require "CopilotChat.actions"
-  local select = require "CopilotChat.select"
-  require("CopilotChat.integrations.telescope").pick(actions.prompt_actions {
+map({ "n" }, "<M-a>", function()
+  require("CopilotChat").toggle {
+    selection = false,
+    context = "buffer",
+  }
+end, { desc = "Copilot toggle chat window" })
+map({ "n", "v" }, "<leader>ac", function()
+  require("CopilotChat").open {
     selection = function(src)
-      return select.visual(src) or select.buffer(src)
+      return CopilotSelection.visual(src) or CopilotSelection.buffer(src)
     end,
+    context = "buffer",
+  }
+end, { desc = "Copilot open chat window" })
+map({ "n" }, "<leader>ar", function()
+  local actions = require "CopilotChat.actions"
+  require("CopilotChat.integrations.telescope").pick(actions.prompt_actions {
+    selection = false,
+    context = "buffer",
+  })
+end, { desc = "Copilot run action" })
+map({ "v" }, "<leader>ar", function()
+  local actions = require "CopilotChat.actions"
+  require("CopilotChat.integrations.telescope").pick(actions.prompt_actions {
+    selection = CopilotSelection.visual,
   })
 end, { desc = "Copilot run action" })
 map({ "v" }, "<leader>ae", function()
-  local input = vim.fn.input "Edit: "
+  local input = vim.fn.input "Copilot Edit: "
   if input ~= "" then
-    require("CopilotChat").ask("> /COPILOT_GENERATE\n\n" .. input, {
-      selection = require("CopilotChat.select").visual,
-    })
+    require("CopilotChat").ask(
+      "> /COPILOT_GENERATE\n\nOnly operate on selected code and not on context.\n\n" .. input,
+      {
+        selection = CopilotSelection.visual,
+        context = "buffer",
+      }
+    )
   end
 end, { desc = "Copilot edit selection" })
 map({ "n" }, "<leader>aa", function()

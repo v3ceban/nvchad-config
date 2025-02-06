@@ -12,7 +12,7 @@ o.foldmethod = "expr"
 o.foldexpr = "nvim_treesitter#foldexpr()"
 o.foldlevel = 99
 g.copilot_no_tab_map = true
-g.markdown_recommended_style = 0 -- disable 4 spaces tabs in markdown
+g.markdown_recommended_style = 0
 
 a.nvim_set_hl(0, "RenderMarkdownHeader", { fg = "#89b4fa" })
 a.nvim_set_hl(0, "RenderMarkdownTodo", { fg = "#f38ba8" })

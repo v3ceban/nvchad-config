@@ -354,7 +354,7 @@ local opts = {
     quote = { raw = "[!QUOTE]", rendered = "󱆨 Quote", highlight = "RenderMarkdownQuote" },
     cite = { raw = "[!CITE]", rendered = "󱆨 Cite", highlight = "RenderMarkdownQuote" },
     -- Custom:
-    user = { raw = "[!USER]", rendered = " User", highlight = "RenderMarkdownSuccess" },
+    user = { raw = "[!USER]", rendered = "󰭹 User", highlight = "RenderMarkdownSuccess" },
     copilot = { raw = "[!COPILOT]", rendered = " Copilot", highlight = "RenderMarkdownHeader" },
     copilot_error = { raw = "[!COPILOT_ERROR]", rendered = " Error", highlight = "RenderMarkdownError" },
   },
