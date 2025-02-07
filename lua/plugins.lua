@@ -4,6 +4,15 @@ return {
     event = "BufRead",
   },
   {
+    "yetone/avante.nvim",
+    event = "VeryLazy",
+    build = "make",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+    },
+    opts = require "configs.avante",
+  },
+  {
     "stevearc/conform.nvim",
     event = "BufWritePre",
     opts = require "configs.conform",
@@ -14,11 +23,10 @@ return {
   },
   {
     "CopilotC-Nvim/CopilotChat.nvim",
+    event = "VeryLazy",
     dependencies = {
       "github/copilot.vim",
-      "nvim-lua/plenary.nvim",
     },
-    event = "VeryLazy",
     opts = require "configs.copilot",
   },
   {
@@ -29,7 +37,6 @@ return {
   {
     "akinsho/git-conflict.nvim",
     event = "VeryLazy",
-    version = "*",
     config = require "configs.git-conflict",
   },
   {
@@ -58,8 +65,8 @@ return {
   },
   {
     "MeanderingProgrammer/render-markdown.nvim",
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
     event = "VeryLazy",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = require "configs.render-markdown",
   },
   {
@@ -68,7 +75,6 @@ return {
   },
   {
     "kylechui/nvim-surround",
-    version = "*",
     event = "VeryLazy",
     config = function()
       return require("configs.surround").setup()
@@ -88,6 +94,7 @@ return {
   },
   {
     "folke/which-key.nvim",
+    event = "VeryLazy",
     opts = require "configs.which-key",
   },
 }

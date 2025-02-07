@@ -78,13 +78,7 @@ map(
 )
 map({ "i" }, "<M-j>", "copilot#Next()", { desc = "Copilot next suggestion", expr = true, silent = true })
 map({ "i" }, "<M-k>", "copilot#Previous()", { desc = "Copilot previous suggestion", expr = true, silent = true })
-map({ "n" }, "<M-a>", function()
-  require("CopilotChat").toggle {
-    selection = false,
-    context = "buffer",
-  }
-end, { desc = "Copilot toggle chat window" })
-map({ "n", "v" }, "<leader>ac", function()
+map({ "n", "v" }, "<leader>cc", function()
   require("CopilotChat").open {
     selection = function(src)
       return CopilotSelection.visual(src) or CopilotSelection.buffer(src)
@@ -92,20 +86,20 @@ map({ "n", "v" }, "<leader>ac", function()
     context = "buffer",
   }
 end, { desc = "Copilot open chat window" })
-map({ "n" }, "<leader>aa", function()
+map({ "n" }, "<leader>cr", function()
   local actions = require "CopilotChat.actions"
   require("CopilotChat.integrations.telescope").pick(actions.prompt_actions {
     selection = false,
     context = "buffer",
   })
 end, { desc = "Copilot run action" })
-map({ "v" }, "<leader>ar", function()
+map({ "v" }, "<leader>cr", function()
   local actions = require "CopilotChat.actions"
   require("CopilotChat.integrations.telescope").pick(actions.prompt_actions {
     selection = CopilotSelection.visual,
   })
 end, { desc = "Copilot run action" })
-map({ "v" }, "<leader>ae", function()
+map({ "v" }, "<leader>ce", function()
   local input = vim.fn.input "Copilot Edit: "
   if input ~= "" then
     require("CopilotChat").ask(
@@ -117,7 +111,7 @@ map({ "v" }, "<leader>ae", function()
     )
   end
 end, { desc = "Copilot edit selection" })
-map({ "n" }, "<leader>as", function()
+map({ "n" }, "<leader>cs", function()
   local input = vim.fn.input "Perplexity: "
   if input ~= "" then
     require("CopilotChat").ask(input, {
@@ -126,7 +120,7 @@ map({ "n" }, "<leader>as", function()
       context = false,
     })
   end
-end, { desc = "Copilot search perplexity" })
+end, { desc = "Copilot search with perplexity" })
 -- Flash.nvim
 map({ "v", "o" }, "n", function()
   require("flash").treesitter()

@@ -102,17 +102,4 @@ local opts = {
   },
 }
 
-vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = "copilot-*",
-  callback = function()
-    vim.opt.completeopt = vim.opt.completeopt + "noinsert" + "noselect" + "popup"
-  end,
-})
-vim.api.nvim_create_autocmd("BufLeave", {
-  pattern = "copilot-*",
-  callback = function()
-    vim.opt.completeopt = vim.opt.completeopt - "noinsert" - "noselect" - "popup"
-  end,
-})
-
 return opts

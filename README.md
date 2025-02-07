@@ -130,6 +130,14 @@ Plugin that helps with abbreviations and substitutions.
   - If no `{}` is provided, the plugin works the same as `:s`
 - Can do much more, see `:h abolish` for usage info
 
+### Avante
+
+This is still work in progress, and [Avante](https://github.com/yetone/avante.nvim) can be disabled by commenting
+the corresponding lines in `plugins.lua`. As plugin matures it can
+potentially replace [CopilotChat](https://github.com/CopilotC-Nvim/CopilotChat.nvim) and, possibly, [Copilot](https://github.com/github/copilot.vim) itself.
+To use with anything other than Copilot, API keys need to be set in
+environment variables (e.g. `OPENAI_API_KEY="your key"`).
+
 ### Copilot
 
 Enables Copilot integration and quick commands
