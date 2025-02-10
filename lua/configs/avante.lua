@@ -189,4 +189,5 @@ local opts = {
     provider = "telescope",
   },
 }
+
 return opts

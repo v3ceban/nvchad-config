@@ -1,6 +1,6 @@
 -- Copilot Chat configuration
 local opts = {
-  model = "gpt-4o",
+  model = "claude-3.5-sonnet",
   agent = "copilot",
   temperature = 0,
 
@@ -40,6 +40,9 @@ local opts = {
       agent = "docker",
       context = "files:full",
       selection = false,
+    },
+    Fix = {
+      prompt = "> /COPILOT_GENERATE\n\nAnalyze the code, identify any issues or problems, and provide a corrected version. Focus on code quality, efficiency, and potential bugs.",
     },
     Grammar = {
       prompt = "> /COPILOT_INSTRUCTIONS\n\nPlease correct the grammar in the selected code, following US English grammar rules. Ensure that no code (such as tags, keywords, or language syntax) is altered. Preserve word choices unless changes are strictly required by grammar rules. Your output should include everything from the selection, retaining the original syntax and content structure, with only the grammar corrected and no line numbers.",

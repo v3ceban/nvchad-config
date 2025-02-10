@@ -143,10 +143,15 @@ environment variables (e.g. `OPENAI_API_KEY="your key"`).
 Enables Copilot integration and quick commands
 
 - Uses the [Copilot](https://github.com/github/copilot.vim) plugin for autocompletion
-- Uses the [CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim) plugin for chat functionality
 - Run `:Copilot auth` to authenticate with GitHub
 - Press `<M-l>` in insert mode to accept Copilot autocompletion suggestions
-- Press `<leader>-C` in normal or visual mode to see avaliable Copilot Chat commands
+- Press `<M-j>` or `<M-k>` in insert mode to cycle through suggestions
+- Uses the [CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim) plugin for chat and some extra functionality
+  - `<leader>cc` to open chat
+    - `<leader>h` in chat window to show help
+  - `<leader>cr` to run a command
+  - `<leader>cs` to search with perplexity
+  - `<leader>ce` to edit selected code
 
 ### Flash.nvim
 
