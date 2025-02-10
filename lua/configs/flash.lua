@@ -16,6 +16,9 @@ local opts = {
       },
     },
   },
+  prompt = {
+    prefix = { { "", "" } },
+  },
 }
 
 return opts

@@ -9,6 +9,7 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldlevel = 99
 vim.g.markdown_recommended_style = 0
 vim.g.copilot_no_tab_map = true
+vim.opt.completeopt = "menu,menuone,noselect,popup"
 
 -- higlight groups for markdown
 vim.api.nvim_set_hl(0, "RenderMarkdownHeader", { fg = "#89b4fa" })
@@ -35,20 +36,6 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   },
   callback = function()
     vim.bo.filetype = "yaml.docker-compose"
-  end,
-})
-
--- for autocompletions in copilot chat
-vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = "copilot-*",
-  callback = function()
-    vim.opt.completeopt = vim.opt.completeopt + "noinsert" + "noselect" + "popup"
-  end,
-})
-vim.api.nvim_create_autocmd("BufLeave", {
-  pattern = "copilot-*",
-  callback = function()
-    vim.opt.completeopt = vim.opt.completeopt - "noinsert" - "noselect" - "popup"
   end,
 })
 

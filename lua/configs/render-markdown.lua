@@ -264,7 +264,6 @@ local opts = {
     --   'highlight': Highlight for the 'rendered' icon
     custom = {
       todo = { raw = "[-]", rendered = "󰥔 ", highlight = "RenderMarkdownTodo" },
-      todo2 = { raw = "[~]", rendered = "󰥔 ", highlight = "RenderMarkdownTodo" },
     },
   },
   quote = {

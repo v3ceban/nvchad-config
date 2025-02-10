@@ -75,7 +75,7 @@ local opts = {
   provider = "copilot", -- claude | openai | azure | gemini | cohere | copilot
   auto_suggestions_provider = "copilot",
   openai = {
-    endpoint = "https://api.openai.com/v1",
+    endpoint = "https://api.openai.com/v1", -- needs OPENAI_API_KEY env variable
     model = "gpt-4o", -- gpt-4o | o1 | o1-mini
   },
   copilot = {
@@ -87,7 +87,7 @@ local opts = {
       __inherited_from = "openai",
       endpoint = "https://api.deepseek.com/v1",
       model = "deepseek-chat", -- deepseek-chat | deepseek-reasoner
-      api_key_name = "DEEPSEEK_API_KEY",
+      api_key_name = "DEEPSEEK_API_KEY", -- needs DEEPSEEK_API_KEY env variable
       disable_tools = true,
     },
     ollama = {
@@ -104,6 +104,9 @@ local opts = {
     enabled = false,
     first_provider = "copilot",
     second_provider = "openai",
+  },
+  web_search_engine = {
+    provider = "tavily", -- needs TAVILY_API_KEY env variable
   },
   behaviour = {
     auto_focus_sidebar = true,

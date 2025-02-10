@@ -125,3 +125,5 @@ end, { desc = "Copilot search with perplexity" })
 map({ "v", "o" }, "n", function()
   require("flash").treesitter()
 end, { desc = "Select treesitter node" })
+-- Avante.nvim
+map({ "n" }, "<leader>ac", "<cmd>AvanteClear<CR>", { desc = "avante: clear history" })
