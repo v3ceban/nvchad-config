@@ -86,7 +86,7 @@ local opts = {
     deepseek = {
       __inherited_from = "openai",
       endpoint = "https://api.deepseek.com/v1",
-      model = "deepseek-chat", -- deepseek-chat | deepseek-reasoner
+      model = "deepseek-reasoner", -- deepseek-chat | deepseek-reasoner
       api_key_name = "DEEPSEEK_API_KEY", -- needs DEEPSEEK_API_KEY env variable
       disable_tools = true,
     },
