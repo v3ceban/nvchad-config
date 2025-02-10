@@ -200,8 +200,13 @@ Extends the built-in `%` command to match quotes and brackets
 ## Useful Links
 
 [Conform.nvim formatters](https://github.com/stevearc/conform.nvim?tab=readme-ov-file#formatters)
+
 [LSPconfig builtins](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md)
+
 [None-ls builtins](https://github.com/nvimtools/none-ls.nvim/blob/main/doc/BUILTINS.md)
+
 [Null-ls builtins](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md)
+
 [NvChad repository](https://github.com/NvChad/NvChad)
-[Nvim-lint linters](https://github.com/mfussenegger/nvim-lint)
+
+[Nvim-lint linters](https://github.com/mfussenegger/nvim-lint?tab=readme-ov-file#available-linters)

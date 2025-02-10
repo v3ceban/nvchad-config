@@ -24,7 +24,6 @@ local options = {
     lua = { "stylua" },
     markdown = { "prettierd" },
     mdx = { "prettierd" },
-    php = { "pint" },
     proto = { "clang-format" },
     python = { "isort", "black" },
     scss = { "prettierd" },
