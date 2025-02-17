@@ -179,12 +179,6 @@ local opts = {
     autojump = false,
   },
   hints = { enabled = false },
-  highlights = {
-    diff = {
-      current = "",
-      incoming = "",
-    },
-  },
   file_selector = {
     provider = "telescope",
   },
