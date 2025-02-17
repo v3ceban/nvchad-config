@@ -175,6 +175,12 @@ local opts = {
       add_current = "<leader>af",
     },
   },
+  highlights = {
+    diff = {
+      current = "DiffText",
+      incoming = "DiffAdd",
+    },
+  },
   diff = {
     autojump = false,
   },
