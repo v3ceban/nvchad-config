@@ -4,8 +4,8 @@ local config = {
   disable_diagnostics = true,
   list_opener = "copen",
   highlights = {
-    incoming = "DiffAdd",
-    current = "DiffText",
+    incoming = "DiffAddGroup",
+    current = "DiffTextGroup",
   },
 }
 
