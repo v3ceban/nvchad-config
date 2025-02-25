@@ -5,13 +5,14 @@ vim.api.nvim_set_hl(0, "DiffTextGroup", { bg = "#1e2030" })
 local opts = {
   provider = "copilot", -- claude | openai | azure | gemini | cohere | copilot
   auto_suggestions_provider = "copilot",
+  cursor_applying_provider = "copilot", -- to test with claude 3.7
   openai = {
     endpoint = "https://api.openai.com/v1", -- needs OPENAI_API_KEY env variable
     model = "gpt-4o", -- gpt-4o | o1 | o1-mini
   },
   copilot = {
     endpoint = "https://api.githubcopilot.com", -- needs Copilot plugin with authentication
-    model = "claude-3.7-sonnet", -- claude-3.7-sonnet | gpt-4o | o3-mini | gemini-2.0-flash-001
+    model = "claude-3.5-sonnet", -- claude-3.7-sonnet | claude-3.5-sonnet | gpt-4o | o3-mini | gemini-2.0-flash-001
   },
   vendors = {
     deepseek = {
