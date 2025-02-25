@@ -1,6 +1,6 @@
 -- Copilot Chat configuration
 local opts = {
-  model = "claude-3.5-sonnet",
+  model = "claude-3.7-sonnet",
   agent = "copilot",
   temperature = 0,
 
@@ -34,6 +34,15 @@ local opts = {
       prompt = "> #git:staged\n\nWrite commit message for the change with commitizen convention. Make sure the title has maximum 50 characters and message is wrapped at 72 characters. Wrap the whole message in code block with language gitcommit.",
       context = false,
       selection = false,
+      callback = function(response)
+        local commit_message = response:match "```gitcommit\n(.-)\n```"
+        if commit_message then
+          vim.fn.system { "git", "commit", "-m", commit_message }
+          vim.notify("Changes committed successfully!", vim.log.levels.INFO)
+        else
+          vim.notify("Could not parse commit message from response", vim.log.levels.ERROR)
+        end
+      end,
     },
     Dockerfile = {
       prompt = "> /COPILOT_INSTRUCTIONS\n\nGenerate a Dockerfile for this application.",

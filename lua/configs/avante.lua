@@ -5,14 +5,13 @@ vim.api.nvim_set_hl(0, "DiffTextGroup", { bg = "#1e2030" })
 local opts = {
   provider = "copilot", -- claude | openai | azure | gemini | cohere | copilot
   auto_suggestions_provider = "copilot",
-  cursor_applying_provider = "ollama", -- https://github.com/yetone/avante.nvim/blob/main/cursor-planning-mode.md
   openai = {
     endpoint = "https://api.openai.com/v1", -- needs OPENAI_API_KEY env variable
     model = "gpt-4o", -- gpt-4o | o1 | o1-mini
   },
   copilot = {
-    endpoint = "https://api.githubcopilot.com",
-    model = "claude-3.5-sonnet", -- claude-3.5-sonnet | gpt-4o | o3-mini | gemini-2.0-flash-001
+    endpoint = "https://api.githubcopilot.com", -- needs Copilot plugin with authentication
+    model = "claude-3.7-sonnet", -- claude-3.7-sonnet | gpt-4o | o3-mini | gemini-2.0-flash-001
   },
   vendors = {
     deepseek = {
@@ -20,12 +19,6 @@ local opts = {
       endpoint = "https://api.deepseek.com/v1",
       model = "deepseek-reasoner", -- deepseek-chat | deepseek-reasoner
       api_key_name = "DEEPSEEK_API_KEY", -- needs DEEPSEEK_API_KEY env variable
-      disable_tools = true,
-    },
-    ollama = {
-      __inherited_from = "openai",
-      endpoint = "http://localhost:11434/v1",
-      model = "hf.co/Kortix/FastApply-7B-v1.0_GGUF:Q4_K_M",
       disable_tools = true,
     },
   },
@@ -97,14 +90,18 @@ local opts = {
     sidebar = {
       apply_all = "A",
       apply_cursor = "a",
+      retry_user_request = "r",
+      edit_user_request = "e",
       switch_windows = "<Tab>",
       reverse_switch_windows = "<S-Tab>",
       remove_file = "d",
       add_file = "@",
+      close = { "<Esc>", "<leader>x" },
     },
     files = {
       add_current = "<leader>af",
     },
+    select_model = "<leader>am",
   },
   highlights = {
     diff = {
