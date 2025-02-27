@@ -37,12 +37,14 @@ local opts = {
       callback = function(response)
         local commit_message = response:match "```gitcommit\n(.-)\n```"
         if commit_message then
-          local choice = vim.fn.confirm("Commit with this message?\n" .. commit_message, "&Yes\n&No", 2)
+          local choice = vim.fn.confirm("Push a commit with this message?\n" .. commit_message, "&Yes\n&No", 2)
           if choice == 1 then
             vim.fn.system { "git", "commit", "-m", commit_message }
+            vim.fn.system { "git", "push" }
+            vim.notify "Committed and pushed changes"
           end
         else
-          vim.notify("Could not parse commit message from response", vim.log.levels.ERROR)
+          vim.notify "Could not parse commit message from response"
         end
       end,
     },
