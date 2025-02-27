@@ -38,7 +38,6 @@ local opts = {
         local commit_message = response:match "```gitcommit\n(.-)\n```"
         if commit_message then
           vim.fn.system { "git", "commit", "-m", commit_message }
-          vim.notify("Changes committed successfully!", vim.log.levels.INFO)
         else
           vim.notify("Could not parse commit message from response", vim.log.levels.ERROR)
         end

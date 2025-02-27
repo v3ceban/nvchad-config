@@ -45,11 +45,10 @@ map({ "v" }, "J", ":m '>+1<CR>gv=gv", { desc = "Move selection down", silent = t
 map({ "v" }, "K", ":m '<-2<CR>gv=gv", { desc = "Move selection up", silent = true })
 map({ "v" }, ">", ">gv", { desc = "Indent selection right", silent = true })
 map({ "v" }, "<", "<gv", { desc = "Indent selection left", silent = true })
-map({ "t" }, "<Esc>", "<C-\\><C-N>", { desc = "terminal escape terminal mode" })
-map({ "n", "t" }, "<C-Up>", "<C-w>+", { desc = "Resize increase window height" })
-map({ "n", "t" }, "<C-Down>", "<C-w>-", { desc = "Resize decrease window height" })
-map({ "n", "t" }, "<C-Right>", "<C-w>>", { desc = "Resize increase window width" })
-map({ "n", "t" }, "<C-Left>", "<C-w><", { desc = "Resize decrease window width" })
+map({ "n" }, "<C-Up>", "<C-w>+", { desc = "Resize increase window height" })
+map({ "n" }, "<C-Down>", "<C-w>-", { desc = "Resize decrease window height" })
+map({ "n" }, "<C-Right>", "<C-w>>", { desc = "Resize increase window width" })
+map({ "n" }, "<C-Left>", "<C-w><", { desc = "Resize decrease window width" })
 -- Diagnostics
 map({ "n" }, "[d", function()
   vim.diagnostic.goto_prev { border = "rounded" }
@@ -89,7 +88,7 @@ end, { desc = "Copilot open chat window" })
 map({ "n" }, "<leader>cr", function()
   local actions = require "CopilotChat.actions"
   require("CopilotChat.integrations.telescope").pick(actions.prompt_actions {
-    selection = false,
+    selection = CopilotSelection.buffer,
     context = "buffer",
   })
 end, { desc = "Copilot run action" })
@@ -125,9 +124,18 @@ end, { desc = "Copilot search with perplexity" })
 map({ "v", "o" }, "n", function()
   require("flash").treesitter()
 end, { desc = "Select treesitter node" })
--- Avante.nvim
--- map({ "n" }, "<leader>ac", "<cmd>AvanteClear<CR>", { desc = "avante: clear history" })
--- map({ "n" }, "<leader>apc", "<cmd>AvanteSwitchProvider copilot<CR>", { desc = "avante: switch provider to copilot" })
--- map({ "n" }, "<leader>apo", "<cmd>AvanteSwitchProvider openai<CR>", { desc = "avante: switch provider to openai" })
--- map({ "n" }, "<leader>apd", "<cmd>AvanteSwitchProvider deepseek<CR>", { desc = "avante: switch provider to deepseek" })
--- map({ "n" }, "<leader>apl", "<cmd>AvanteSwitchProvider ollama<CR>", { desc = "avante: switch provider to ollama" })
+-- Claude Code
+vim.keymap.set({ "n", "t" }, "<A-c>", function()
+  require("nvchad.term").toggle {
+    pos = "float",
+    float_opts = {
+      row = 0.15,
+      col = 0.15,
+      width = 0.7,
+      height = 0.6,
+    },
+    id = "claude",
+    cmd = vim.fn.executable "claude" == 1 and "claude" or "npx @anthropic-ai/claude-code",
+    clear_cmd = false,
+  }
+end, { desc = "Claude Toggle code window" })
