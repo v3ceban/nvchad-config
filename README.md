@@ -152,6 +152,7 @@ Enables Copilot integration and quick commands
   - `<leader>cr` to run a command
   - `<leader>cs` to search with perplexity
   - `<leader>ce` to edit selected code
+  - `<leader>gC` to add all changes to git and generate a commit message
 
 ### Flash.nvim
 
