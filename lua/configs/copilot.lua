@@ -1,6 +1,6 @@
 -- Copilot Chat configuration
 local opts = {
-  model = "gpt-4o",
+  model = "claude-3.5-sonnet",
   agent = "copilot",
   temperature = 0,
 
@@ -31,7 +31,7 @@ local opts = {
   -- extends default prompts
   prompts = {
     Commit = {
-      prompt = "> #git:staged\n\nWrite commit message for the change with commitizen convention. Make sure the title has maximum 50 characters and message is wrapped at 72 characters. Wrap the whole message in code block with language gitcommit.",
+      prompt = "#git:staged\n\nWrite commit message for the change with commitizen convention. Make sure the title has maximum 50 characters and message is wrapped at 72 characters. Wrap the whole message in code block with language gitcommit.",
       context = false,
       selection = false,
       callback = function(response)
@@ -45,29 +45,29 @@ local opts = {
               vim.fn.system { "git", "push" }
               vim.notify "Commit pushed successfully"
             end
+            vim.defer_fn(function()
+              vim.cmd "close"
+            end, 20)
           end
         else
           vim.notify "Could not parse commit message from response"
         end
-        vim.defer_fn(function()
-          vim.cmd "close"
-        end, 20)
       end,
     },
     Dockerfile = {
-      prompt = "> /COPILOT_INSTRUCTIONS\n\nGenerate a Dockerfile for this application.",
+      prompt = "/COPILOT_INSTRUCTIONS\n\nGenerate a Dockerfile for this application.",
       agent = "docker",
       context = "files:full",
       selection = false,
     },
     Fix = {
-      prompt = "> /COPILOT_GENERATE\n\nAnalyze the code, identify any issues or problems, and provide a corrected version. Focus on code quality, efficiency, and potential bugs.",
+      prompt = "/COPILOT_GENERATE\n\nAnalyze the code, identify any issues or problems, and provide a corrected version. Focus on code quality, efficiency, and potential bugs.",
     },
     Grammar = {
-      prompt = "> /COPILOT_INSTRUCTIONS\n\nPlease correct the grammar in the selected code, following US English grammar rules. Ensure that no code (such as tags, keywords, or language syntax) and formatiing (tabs, spaces, line breaks) is altered. Preserve word choices unless changes are strictly required by grammar rules. Your output should include everything from the selection, retaining the original syntax and content structure, with only the grammar corrected and no line numbers.",
+      prompt = "/COPILOT_INSTRUCTIONS\n\nPlease correct the grammar in the selected code, following US English grammar rules. Ensure that no code (such as tags, keywords, or language syntax) and formatiing (tabs, spaces, line breaks) is altered. Preserve word choices unless changes are strictly required by grammar rules. Your output should include everything from the selection, retaining the original syntax and content structure, with only the grammar corrected and no line numbers.",
     },
     Review = {
-      prompt = "> /COPILOT_REVIEW\n\nReview the selected code.",
+      prompt = "/COPILOT_REVIEW\n\nReview the selected code.",
       callback = false,
     },
   },
