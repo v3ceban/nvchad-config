@@ -43,14 +43,11 @@ local opts = {
             local push_choice = vim.fn.confirm("Push this commit to remote?", "&Yes\n&No", 2)
             if push_choice == 1 then
               vim.fn.system { "git", "push" }
-              vim.notify "Commit pushed successfully"
             end
             vim.defer_fn(function()
               vim.cmd "close"
             end, 20)
           end
-        else
-          vim.notify "Could not parse commit message from response"
         end
       end,
     },
