@@ -8,6 +8,7 @@ return {
     "yetone/avante.nvim",
     event = "User",
     build = "make",
+    version = false,
     dependencies = {
       "MunifTanjim/nui.nvim",
     },
@@ -45,6 +46,7 @@ return {
   {
     "akinsho/git-conflict.nvim",
     event = "VeryLazy",
+    version = "*",
     config = require "configs.git-conflict",
   },
   {
@@ -61,6 +63,10 @@ return {
     end,
   },
   {
+    "nvim-tree/nvim-tree.lua",
+    opts = require "configs.nvim-tree",
+  },
+  {
     "airblade/vim-matchquote",
     keys = { "%" },
   },
@@ -74,7 +80,6 @@ return {
   {
     "MeanderingProgrammer/render-markdown.nvim",
     ft = { "markdown", "copilot-chat", "Avante" },
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
     opts = require "configs.render-markdown",
   },
   {
@@ -85,6 +90,7 @@ return {
   },
   {
     "kylechui/nvim-surround",
+    version = "*",
     keys = {
       { "cs", mode = { "n" } },
       { "ds", mode = { "n" } },

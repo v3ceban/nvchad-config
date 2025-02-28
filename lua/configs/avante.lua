@@ -21,7 +21,7 @@ local opts = {
     deepseek = {
       __inherited_from = "openai",
       endpoint = "https://api.deepseek.com/v1",
-      model = "deepseek-reasoner", -- deepseek-chat | deepseek-reasoner
+      model = "deepseek-chat", -- deepseek-chat | deepseek-reasoner
       api_key_name = "DEEPSEEK_API_KEY", -- needs DEEPSEEK_API_KEY env variable
       disable_tools = true,
     },
@@ -60,8 +60,8 @@ local opts = {
       all_theirs = "<leader>gca",
       both = "<leader>gcb",
       cursor = "<leader>gch",
-      next = "<leader>gcj",
-      prev = "<leader>gck",
+      prev = "[c",
+      next = "]c",
     },
     suggestion = {
       accept = "<M-l>",
@@ -114,7 +114,7 @@ local opts = {
     },
   },
   diff = {
-    autojump = false,
+    autojump = true,
   },
   hints = { enabled = false },
   file_selector = {

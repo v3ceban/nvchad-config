@@ -37,15 +37,21 @@ local opts = {
       callback = function(response)
         local commit_message = response:match "```gitcommit\n(.-)\n```"
         if commit_message then
-          local choice = vim.fn.confirm("Push a commit with this message?\n" .. commit_message, "&Yes\n&No", 2)
-          if choice == 1 then
+          local commit_choice = vim.fn.confirm("Create a commit with this message?\n" .. commit_message, "&Yes\n&No", 2)
+          if commit_choice == 1 then
             vim.fn.system { "git", "commit", "-m", commit_message }
-            vim.fn.system { "git", "push" }
-            vim.notify "Committed and pushed changes"
+            local push_choice = vim.fn.confirm("Push this commit to remote?", "&Yes\n&No", 2)
+            if push_choice == 1 then
+              vim.fn.system { "git", "push" }
+              vim.notify "Commit pushed successfully"
+            end
           end
         else
           vim.notify "Could not parse commit message from response"
         end
+        vim.defer_fn(function()
+          vim.cmd "close"
+        end, 20)
       end,
     },
     Dockerfile = {

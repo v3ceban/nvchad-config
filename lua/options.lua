@@ -16,7 +16,9 @@ vim.opt.laststatus = 3
 vim.api.nvim_set_hl(0, "RenderMarkdownHeader", { fg = "#89b4fa" })
 vim.api.nvim_set_hl(0, "RenderMarkdownTodo", { fg = "#f38ba8" })
 vim.api.nvim_set_hl(0, "RenderMarkdownCodeInline", { fg = "#fab387" })
-vim.api.nvim_set_hl(0, "FloatTitle", { bg = nil })
+-- higlight groups for avante and git-conflict
+vim.api.nvim_set_hl(0, "DiffAddGroup", { bg = "#272a3f" })
+vim.api.nvim_set_hl(0, "DiffTextGroup", { bg = "#1e2030" })
 
 -- for better syntax highlighting in .env files
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {

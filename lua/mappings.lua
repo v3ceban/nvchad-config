@@ -11,6 +11,11 @@ map("n", "<leader>x", function()
     vim.cmd "q"
   end
 end, { desc = "close tab or window" })
+for i = 1, 9, 1 do
+  map("n", string.format("%s<Tab>", i), function()
+    vim.api.nvim_set_current_buf(vim.t.bufs[i])
+  end)
+end
 map({ "n", "i", "v", "t" }, "<C-s>", "<cmd>wa<CR>", { desc = "Save all files" })
 map({ "n", "i", "v", "t" }, "<C-q>", "<cmd>qa!<CR>", { desc = "Close all buffers and quit" })
 map({ "n", "i", "v", "t" }, "<C-z>", "<nop>")
@@ -52,21 +57,21 @@ map({ "n" }, "<C-Left>", "<C-w><", { desc = "Resize decrease window width" })
 -- Diagnostics
 map({ "n" }, "[d", function()
   vim.diagnostic.goto_prev { border = "rounded" }
-end, { desc = "LSP Jump to the previous diagnostic", silent = true })
+end, { desc = "LSP previous diagnostic", silent = true })
 map({ "n" }, "]d", function()
   vim.diagnostic.goto_next { border = "rounded" }
-end, { desc = "LSP Jump to the next diagnostic", silent = true })
+end, { desc = "LSP next diagnostic", silent = true })
 -- Gitsigns
-map({ "n" }, "<leader>gb", "<cmd>lua require('gitsigns').blame_line()<CR>", { desc = "Git Blame line" })
-map({ "n" }, "[h", "<cmd>lua require('gitsigns').prev_hunk()<CR>", { desc = "Git Previous hunk" })
-map({ "n" }, "]h", "<cmd>lua require('gitsigns').next_hunk()<CR>", { desc = "Git Next hunk" })
+map({ "n" }, "<leader>gb", "<cmd>lua require('gitsigns').blame_line()<CR>", { desc = "Git blame line" })
+map({ "n" }, "[h", "<cmd>lua require('gitsigns').prev_hunk()<CR>", { desc = "Git previous hunk" })
+map({ "n" }, "]h", "<cmd>lua require('gitsigns').next_hunk()<CR>", { desc = "Git next hunk" })
 -- Git conflict
-map({ "n" }, "<leader>gco", "<cmd>GitConflictChooseOurs<CR>", { desc = "Git Choose our commit" })
-map({ "n" }, "<leader>gct", "<cmd>GitConflictChooseTheirs<CR>", { desc = "Git Choose theirs commit" })
-map({ "n" }, "<leader>gcn", "<cmd>GitConflictChooseNone<CR>", { desc = "Git Choose none commits" })
-map({ "n" }, "<leader>gcb", "<cmd>GitConflictChooseBoth<CR>", { desc = "Git Choose both commits" })
-map({ "n" }, "<leader>gcj", "<cmd>GitConflictNextConflict<CR>", { desc = "Git Next conflict" })
-map({ "n" }, "<leader>gck", "<cmd>GitConflictPrevConflict<CR>", { desc = "Git Previous conflict" })
+map({ "n" }, "<leader>gco", "<cmd>GitConflictChooseOurs<CR>", { desc = "Git choose our commit" })
+map({ "n" }, "<leader>gct", "<cmd>GitConflictChooseTheirs<CR>", { desc = "Git choose theirs commit" })
+map({ "n" }, "<leader>gcn", "<cmd>GitConflictChooseNone<CR>", { desc = "Git choose none commits" })
+map({ "n" }, "<leader>gcb", "<cmd>GitConflictChooseBoth<CR>", { desc = "Git choose both commits" })
+map({ "n" }, "[c", "<cmd>GitConflictPrevConflict<CR>", { desc = "Git previous conflict" })
+map({ "n" }, "]c", "<cmd>GitConflictNextConflict<CR>", { desc = "Git next conflict" })
 -- Github Copilot
 local CopilotSelection = require "CopilotChat.select"
 map(
@@ -98,18 +103,6 @@ map({ "v" }, "<leader>cr", function()
     selection = CopilotSelection.visual,
   })
 end, { desc = "Copilot run action" })
-map({ "v" }, "<leader>ce", function()
-  local input = vim.fn.input "Copilot Edit: "
-  if input ~= "" then
-    require("CopilotChat").ask(
-      "> /COPILOT_GENERATE\n\nOnly operate on selected code and not on context.\n\n" .. input,
-      {
-        selection = CopilotSelection.visual,
-        context = "buffer",
-      }
-    )
-  end
-end, { desc = "Copilot edit selection" })
 map({ "n" }, "<leader>cs", function()
   local input = vim.fn.input "Perplexity: "
   if input ~= "" then
@@ -120,22 +113,11 @@ map({ "n" }, "<leader>cs", function()
     })
   end
 end, { desc = "Copilot search with perplexity" })
+map({ "n" }, "<leader>gC", function()
+  vim.fn.system "git add ."
+  vim.cmd "CopilotChatCommit"
+end, { desc = "Git commit all changes" })
 -- Flash.nvim
 map({ "v", "o" }, "n", function()
   require("flash").treesitter()
 end, { desc = "Select treesitter node" })
--- Claude Code
-vim.keymap.set({ "n", "t" }, "<A-c>", function()
-  require("nvchad.term").toggle {
-    pos = "float",
-    float_opts = {
-      row = 0.15,
-      col = 0.15,
-      width = 0.7,
-      height = 0.6,
-    },
-    id = "claude",
-    cmd = vim.fn.executable "claude" == 1 and "claude" or "npx @anthropic-ai/claude-code",
-    clear_cmd = false,
-  }
-end, { desc = "Claude Toggle code window" })

@@ -92,6 +92,7 @@ M.cheatsheet = {
     "autopairs",
     "terminal (t)",
     "toggle (v)",
+    "which-key-trigger",
   },
 }
 
