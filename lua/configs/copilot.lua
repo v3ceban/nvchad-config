@@ -20,7 +20,7 @@ local opts = {
   auto_follow_cursor = false,
   auto_insert_mode = false,
   insert_at_end = false,
-  clear_chat_on_new_prompt = true,
+  clear_chat_on_new_prompt = false,
   chat_autocomplete = true,
 
   question_header = "> [!USER] User ",
