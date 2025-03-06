@@ -1,6 +1,6 @@
 -- Copilot Chat configuration
 local opts = {
-  model = "claude-3.5-sonnet",
+  model = "claude-3.7-sonnet",
   agent = "copilot",
   temperature = 0,
 
@@ -78,6 +78,12 @@ local opts = {
       prompt = "/COPILOT_REVIEW\n\nReview the selected code.",
       callback = false,
       sticky = {},
+    },
+  },
+
+  providers = {
+    github_models = {
+      disabled = true,
     },
   },
 
