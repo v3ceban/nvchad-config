@@ -7,7 +7,7 @@ local opts = {
   auto_suggestions_provider = "copilot",
   openai = {
     endpoint = "https://api.openai.com/v1", -- needs OPENAI_API_KEY env variable
-    model = "gpt-4o", -- gpt-4o | o1 | o1-mini
+    model = "o3-mini", -- gpt-4o | o1 | o3-mini
   },
   copilot = {
     endpoint = "https://api.githubcopilot.com", -- needs Copilot plugin with authentication
