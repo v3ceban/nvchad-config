@@ -93,40 +93,40 @@ local CopilotChat = require "CopilotChat"
 local CopilotSelection = require "CopilotChat.select"
 local CopilotTelescope = require "CopilotChat.integrations.telescope"
 local CopilotActions = require "CopilotChat.actions"
+
+local function get_chat_config(selection_type, with_buffer, agent)
+  local config = {
+    selection = selection_type,
+    context = with_buffer and "buffer" or false,
+    remember_as_sticky = false,
+  }
+  if agent then
+    config.agent = agent
+  end
+  return config
+end
+
 map({ "n" }, "<leader>cc", function()
-  CopilotChat.open {
-    selection = CopilotSelection.buffer,
-    context = "buffer",
-  }
-end, { desc = "Copilot chat: Buffer" })
+  CopilotChat.open(get_chat_config(CopilotSelection.buffer, true))
+end, { desc = "Copilot open chat" })
 map({ "v" }, "<leader>cc", function()
-  CopilotChat.open {
-    selection = CopilotSelection.visual,
-    context = false,
-  }
-end, { desc = "Copilot chat: Selection" })
+  CopilotChat.open(get_chat_config(CopilotSelection.visual, false))
+end, { desc = "Copilot open chat" })
+
 map({ "n" }, "<leader>cr", function()
-  CopilotTelescope.pick(CopilotActions.prompt_actions {
-    selection = CopilotSelection.buffer,
-    context = "buffer",
-  })
-end, { desc = "Copilot action: Buffer" })
+  CopilotTelescope.pick(CopilotActions.prompt_actions(get_chat_config(CopilotSelection.buffer, true)))
+end, { desc = "Copilot run action" })
 map({ "v" }, "<leader>cr", function()
-  CopilotTelescope.pick(CopilotActions.prompt_actions {
-    selection = CopilotSelection.visual,
-    context = false,
-  })
-end, { desc = "Copilot action: Selection" })
+  CopilotTelescope.pick(CopilotActions.prompt_actions(get_chat_config(CopilotSelection.visual, false)))
+end, { desc = "Copilot run action" })
+
 map({ "n" }, "<leader>cs", function()
   local input = vim.fn.input "Perplexity: "
   if input ~= "" then
-    CopilotChat.ask(input, {
-      agent = "perplexityai",
-      selection = false,
-      context = false,
-    })
+    CopilotChat.ask(input, get_chat_config(false, false, "perplexityai"))
   end
 end, { desc = "Copilot search with perplexity" })
+
 map({ "n" }, "<leader>gC", function()
   vim.fn.system "git add ."
   vim.cmd "CopilotChatCommit"

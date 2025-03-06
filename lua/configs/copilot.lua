@@ -4,6 +4,11 @@ local opts = {
   agent = "copilot",
   temperature = 0,
 
+  -- selection = function(source)
+  --   local select = require "CopilotChat.select"
+  --   return select.visual(source)
+  -- end,
+
   window = {
     layout = "float", -- vertical | horizontal | float | replace
     width = 0.6,
@@ -28,12 +33,12 @@ local opts = {
   error_header = "> [!ERROR] Error ",
   separator = "",
 
-  -- extends default prompts
   prompts = {
     Commit = {
       prompt = "#git:staged\n\nWrite commit message for the change with commitizen convention. Make sure the title has maximum 50 characters and message is wrapped at 72 characters. Wrap the whole message in code block with language gitcommit.",
       context = false,
       selection = false,
+      sticky = {},
       callback = function(response)
         local commit_message = response:match "```gitcommit\n(.-)\n```"
         if commit_message then
@@ -51,21 +56,28 @@ local opts = {
         end
       end,
     },
-    Dockerfile = {
-      prompt = "/COPILOT_INSTRUCTIONS\n\nGenerate a Dockerfile for this application.",
-      agent = "docker",
-      context = "files:full",
-      selection = false,
+    -- Dockerfile = {
+    --   prompt = "/COPILOT_INSTRUCTIONS\n\nGenerate a Dockerfile for this application.",
+    --   agent = "docker",
+    --   context = "files:full",
+    --   selection = false,
+    -- },
+    Explain = {
+      prompt = "/COPILOT_EXPLAIN\n\nWrite an explanation for the selected code as paragraphs of text",
+      sticky = {},
     },
     Fix = {
       prompt = "/COPILOT_GENERATE\n\nAnalyze the code, identify any issues or problems, and provide a corrected version. Focus on code quality, efficiency, and potential bugs.",
+      sticky = {},
     },
     Grammar = {
       prompt = "/COPILOT_INSTRUCTIONS\n\nPlease correct the grammar in the selected code, following US English grammar rules. Ensure that no code (such as tags, keywords, or language syntax) and formatiing (tabs, spaces, line breaks) is altered. Preserve word choices unless changes are strictly required by grammar rules. Your output should include everything from the selection, retaining the original syntax and content structure, with only the grammar corrected and no line numbers.",
+      sticky = {},
     },
     Review = {
       prompt = "/COPILOT_REVIEW\n\nReview the selected code.",
       callback = false,
+      sticky = {},
     },
   },
 
@@ -86,8 +98,10 @@ local opts = {
       insert = "",
     },
     toggle_sticky = {
-      detail = "Makes line under cursor sticky or deletes sticky line.",
       normal = "<leader>s",
+    },
+    clear_stickies = {
+      normal = "<leader>S",
     },
     accept_diff = {
       normal = "<leader>a",
