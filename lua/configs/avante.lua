@@ -3,7 +3,7 @@ vim.api.nvim_set_hl(0, "DiffAddGroup", { bg = "#272a3f" })
 vim.api.nvim_set_hl(0, "DiffTextGroup", { bg = "#1e2030" })
 
 local opts = {
-  provider = "copilot", -- claude | openai | azure | gemini | cohere | copilot
+  provider = "copilot", -- openai | copilot | ollama
   auto_suggestions_provider = "copilot",
   openai = {
     endpoint = "https://api.openai.com/v1", -- needs OPENAI_API_KEY env variable
@@ -12,6 +12,14 @@ local opts = {
   copilot = {
     endpoint = "https://api.githubcopilot.com", -- needs Copilot plugin with authentication
     model = "claude-3.7-sonnet", -- claude-3.7-sonnet | claude-3.5-sonnet | gpt-4o | o3-mini
+  },
+  ollama = {
+    endpoint = "http://127.0.0.1:11434",
+    model = "qwen2.5-coder", -- "ollama ls" for available models
+    options = {
+      num_ctx = 32768,
+    },
+    stream = true,
   },
   vendors = {
     ["copilot-3.5"] = {
