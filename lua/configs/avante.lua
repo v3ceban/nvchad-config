@@ -1,17 +1,14 @@
--- higlight groups for avante and git-conflict
+-- higlight groups for avante and git-conflict needs to be set here for some reason
 vim.api.nvim_set_hl(0, "DiffAddGroup", { bg = "#272a3f" })
 vim.api.nvim_set_hl(0, "DiffTextGroup", { bg = "#1e2030" })
 
 local opts = {
-  provider = "copilot", -- openai | copilot | ollama
-  auto_suggestions_provider = "copilot",
+  provider = "copilot:3.7",
+  auto_suggestions_provider = "copilot:3.7",
   openai = {
     endpoint = "https://api.openai.com/v1", -- needs OPENAI_API_KEY env variable
-    model = "o3-mini", -- gpt-4o | o1 | o3-mini
-  },
-  copilot = {
-    endpoint = "https://api.githubcopilot.com", -- needs Copilot plugin with authentication
-    model = "claude-3.7-sonnet", -- claude-3.7-sonnet | claude-3.5-sonnet | gpt-4o | o3-mini
+    model = "o3-mini",
+    max_tokens = 16384,
   },
   ollama = {
     endpoint = "http://127.0.0.1:11434",
@@ -22,15 +19,35 @@ local opts = {
     stream = true,
   },
   vendors = {
-    ["copilot-3.5"] = {
+    ["copilot:3.7"] = {
+      __inherited_from = "copilot",
+      model = "claude-3.7-sonnet",
+      max_tokens = 16384,
+    },
+    ["copilot:3.5"] = {
       __inherited_from = "copilot",
       model = "claude-3.5-sonnet",
+      max_tokens = 16384,
     },
-    deepseek = {
+    ["copilot:o3"] = {
+      __inherited_from = "copilot",
+      model = "o3-mini",
+      max_tokens = 16384,
+    },
+    ["deepseek:v3"] = {
       __inherited_from = "openai",
       endpoint = "https://api.deepseek.com/v1",
-      model = "deepseek-chat", -- deepseek-chat | deepseek-reasoner
+      model = "deepseek-chat",
+      max_tokens = 16384,
       api_key_name = "DEEPSEEK_API_KEY", -- needs DEEPSEEK_API_KEY env variable
+      disable_tools = true,
+    },
+    ["deepseek:r1"] = {
+      __inherited_from = "openai",
+      endpoint = "https://api.deepseek.com/v1",
+      model = "deepseek-reasoner",
+      max_tokens = 16384,
+      api_key_name = "DEEPSEEK_API_KEY",
       disable_tools = true,
     },
   },
@@ -129,5 +146,22 @@ local opts = {
     provider = "telescope",
   },
 }
+
+local hidden_models = {
+  "bedrock",
+  "claude",
+  "claude-haiku",
+  "claude-opus",
+  "cohere",
+  "copilot",
+  "gemini",
+  "openai-gpt-4o-mini",
+  "vertex",
+  "vertex_claude",
+}
+
+for _, model in ipairs(hidden_models) do
+  opts[model] = { hide_in_model_selector = true }
+end
 
 return opts
