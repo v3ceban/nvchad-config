@@ -44,17 +44,23 @@ map({ "n" }, "<C-Left>", "<C-w><", { desc = "Resize decrease window width" })
 
 -- Tabufline
 map("n", "<leader>x", function()
-  local success = pcall(function()
-    require("nvchad.tabufline").close_buffer()
-  end)
-  if not success then
-    vim.cmd "q"
+  local count = vim.v.count > 0 and vim.v.count or 1
+  for _ = 1, count do
+    local success = pcall(function()
+      require("nvchad.tabufline").close_buffer()
+    end)
+    if not success then
+      vim.cmd "q"
+      break
+    end
   end
 end, { desc = "close tab or window" })
 for i = 1, 9, 1 do
   map("n", string.format("%s<Tab>", i), function()
-    vim.api.nvim_set_current_buf(vim.t.bufs[i])
-  end)
+    if vim.t.bufs and vim.t.bufs[i] then
+      vim.api.nvim_set_current_buf(vim.t.bufs[i])
+    end
+  end, { desc = string.format("Tabufline go to buffer %s", i), silent = true })
 end
 
 -- Diagnostics

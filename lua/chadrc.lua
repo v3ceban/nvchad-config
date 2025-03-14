@@ -88,6 +88,7 @@ M.cheatsheet = {
     "Save (i)",
     "Save (t)",
     "Save (v)",
+    "Tabufline",
     "Toggle (x)",
     "autopairs",
     "terminal (t)",
