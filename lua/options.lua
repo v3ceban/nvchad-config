@@ -54,7 +54,7 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.api.nvim_buf_set_keymap(
       0,
       "n",
-      "dd",
+      "d",
       ":call setqflist(filter(getqflist(), {idx -> idx != line('.') - 1}))<CR>:redraw!<CR>",
       { noremap = true, silent = true }
     )
