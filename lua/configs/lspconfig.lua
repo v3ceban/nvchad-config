@@ -112,8 +112,10 @@ lspconfig.pylsp.setup {
   settings = {
     pylsp = {
       plugins = {
+        mccabe = {
+          threshold = 50,
+        },
         pycodestyle = {
-          enabled = true,
           ignore = { "E501", "W503" },
           maxLineLength = 120,
         },
