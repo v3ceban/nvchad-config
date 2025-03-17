@@ -56,12 +56,6 @@ local opts = {
         end
       end,
     },
-    -- Dockerfile = {
-    --   prompt = "/COPILOT_INSTRUCTIONS\n\nGenerate a Dockerfile for this application.",
-    --   agent = "docker",
-    --   context = "files:full",
-    --   selection = false,
-    -- },
     Explain = {
       prompt = "/COPILOT_EXPLAIN\n\nWrite an explanation for the selected code as paragraphs of text",
       sticky = {},

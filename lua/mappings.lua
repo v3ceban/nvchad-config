@@ -89,10 +89,10 @@ map(
   { "i" },
   "<M-l>",
   [[copilot#Accept("\\<CR>")]],
-  { desc = "Copilot accept suggestion", expr = true, replace_keycodes = false, silent = true }
+  { desc = "AI Accept suggestion", expr = true, replace_keycodes = false, silent = true }
 )
-map({ "i" }, "<M-j>", "copilot#Next()", { desc = "Copilot next suggestion", expr = true, silent = true })
-map({ "i" }, "<M-k>", "copilot#Previous()", { desc = "Copilot previous suggestion", expr = true, silent = true })
+map({ "i" }, "<M-j>", "copilot#Next()", { desc = "AI Next suggestion", expr = true, silent = true })
+map({ "i" }, "<M-k>", "copilot#Previous()", { desc = "AI Previous suggestion", expr = true, silent = true })
 
 -- Copilot Chat
 local CopilotChat = require "CopilotChat"
@@ -112,31 +112,36 @@ local function get_chat_config(selection_type, with_buffer, agent)
   return config
 end
 
-map({ "n" }, "<leader>cc", function()
+map({ "n" }, "<leader>ac", function()
   CopilotChat.open(get_chat_config(CopilotSelection.buffer, true))
-end, { desc = "Copilot open chat" })
-map({ "v" }, "<leader>cc", function()
+end, { desc = "AI Open chat" })
+map({ "v" }, "<leader>ac", function()
   CopilotChat.open(get_chat_config(CopilotSelection.visual, false))
-end, { desc = "Copilot open chat" })
+end, { desc = "AI Open chat with selected code" })
 
-map({ "n" }, "<leader>cr", function()
+map({ "n" }, "<leader>ar", function()
   CopilotTelescope.pick(CopilotActions.prompt_actions(get_chat_config(CopilotSelection.buffer, true)))
-end, { desc = "Copilot run action" })
-map({ "v" }, "<leader>cr", function()
+end, { desc = "AI Run action" })
+map({ "v" }, "<leader>ar", function()
   CopilotTelescope.pick(CopilotActions.prompt_actions(get_chat_config(CopilotSelection.visual, false)))
-end, { desc = "Copilot run action" })
+end, { desc = "AI Run action on selected code" })
 
-map({ "n" }, "<leader>cs", function()
+map({ "n" }, "<leader>ap", function()
   local input = vim.fn.input "Perplexity: "
   if input ~= "" then
     CopilotChat.ask(input, get_chat_config(false, false, "perplexityai"))
   end
-end, { desc = "Copilot search with perplexity" })
+end, { desc = "AI Search with perplexity" })
 
-map({ "n" }, "<leader>gC", function()
+map({ "n" }, "<leader>agc", function()
   vim.fn.system "git add ."
   vim.cmd "CopilotChatCommit"
-end, { desc = "Git commit all changes" })
+end, { desc = "AI Generate commit" })
+
+-- Avante
+map({ "n" }, "<M-a>", "<cmd>AvanteToggle<CR>", { desc = "AI Toggle chat" })
+map({ "v" }, "<leader>ae", "<cmd>AvanteEdit<CR>", { desc = "AI Edit selected code" })
+map({ "n" }, "<leader>am", "<cmd>AvanteModels<CR>", { desc = "AI Change model" })
 
 -- Flash.nvim
 map({ "v", "o" }, "n", function()

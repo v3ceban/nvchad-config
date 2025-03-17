@@ -22,6 +22,7 @@ local opts = {
     ["copilot:3.7"] = {
       __inherited_from = "copilot",
       model = "claude-3.7-sonnet",
+      disable_tools = true, -- until 3.7 behaves well with tools enabled
       max_tokens = 16384,
     },
     ["copilot:3.5"] = {
@@ -102,15 +103,15 @@ local opts = {
       normal = "<CR>",
       insert = "<C-s>",
     },
-    ask = "<leader>aa",
-    edit = "<leader>ae",
-    refresh = "<leader>ar",
     -- <leader>sr map is set in mappings.lua as noremap
     -- setting avante maps to this key will effectively disable it
     -- and hide it from nvchad cheatsheet
+    ask = "<leader>sr",
+    edit = "<leader>sr",
+    refresh = "<leader>sr",
     focus = "<leader>sr", -- disabled
     toggle = {
-      default = "<M-a>",
+      default = "<leader>sr",
       debug = "<leader>sr", -- disabled
       hint = "<leader>sr", -- disabled
       suggestion = "<leader>sr", -- disabled
@@ -128,9 +129,9 @@ local opts = {
       close = { "<Esc>", "<leader>x" },
     },
     files = {
-      add_current = "<leader>af",
+      add_current = "<leader>sr",
     },
-    select_model = "<leader>am",
+    select_model = "<leader>sr",
   },
   highlights = {
     diff = {
