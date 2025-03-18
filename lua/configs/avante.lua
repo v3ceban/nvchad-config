@@ -106,9 +106,9 @@ local opts = {
     -- <leader>sr map is set in mappings.lua as noremap
     -- setting avante maps to this key will effectively disable it
     -- and hide it from nvchad cheatsheet
-    ask = "<leader>sr",
-    edit = "<leader>sr",
-    refresh = "<leader>sr",
+    ask = "<leader>sr", -- disabled
+    edit = "<leader>sr", -- disabled
+    refresh = "<leader>sr", -- disabled
     focus = "<leader>sr", -- disabled
     toggle = {
       default = "<leader>sr",
@@ -129,7 +129,7 @@ local opts = {
       close = { "<Esc>", "<leader>x" },
     },
     files = {
-      add_current = "<leader>sr",
+      add_current = "<M-f>",
     },
     select_model = "<leader>sr",
   },
