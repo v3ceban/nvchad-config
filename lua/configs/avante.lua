@@ -25,6 +25,12 @@ local opts = {
       disable_tools = true, -- until 3.7 behaves well with tools enabled
       max_tokens = 16384,
     },
+    ["copilot:3.7-tools"] = {
+      __inherited_from = "copilot",
+      model = "claude-3.7-sonnet",
+      disable_tools = false,
+      max_tokens = 16384,
+    },
     ["copilot:3.5"] = {
       __inherited_from = "copilot",
       model = "claude-3.5-sonnet",
