@@ -17,6 +17,7 @@ local opts = {
     ["copilot:3.7"] = {
       __inherited_from = "copilot",
       model = "claude-3.7-sonnet",
+      disable_tools = true, -- still not working good
     },
     ["copilot:3.5"] = {
       __inherited_from = "copilot",
