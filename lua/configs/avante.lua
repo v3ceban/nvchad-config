@@ -18,14 +18,17 @@ local opts = {
       __inherited_from = "copilot",
       model = "claude-3.7-sonnet",
       disable_tools = true, -- still not working good
+      max_tokens = 32768,
     },
     ["copilot:3.5"] = {
       __inherited_from = "copilot",
       model = "claude-3.5-sonnet",
+      max_tokens = 32768,
     },
     ["copilot:o3"] = {
       __inherited_from = "copilot",
       model = "o3-mini",
+      max_tokens = 32768,
     },
     ["deepseek:v3"] = {
       __inherited_from = "openai",
@@ -33,6 +36,7 @@ local opts = {
       model = "deepseek-chat",
       api_key_name = "DEEPSEEK_API_KEY", -- needs DEEPSEEK_API_KEY env variable
       disable_tools = true,
+      max_tokens = 8192,
     },
     ["deepseek:r1"] = {
       __inherited_from = "openai",
