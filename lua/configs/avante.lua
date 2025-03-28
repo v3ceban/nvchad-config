@@ -61,7 +61,7 @@ local opts = {
     minimize_diff = true,
     enable_token_counting = false,
     enable_cursor_planning_mode = false,
-    enable_claude_text_editor_tool_mode = true,
+    enable_claude_text_editor_tool_mode = false,
     use_cwd_as_project_root = false,
   },
   windows = {
