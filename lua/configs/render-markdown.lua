@@ -188,9 +188,9 @@ local opts = {
     --  full:  full width of the window
     width = "full",
     -- Amount of padding to add to the left of code blocks
-    left_pad = 2,
+    left_pad = 1,
     -- Amount of padding to add to the right of code blocks when width is 'block'
-    right_pad = 2,
+    right_pad = 1,
     -- Minimum width to use for code blocks when width is 'block'
     min_width = 0,
     -- Determins how the top / bottom of code block are rendered:

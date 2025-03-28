@@ -6,9 +6,9 @@ return {
   },
   {
     "yetone/avante.nvim",
-    event = "User",
+    event = "VeryLazy",
     build = "make",
-    version = "*",
+    version = false,
     dependencies = {
       "MunifTanjim/nui.nvim",
     },

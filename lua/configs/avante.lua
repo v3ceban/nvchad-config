@@ -1,14 +1,9 @@
--- higlight groups for avante and git-conflict needs to be set here for some reason
-vim.api.nvim_set_hl(0, "DiffAddGroup", { bg = "#272a3f" })
-vim.api.nvim_set_hl(0, "DiffTextGroup", { bg = "#1e2030" })
-
 local opts = {
   provider = "copilot:3.7",
   auto_suggestions_provider = "copilot:3.7",
   openai = {
     endpoint = "https://api.openai.com/v1", -- needs OPENAI_API_KEY env variable
     model = "o3-mini",
-    max_tokens = 16384,
   },
   ollama = {
     endpoint = "http://127.0.0.1:11434",
@@ -22,30 +17,19 @@ local opts = {
     ["copilot:3.7"] = {
       __inherited_from = "copilot",
       model = "claude-3.7-sonnet",
-      disable_tools = true, -- until 3.7 behaves well with tools enabled
-      max_tokens = 16384,
-    },
-    ["copilot:3.7-tools"] = {
-      __inherited_from = "copilot",
-      model = "claude-3.7-sonnet",
-      disable_tools = false,
-      max_tokens = 16384,
     },
     ["copilot:3.5"] = {
       __inherited_from = "copilot",
       model = "claude-3.5-sonnet",
-      max_tokens = 16384,
     },
     ["copilot:o3"] = {
       __inherited_from = "copilot",
       model = "o3-mini",
-      max_tokens = 16384,
     },
     ["deepseek:v3"] = {
       __inherited_from = "openai",
       endpoint = "https://api.deepseek.com/v1",
       model = "deepseek-chat",
-      max_tokens = 16384,
       api_key_name = "DEEPSEEK_API_KEY", -- needs DEEPSEEK_API_KEY env variable
       disable_tools = true,
     },
@@ -53,7 +37,6 @@ local opts = {
       __inherited_from = "openai",
       endpoint = "https://api.deepseek.com/v1",
       model = "deepseek-reasoner",
-      max_tokens = 16384,
       api_key_name = "DEEPSEEK_API_KEY",
       disable_tools = true,
     },
@@ -78,9 +61,12 @@ local opts = {
     minimize_diff = true,
     enable_token_counting = false,
     enable_cursor_planning_mode = false,
+    enable_claude_text_editor_tool_mode = true,
+    use_cwd_as_project_root = false,
   },
   windows = {
     position = "right", -- "right" | "left" | "top" | "bottom" | "smart"
+    wrap = true,
     ask = {
       start_insert = false,
     },
@@ -116,6 +102,7 @@ local opts = {
     edit = "<leader>sr", -- disabled
     refresh = "<leader>sr", -- disabled
     focus = "<leader>sr", -- disabled
+    stop = "<leader>sr", -- disabled
     toggle = {
       default = "<leader>sr",
       debug = "<leader>sr", -- disabled
@@ -133,11 +120,14 @@ local opts = {
       remove_file = "d",
       add_file = "@",
       close = { "<Esc>", "<leader>x" },
+      close_from_input = { normal = { "<Esc>", "<leader>x" } },
     },
     files = {
       add_current = "<M-f>",
+      add_all_buffers = "<M-F>",
     },
     select_model = "<leader>sr",
+    select_history = "<leader>sr",
   },
   highlights = {
     diff = {
