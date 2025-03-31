@@ -95,42 +95,42 @@ local opts = {
     },
     submit_prompt = {
       normal = "<CR>",
-      insert = "",
+      insert = "<C-s>",
     },
     toggle_sticky = {
-      normal = "<leader>s",
+      normal = "<leader>cs",
     },
     clear_stickies = {
-      normal = "<leader>S",
+      normal = "<leader>cS",
     },
     accept_diff = {
-      normal = "<leader>a",
+      normal = "<leader>ga",
       insert = "",
     },
     jump_to_diff = {
-      normal = "",
+      normal = "<leader>gj",
     },
     quickfix_answers = {
-      normal = "",
+      normal = "<leader>gqa",
     },
     quickfix_diffs = {
-      normal = "",
+      normal = "<leader>gqd",
     },
     yank_diff = {
-      normal = "",
+      normal = "<leader>gy",
       register = '"',
     },
     show_diff = {
-      normal = "<leader>d",
+      normal = "<leader>gd",
     },
     show_info = {
-      normal = "<leader>i",
+      normal = "<leader>gi",
     },
     show_context = {
-      normal = "<leader>c",
+      normal = "<leader>gc",
     },
     show_help = {
-      normal = "<leader>h",
+      normal = "<leader>gh",
     },
   },
 }

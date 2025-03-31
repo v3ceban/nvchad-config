@@ -59,7 +59,7 @@ local opts = {
     auto_suggestions = false,
     auto_suggestions_respect_ignore = false,
     auto_set_highlight_group = true,
-    auto_set_keymaps = true,
+    auto_set_keymaps = false,
     auto_apply_diff_after_generation = false,
     jump_result_buffer_on_finish = false,
     support_paste_from_clipboard = false,
@@ -100,20 +100,21 @@ local opts = {
       normal = "<CR>",
       insert = "<C-s>",
     },
-    -- <leader>sr map is set in mappings.lua as noremap
-    -- setting avante maps to this key will effectively disable it
-    -- and hide it from nvchad cheatsheet
-    ask = "<leader>sr", -- disabled
-    edit = "<leader>sr", -- disabled
-    refresh = "<leader>sr", -- disabled
-    focus = "<leader>sr", -- disabled
-    stop = "<leader>sr", -- disabled
+    cancel = {
+      normal = { "<C-c>", "<Esc>" },
+      insert = { "<C-c>" },
+    },
+    ask = false,
+    edit = false,
+    refresh = false,
+    focus = false,
+    stop = false,
     toggle = {
       default = "<leader>sr",
-      debug = "<leader>sr", -- disabled
-      hint = "<leader>sr", -- disabled
-      suggestion = "<leader>sr", -- disabled
-      repomap = "<leader>sr", -- disabled
+      debug = false,
+      hint = false,
+      suggestion = false,
+      repomap = false,
     },
     sidebar = {
       apply_all = "A",
@@ -131,8 +132,8 @@ local opts = {
       add_current = "<M-f>",
       add_all_buffers = "<M-F>",
     },
-    select_model = "<leader>sr",
-    select_history = "<leader>sr",
+    select_model = false,
+    select_history = false,
   },
   highlights = {
     diff = {

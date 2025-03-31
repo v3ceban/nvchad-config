@@ -143,7 +143,13 @@ map({ "n" }, "<M-a>", "<cmd>AvanteToggle<CR>", { desc = "AI Toggle chat" })
 map({ "v" }, "<leader>ae", "<cmd>AvanteEdit<CR>", { desc = "AI Edit selected code" })
 map({ "n" }, "<leader>am", "<cmd>AvanteModels<CR>", { desc = "AI Change model" })
 map({ "n" }, "<leader>ah", "<cmd>AvanteHistory<CR>", { desc = "AI Select history" })
-map({ "n" }, "<leader>as", "<cmd>AvanteStop<CR>", { desc = "AI Stop generating" })
+map({ "n" }, "<leader>as", function()
+  if vim.bo.filetype == "copilot-chat" then
+    vim.cmd "CopilotChatStop"
+  else
+    vim.cmd "AvanteStop"
+  end
+end, { desc = "AI Stop generating" })
 
 -- Flash.nvim
 map({ "v", "o" }, "n", function()
