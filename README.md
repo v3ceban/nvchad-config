@@ -132,11 +132,16 @@ Plugin that helps with abbreviations and substitutions.
 
 ### Avante
 
-This is still work in progress, and [Avante](https://github.com/yetone/avante.nvim) can be disabled by commenting
-the corresponding lines in `plugins.lua`. As plugin matures it can
-potentially replace [CopilotChat](https://github.com/CopilotC-Nvim/CopilotChat.nvim) and, possibly, [Copilot](https://github.com/github/copilot.vim) itself.
-To use with anything other than Copilot, API keys need to be set in
+[Avante.nvim](https://github.com/yetone/avante.nvim) is used to edit code with llms. It supports different AI providers
+and models, tools (file creation, reading, web search, etc.) and has a clean chat
+interface. To use with anything other than Copilot, API keys need to be set in
 environment variables (e.g. `OPENAI_API_KEY="your key"`).
+
+- Default provider is `copilot` with `claude` model (needs to be enabled in github)
+- `<leader>am` to change provider/model
+- `<leader>ae` to edit visual selection
+- `<M-a>` to toggle chat window
+- `<M-f>` to add currently opened file to chat context
 
 ### Copilot
 
@@ -147,12 +152,11 @@ Enables Copilot integration and quick commands
 - Press `<M-l>` in insert mode to accept Copilot autocompletion suggestions
 - Press `<M-j>` or `<M-k>` in insert mode to cycle through suggestions
 - Uses the [CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim) plugin for chat and some extra functionality
-  - `<leader>cc` to open chat
+  - `<leader>ac` to open chat
     - `<leader>h` in chat window to show help
-  - `<leader>cr` to run a command
-  - `<leader>cs` to search with perplexity
-  - `<leader>ce` to edit selected code
-  - `<leader>gC` to add all changes to git and generate a commit message
+  - `<leader>ar` to run a command
+  - `<leader>ap` to search with perplexity
+  - `<leader>agc` to add all changes to git and generate a commit message
 
 ### Flash.nvim
 
