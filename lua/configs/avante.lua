@@ -1,6 +1,6 @@
 local opts = {
-  provider = "copilot:3.7",
-  auto_suggestions_provider = "copilot:3.7",
+  provider = "copilot:3.5",
+  auto_suggestions_provider = "copilot:3.5",
   openai = {
     endpoint = "https://api.openai.com/v1", -- needs OPENAI_API_KEY env variable
     model = "o3-mini",
@@ -29,6 +29,11 @@ local opts = {
       __inherited_from = "copilot",
       model = "o3-mini",
       max_tokens = 32768,
+    },
+    ["copilot:gemini"] = {
+      __inherited_from = "copilot",
+      model = "gemini-2.0-flash-001",
+      max_tokens = 65536,
     },
     ["deepseek:v3"] = {
       __inherited_from = "openai",
@@ -151,6 +156,8 @@ local opts = {
 }
 
 local hidden_models = {
+  "aihubmix",
+  "aihubmix-claude",
   "bedrock",
   "claude",
   "claude-haiku",
