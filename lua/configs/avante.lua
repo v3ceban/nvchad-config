@@ -50,6 +50,20 @@ local opts = {
       api_key_name = "DEEPSEEK_API_KEY",
       disable_tools = true,
     },
+    ["groq:r1"] = {
+      __inherited_from = "openai",
+      endpoint = "https://api.groq.com/openai/v1/",
+      model = "deepseek-r1-distill-llama-70b",
+      api_key_name = "GROQ_API_KEY", -- needs GROQ_API_KEY env variable
+      max_tokens = 131072,
+    },
+    ["groq:qwen"] = {
+      __inherited_from = "openai",
+      endpoint = "https://api.groq.com/openai/v1/",
+      model = "qwen-2.5-coder-32b",
+      api_key_name = "GROQ_API_KEY",
+      max_tokens = 131072,
+    },
   },
   dual_boost = {
     enabled = false,
