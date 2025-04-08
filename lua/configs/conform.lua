@@ -63,6 +63,11 @@ local options = {
     timeout_ms = 1000,
     lsp_format = "fallback",
   },
+
+  default_format_opts = {
+    timeout_ms = 1000,
+    lsp_format = "fallback",
+  },
 }
 
 return options
