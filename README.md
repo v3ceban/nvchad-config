@@ -64,7 +64,7 @@ The configuration can be used as is and doesn't require any further setup.
 ### JavaScript/TypeScript
 
 - Uses [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) for LSP
-- Uses [eslint](https://github.com/Microsoft/vscode-eslint) for linting
+- Uses [eslintd](https://github.com/mantoni/eslint_d.js/) for linting
 - Uses [prettierd](https://github.com/fsouza/prettierd) for formatting
 - Requires eslint config to run linting server
   - Run `npm init` if not already done

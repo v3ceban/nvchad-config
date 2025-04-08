@@ -13,7 +13,6 @@ local servers = {
   "html",
   "prismals",
   "jsonls",
-  "eslint",
 }
 
 for _, lsp in ipairs(servers) do
