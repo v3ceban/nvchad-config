@@ -12,6 +12,8 @@ local servers = {
   "dockerls",
   "html",
   "prismals",
+  "jsonls",
+  "eslint",
 }
 
 for _, lsp in ipairs(servers) do

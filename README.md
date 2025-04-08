@@ -51,25 +51,30 @@ The configuration can be used as is and doesn't require any further setup.
 ### HTML
 
 - Uses [css-lsp](https://github.com/microsoft/vscode-css-languageservice) for LSP and linting
-- Uses [prettierd](https://github.com/fsouza/prettierd) for formatting
+- Uses [prettier](https//prettier.io/) for formatting
 - Uses [emmet](https://github.com/olrtg/emmet-language-server) for LSP snippets
 
 ### CSS
 
 - Uses [html-lsp](https://github.com/microsoft/vscode-html-languageservice) for LSP and linting
-- Uses [prettierd](https://github.com/fsouza/prettierd) for formatting
+- Uses [prettier](https//prettier.io/) for formatting
 - Uses [tailwindcss-language-server](https://github.com/tailwindlabs/tailwindcss-intellisense) for Tailwind LSP
 - Uses [rustywind](https://github.com/avencera/rustywind) for Tailwind classes organization
 
 ### JavaScript/TypeScript
 
 - Uses [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) for LSP
-- Uses [eslint_d](https://github.com/mantoni/eslint_d.js) for linting
-- Uses [prettierd](https://github.com/fsouza/prettierd) for formatting
+- Uses [eslint](https://github.com/Microsoft/vscode-eslint) for linting
+- Uses [prettier](https//prettier.io/) for formatting
 - Requires eslint config to run linting server
   - Run `npm init` if not already done
   - Run `npm init @eslint/config@latest` in the root of the project
 - Uses [prisma-language-server](https://github.com/prisma/language-tools) for LSP in Prisma files
+
+### JSON
+
+- Uses [json-lsp](https://github.com/microsoft/vscode-json-languageservice) for LSP in JSON files
+- Uses [fixjson](https://github.com/rhysd/fixjson) for formatting JSON files
 
 ### PHP
 
@@ -132,16 +137,29 @@ Plugin that helps with abbreviations and substitutions.
 
 ### Avante
 
-[Avante.nvim](https://github.com/yetone/avante.nvim) is used to edit code with llms. It supports different AI providers
-and models, tools (file creation, reading, web search, etc.) and has a clean chat
-interface. To use with anything other than Copilot, API keys need to be set in
-environment variables (e.g. `OPENAI_API_KEY="your key"`).
+[Avante.nvim](https://github.com/yetone/avante.nvim) is used to edit code with LLMs. It supports different AI providers and models,
+tools (file creation, reading, web search, etc.) and has a clean chat interface.
 
-- Default provider is `copilot` with `claude` model (needs to be enabled in github)
-- `<leader>am` to change provider/model
-- `<leader>ae` to edit visual selection
-- `<M-a>` to toggle chat window
-- `<M-f>` to add currently opened file to chat context
+#### Setup & Configuration
+
+- Default provider is `copilot` with Claude 3.5 Sonnet model
+- Various providers supported:
+  - Copilot (Claude 3.7/3.5, GPT-4o/o3-mini, Gemini)
+  - OpenAI (needs `OPENAI_API_KEY`)
+  - Deepseek (needs `DEEPSEEK_API_KEY`)
+  - Groq (needs `GROQ_API_KEY`)
+  - Ollama (local models)
+- Web search powered by Tavily (needs `TAVILY_API_KEY`)
+
+#### Keybindings
+
+- `<M-a>` - Toggle chat window
+- `<leader>am` - Change provider/model
+- `<leader>ae` - Edit visual selection with AI
+- `<leader>ah` - View chat history
+- `<leader>as` - Stop AI generation
+- `<M-f>` - Add current buffer to chat context
+- `<M-F>` - Add all open buffers to chat context
 
 ### Copilot
 
