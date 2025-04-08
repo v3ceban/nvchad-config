@@ -60,12 +60,12 @@ local options = {
   },
 
   format_on_save = {
-    timeout_ms = 1000,
+    timeout_ms = 2000,
     lsp_format = "fallback",
   },
 
   default_format_opts = {
-    timeout_ms = 1000,
+    timeout_ms = 2000,
     lsp_format = "fallback",
   },
 }
