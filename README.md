@@ -51,13 +51,13 @@ The configuration can be used as is and doesn't require any further setup.
 ### HTML
 
 - Uses [css-lsp](https://github.com/microsoft/vscode-css-languageservice) for LSP and linting
-- Uses [prettier](https//prettier.io/) for formatting
+- Uses [prettierd](https://github.com/fsouza/prettierd) for formatting
 - Uses [emmet](https://github.com/olrtg/emmet-language-server) for LSP snippets
 
 ### CSS
 
 - Uses [html-lsp](https://github.com/microsoft/vscode-html-languageservice) for LSP and linting
-- Uses [prettier](https//prettier.io/) for formatting
+- Uses [prettierd](https://github.com/fsouza/prettierd) for formatting
 - Uses [tailwindcss-language-server](https://github.com/tailwindlabs/tailwindcss-intellisense) for Tailwind LSP
 - Uses [rustywind](https://github.com/avencera/rustywind) for Tailwind classes organization
 
@@ -65,7 +65,7 @@ The configuration can be used as is and doesn't require any further setup.
 
 - Uses [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) for LSP
 - Uses [eslint](https://github.com/Microsoft/vscode-eslint) for linting
-- Uses [prettier](https//prettier.io/) for formatting
+- Uses [prettierd](https://github.com/fsouza/prettierd) for formatting
 - Requires eslint config to run linting server
   - Run `npm init` if not already done
   - Run `npm init @eslint/config@latest` in the root of the project
