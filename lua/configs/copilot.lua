@@ -98,10 +98,10 @@ local opts = {
       insert = "<C-s>",
     },
     toggle_sticky = {
-      normal = "<leader>cs",
+      normal = "<leader>ts",
     },
     clear_stickies = {
-      normal = "<leader>cS",
+      normal = "<leader>tS",
     },
     accept_diff = {
       normal = "<leader>ga",
@@ -121,16 +121,16 @@ local opts = {
       register = '"',
     },
     show_diff = {
-      normal = "<leader>gd",
+      normal = "<leader>d",
     },
     show_info = {
-      normal = "<leader>gi",
+      normal = "<leader>i",
     },
     show_context = {
-      normal = "<leader>gc",
+      normal = "<leader>c",
     },
     show_help = {
-      normal = "<leader>gh",
+      normal = "<leader>h",
     },
   },
 }
