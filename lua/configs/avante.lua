@@ -13,7 +13,7 @@ local opts = {
   openai = {
     endpoint = "https://api.openai.com/v1", -- needs OPENAI_API_KEY env variable
     model = "o3-mini",
-    max_tokens = tokens(64),
+    max_completion_tokens = tokens(64),
     reasoning_effort = "high",
   },
   ollama = {
