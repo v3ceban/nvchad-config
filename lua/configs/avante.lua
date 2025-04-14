@@ -40,10 +40,15 @@ local opts = {
       model = "o3-mini",
       max_tokens = tokens(64),
     },
+    ["copilot:gpt-4.1"] = {
+      __inherited_from = "copilot",
+      model = "gpt-4.1",
+      max_tokens = tokens(256),
+    },
     ["copilot:gemini"] = {
       __inherited_from = "copilot",
-      model = "gemini-2.0-flash-001",
-      max_tokens = tokens(128),
+      model = "gemini-2.5-pro",
+      max_tokens = tokens(256),
     },
     ["deepseek:v3"] = {
       __inherited_from = "openai",
