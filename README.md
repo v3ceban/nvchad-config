@@ -7,6 +7,12 @@ This config transforms NeoVim into a full-fledged IDE with LSP support, linting,
 autocompletion, AI-powered code suggestions, and more. It also includes some quality of life
 improvements and additional features to make coding more enjoyable.
 
+> [!WARNING]
+> Since Neovim 0.11 is not yet available on Fedora 41 and PostmarketOS Edge (Alpine)
+> some plugins can't be updated. DO NOT RUN `:Lazy sync` to update plugins, unless
+> you have 0.11 installed. Provided `lazy-lock.json` is compatible with 0.10.4, the
+> latest version available on systems I use.
+
 The configuration can be used as is and doesn't require any further setup.
 
 > [!NOTE]
