@@ -1,6 +1,6 @@
 -- Copilot Chat configuration
 local opts = {
-  model = "claude-3.5-sonnet",
+  model = "gpt-4.1",
   agent = "copilot",
   temperature = 0,
 

@@ -1,54 +1,60 @@
-local function tokens(num)
-  return num * 1024
-end
-
 local opts = {
-  provider = "copilot",
-  auto_suggestions_provider = "copilot",
-  copilot = {
-    endpoint = "https://api.githubcopilot.com", -- needs Copilot plugin authentication
-    model = "claude-3.5-sonnet",
-    max_tokens = tokens(64),
-  },
-  openai = {
-    endpoint = "https://api.openai.com/v1", -- needs OPENAI_API_KEY env variable
-    model = "o3-mini",
-    max_completion_tokens = tokens(64),
-    reasoning_effort = "high",
-  },
+  provider = "copilot:gpt-4.1",
+  auto_suggestions_provider = "copilot:gpt-4.1",
   ollama = {
     endpoint = "http://127.0.0.1:11434",
     model = "qwen2.5-coder", -- "ollama ls" for available models
     options = {
-      num_ctx = tokens(32),
+      num_ctx = 32768,
     },
     stream = true,
   },
   vendors = {
-    ["copilot:3.7-thought"] = {
-      __inherited_from = "copilot",
-      model = "claude-3.7-sonnet-thought",
-      max_tokens = tokens(64),
+    ["openai:o4-mini"] = {
+      __inherited_from = "openai",
+      model = "o4-mini",
+      max_completion_tokens = 100000,
+      reasoning_effort = "high",
     },
-    ["copilot:3.7"] = {
+    ["openai:gpt-4.1"] = {
+      __inherited_from = "openai",
+      model = "gpt-4.1",
+      max_tokens = 32768,
+    },
+    ["copilot:claude-3.5"] = {
+      __inherited_from = "copilot",
+      model = "claude-3.5-sonnet",
+      max_tokens = 65536,
+    },
+    ["copilot:claude-3.7"] = {
       __inherited_from = "copilot",
       model = "claude-3.7-sonnet",
-      max_tokens = tokens(64),
+      max_tokens = 65536,
     },
-    ["copilot:o3"] = {
+    ["copilot:claude-3.7-thought"] = {
       __inherited_from = "copilot",
-      model = "o3-mini",
-      max_tokens = tokens(64),
+      model = "claude-3.7-sonnet-thought",
+      max_tokens = 65536,
+    },
+    ["copilot:o4-mini"] = {
+      __inherited_from = "copilot",
+      model = "o4-mini",
+      max_tokens = 100000,
     },
     ["copilot:gpt-4.1"] = {
       __inherited_from = "copilot",
       model = "gpt-4.1",
-      max_tokens = tokens(256),
+      max_tokens = 32768,
     },
-    ["copilot:gemini"] = {
+    ["copilot:gemini-2.0"] = {
+      __inherited_from = "copilot",
+      model = "gemini-2.0-flash-001",
+      max_tokens = 8192,
+    },
+    ["copilot:gemini-2.5"] = {
       __inherited_from = "copilot",
       model = "gemini-2.5-pro",
-      max_tokens = tokens(256),
+      max_tokens = 65536,
     },
     ["deepseek:v3"] = {
       __inherited_from = "openai",
@@ -56,7 +62,7 @@ local opts = {
       model = "deepseek-chat",
       api_key_name = "DEEPSEEK_API_KEY", -- needs DEEPSEEK_API_KEY env variable
       disable_tools = true,
-      max_tokens = tokens(8),
+      max_tokens = 8192,
     },
     ["deepseek:r1"] = {
       __inherited_from = "openai",
@@ -64,21 +70,7 @@ local opts = {
       model = "deepseek-reasoner",
       api_key_name = "DEEPSEEK_API_KEY",
       disable_tools = true,
-      max_tokens = tokens(8),
-    },
-    ["groq:r1"] = {
-      __inherited_from = "openai",
-      endpoint = "https://api.groq.com/openai/v1/",
-      model = "deepseek-r1-distill-llama-70b",
-      api_key_name = "GROQ_API_KEY", -- needs GROQ_API_KEY env variable
-      max_tokens = tokens(128),
-    },
-    ["groq:qwen"] = {
-      __inherited_from = "openai",
-      endpoint = "https://api.groq.com/openai/v1/",
-      model = "qwen-2.5-coder-32b",
-      api_key_name = "GROQ_API_KEY",
-      max_tokens = tokens(128),
+      max_tokens = 8192,
     },
   },
   dual_boost = {
@@ -103,6 +95,9 @@ local opts = {
     enable_cursor_planning_mode = false,
     enable_claude_text_editor_tool_mode = false,
     use_cwd_as_project_root = false,
+  },
+  disabled_tools = {
+    "python",
   },
   windows = {
     position = "right", -- "right" | "left" | "top" | "bottom" | "smart"
@@ -189,11 +184,14 @@ local hidden_models = {
   "aihubmix",
   "aihubmix-claude",
   "bedrock",
+  "bedrock-claude-3.7-sonnet",
   "claude",
   "claude-haiku",
   "claude-opus",
   "cohere",
+  "copilot",
   "gemini",
+  "openai",
   "openai-gpt-4o-mini",
   "vertex",
   "vertex_claude",
