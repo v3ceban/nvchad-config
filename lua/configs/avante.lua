@@ -21,6 +21,10 @@ local opts = {
       model = "gpt-4.1",
       max_tokens = 32768,
     },
+    -- copilot doesn't seem to care about max_tokens values,
+    -- be it 8k or over 9000k, max_tokens values below are
+    -- pulled from corresponding vendor model specifications
+    -- and may or may not do anything
     ["copilot:claude-3.5"] = {
       __inherited_from = "copilot",
       model = "claude-3.5-sonnet",
