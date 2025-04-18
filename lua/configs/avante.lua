@@ -6,6 +6,7 @@ local opts = {
     model = "qwen2.5-coder", -- "ollama ls" for available models
     options = {
       num_ctx = 32768,
+      keep_alive = "20m",
     },
     stream = true,
   },
