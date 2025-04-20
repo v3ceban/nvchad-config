@@ -7,6 +7,10 @@ map({ "n", "i", "v", "t" }, "<C-s>", "<cmd>wa<CR>", { desc = "Save all files" })
 map({ "n", "i", "v", "t" }, "<C-q>", "<cmd>qa!<CR>", { desc = "Close all buffers and quit" })
 map({ "n", "i", "v", "t" }, "<C-z>", "<nop>")
 map({ "n", "v" }, "Q", "q")
+map({ "v" }, "<C-c>", "y", { desc = "general Copy selection" })
+map({ "v" }, "<C-x>", "d", { desc = "general Cut selection" })
+
+-- Search and replace
 map({ "n" }, "<leader>sw", [[:/<C-r><C-w><CR>]], { desc = "Search word", noremap = true })
 map(
   { "n" },
@@ -33,10 +37,14 @@ map(
   [["zy:%Subvert/<C-r>z/<C-r>z/gc<Left><Left><Left>]],
   { desc = "Search subvert selection", noremap = true }
 )
+
+-- Selection movement
 map({ "v" }, "J", ":m '>+1<CR>gv=gv", { desc = "Move selection down", silent = true })
 map({ "v" }, "K", ":m '<-2<CR>gv=gv", { desc = "Move selection up", silent = true })
 map({ "v" }, ">", ">gv", { desc = "Indent selection right", silent = true })
 map({ "v" }, "<", "<gv", { desc = "Indent selection left", silent = true })
+
+-- Resize windows
 map({ "n" }, "<C-Up>", "<C-w>+", { desc = "Resize increase window height" })
 map({ "n" }, "<C-Down>", "<C-w>-", { desc = "Resize decrease window height" })
 map({ "n" }, "<C-Right>", "<C-w>>", { desc = "Resize increase window width" })
@@ -63,13 +71,26 @@ for i = 1, 9, 1 do
   end, { desc = string.format("Tabufline go to buffer %s", i), silent = true })
 end
 
--- Diagnostics
+-- Diagnostics and LSP
 map({ "n" }, "[d", function()
-  vim.diagnostic.goto_prev { border = "rounded" }
+  vim.diagnostic.jump {
+    count = -1,
+    float = {
+      border = "rounded",
+    },
+  }
 end, { desc = "LSP previous diagnostic", silent = true })
 map({ "n" }, "]d", function()
-  vim.diagnostic.goto_next { border = "rounded" }
+  vim.diagnostic.jump {
+    count = 1,
+    float = {
+      border = "rounded",
+    },
+  }
 end, { desc = "LSP next diagnostic", silent = true })
+map({ "n" }, "K", function()
+  vim.lsp.buf.hover { border = "rounded" }
+end, { desc = "LSP show available info", silent = true })
 
 -- Gitsigns
 map({ "n" }, "<leader>gb", "<cmd>lua require('gitsigns').blame_line()<CR>", { desc = "Git blame line" })

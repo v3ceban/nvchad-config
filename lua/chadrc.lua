@@ -15,6 +15,7 @@ M.ui = {
   },
 
   tabufline = {
+    lazyload = false,
     order = {
       "treeOffset",
       "buffers",
@@ -80,6 +81,7 @@ M.cheatsheet = {
     "Close (t)",
     "Close (v)",
     "Delete",
+    "general (x)",
     "Indent (v)",
     "LSP (v)",
     "Nvim",
