@@ -29,6 +29,12 @@ vim.api.nvim_set_hl(0, "RenderMarkdownCodeInline", { fg = "#fab387" })
 -- higlight groups for avante and git-conflict
 vim.api.nvim_set_hl(0, "DiffAddGroup", { bg = "#272a3f" })
 vim.api.nvim_set_hl(0, "DiffTextGroup", { bg = "#1e2030" })
+-- highlight groups for LSP signature
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    vim.api.nvim_set_hl(0, "LspSignatureActiveParameter", { fg = "", bg = "", bold = true, italic = true })
+  end,
+})
 
 -- for better syntax highlighting in .env files
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {

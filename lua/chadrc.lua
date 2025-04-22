@@ -15,7 +15,6 @@ M.ui = {
   },
 
   tabufline = {
-    lazyload = false,
     order = {
       "treeOffset",
       "buffers",
@@ -90,11 +89,14 @@ M.cheatsheet = {
     "Save (i)",
     "Save (t)",
     "Save (v)",
+    "Show",
     "Tabufline",
     "Toggle (x)",
     "autopairs",
     "terminal (t)",
     "toggle (v)",
+    "vim.snippet.jump (i)",
+    "vim.snippet.jump (s)",
     "which-key-trigger",
   },
 }

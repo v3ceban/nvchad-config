@@ -91,6 +91,12 @@ end, { desc = "LSP next diagnostic", silent = true })
 map({ "n" }, "K", function()
   vim.lsp.buf.hover { border = "rounded" }
 end, { desc = "LSP show available info", silent = true })
+map({ "i" }, "<M-K>", function()
+  vim.lsp.buf.signature_help { border = "rounded" }
+end, { desc = "LSP show signature help", silent = true })
+map({ "n", "v" }, "<leader>ca", function()
+  vim.lsp.buf.code_action()
+end, { desc = "LSP code action", silent = true })
 
 -- Gitsigns
 map({ "n" }, "<leader>gb", "<cmd>lua require('gitsigns').blame_line()<CR>", { desc = "Git blame line" })
