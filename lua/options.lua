@@ -12,6 +12,16 @@ vim.g.copilot_no_tab_map = true
 vim.opt.completeopt = "menu,menuone,noselect,popup"
 vim.opt.laststatus = 3
 
+-- LSP open diagnostics on jump
+vim.diagnostic.config {
+  jump = {
+    float = true,
+  },
+  float = {
+    border = "rounded",
+  },
+}
+
 -- higlight groups for markdown
 vim.api.nvim_set_hl(0, "RenderMarkdownHeader", { fg = "#89b4fa" })
 vim.api.nvim_set_hl(0, "RenderMarkdownTodo", { fg = "#f38ba8" })
@@ -19,6 +29,12 @@ vim.api.nvim_set_hl(0, "RenderMarkdownCodeInline", { fg = "#fab387" })
 -- higlight groups for avante and git-conflict
 vim.api.nvim_set_hl(0, "DiffAddGroup", { bg = "#272a3f" })
 vim.api.nvim_set_hl(0, "DiffTextGroup", { bg = "#1e2030" })
+-- highlight groups for LSP signature
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    vim.api.nvim_set_hl(0, "LspSignatureActiveParameter", { fg = "", bg = "", bold = true, italic = true })
+  end,
+})
 
 -- for better syntax highlighting in .env files
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
@@ -43,7 +59,7 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   end,
 })
 
--- close quickfix window after pressing enter
+-- close quickfix window after pressing enter, q, or escape, leave open when pressing o
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "qf",
   callback = function()
