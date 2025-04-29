@@ -1,6 +1,7 @@
 local opts = {
   provider = "copilot:gpt-4.1",
   auto_suggestions_provider = "copilot:gpt-4.1",
+  mode = "legacy", -- agentic | legacy
   ollama = {
     endpoint = "http://127.0.0.1:11434",
     model = "qwen2.5-coder", -- "ollama ls" for available models
@@ -97,8 +98,8 @@ local opts = {
     support_paste_from_clipboard = false,
     minimize_diff = true,
     enable_token_counting = false,
-    enable_cursor_planning_mode = false,
-    enable_claude_text_editor_tool_mode = false,
+    -- enable_cursor_planning_mode = false,
+    -- enable_claude_text_editor_tool_mode = false,
     use_cwd_as_project_root = false,
   },
   disabled_tools = {

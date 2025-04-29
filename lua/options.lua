@@ -31,7 +31,7 @@ vim.api.nvim_set_hl(0, "DiffAddGroup", { bg = "#272a3f" })
 vim.api.nvim_set_hl(0, "DiffTextGroup", { bg = "#1e2030" })
 -- highlight groups for LSP signature
 vim.api.nvim_create_autocmd("LspAttach", {
-  callback = function(args)
+  callback = function()
     vim.api.nvim_set_hl(0, "LspSignatureActiveParameter", { fg = "", bg = "", bold = true, italic = true })
   end,
 })
