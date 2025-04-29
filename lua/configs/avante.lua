@@ -180,6 +180,10 @@ local opts = {
     autojump = true,
   },
   hints = { enabled = false },
+  selector = {
+    provider = "telescope",
+    exclude_auto_select = { "NvimTree" },
+  },
   file_selector = {
     provider = "telescope",
   },

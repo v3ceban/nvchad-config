@@ -39,17 +39,6 @@ return {
     opts = require "configs.copilot",
   },
   {
-    "stevearc/dressing.nvim",
-    init = function() -- lazy load on vim.ui.select call only
-      ---@diagnostic disable-next-line: duplicate-set-field
-      vim.ui.select = function(...)
-        require("lazy").load { plugins = { "dressing.nvim" } }
-        return vim.ui.select(...)
-      end
-    end,
-    opts = require "configs.dressing",
-  },
-  {
     "folke/flash.nvim",
     event = "VeryLazy",
     opts = require "configs.flash",
