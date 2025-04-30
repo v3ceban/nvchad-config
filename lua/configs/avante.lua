@@ -107,7 +107,7 @@ local opts = {
   },
   windows = {
     position = "right", -- "right" | "left" | "top" | "bottom" | "smart"
-    wrap = true,
+    wrap = false,
     ask = {
       start_insert = false,
     },
@@ -180,7 +180,10 @@ local opts = {
   diff = {
     autojump = true,
   },
-  hints = { enabled = false },
+  hints = {
+    enabled = false,
+    -- submit_hint = false,
+  },
   selector = {
     provider = "telescope",
     exclude_auto_select = { "NvimTree" },
@@ -209,6 +212,12 @@ local hidden_models = {
 
 for _, model in ipairs(hidden_models) do
   opts[model] = { hide_in_model_selector = true }
+end
+
+local no_tools = true
+
+for _, model in ipairs(opts.vendors) do
+  opts.vendors[model].disable_tools = no_tools
 end
 
 return opts
