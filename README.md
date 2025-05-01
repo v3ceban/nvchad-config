@@ -7,15 +7,18 @@ This config transforms NeoVim into a full-fledged IDE with LSP support, linting,
 autocompletion, AI-powered code suggestions, and more. It also includes some quality of life
 improvements and additional features to make coding more enjoyable.
 
-The configuration can be used as is and doesn't require any further setup.
+The configuration can be used as is and doesn't require any further setup (aside from
+adding your API keys as env variables for AI providers).
 
 > [!NOTE]
 > Some Mason packages aren't avaliable on certain ARM processors. Watch out for
 > errors and install them manually if needed.
 
 > [!IMPORTANT]
-> This configuration is now on version 2.5 and requires a fresh install to work properly.
-> The old configuration can be accessed on "v2.0" branch. It will not be maintained or updated any longer.
+> This is my personal configuration and is not intended to be used as a general-purpose
+> neovim distro. Feel free to use it as a base for your own configuration, but be aware that
+> my defaults and plugins may not suit your needs. I'm always open to suggestions and PRs,
+> but I will not accept them if they don't fit my personal workflow.
 
 ## Installation
 
