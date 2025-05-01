@@ -107,7 +107,7 @@ local opts = {
   },
   windows = {
     position = "right", -- "right" | "left" | "top" | "bottom" | "smart"
-    wrap = false,
+    wrap = true,
     ask = {
       start_insert = false,
     },

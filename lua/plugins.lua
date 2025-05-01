@@ -13,6 +13,15 @@ return {
       "MunifTanjim/nui.nvim",
     },
     opts = require "configs.avante",
+    -- disable floating input hint while lazy loading
+    config = function(_, opts)
+      require("avante").setup(opts)
+      local ok, Sidebar = pcall(require, "avante.sidebar")
+      if ok and Sidebar then
+        Sidebar.show_input_hint = function() end
+        Sidebar.close_input_hint = function() end
+      end
+    end,
   },
   {
     "hrsh7th/nvim-cmp",
