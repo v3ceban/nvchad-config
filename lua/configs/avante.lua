@@ -98,9 +98,8 @@ local opts = {
     support_paste_from_clipboard = false,
     minimize_diff = true,
     enable_token_counting = false,
-    -- enable_cursor_planning_mode = false,
-    -- enable_claude_text_editor_tool_mode = false,
     use_cwd_as_project_root = false,
+    auto_focus_on_diff_view = false,
   },
   disabled_tools = {
     "python",
@@ -146,7 +145,7 @@ local opts = {
     focus = false,
     stop = false,
     toggle = {
-      default = "<leader>sr",
+      default = false,
       debug = false,
       hint = false,
       suggestion = false,
@@ -166,7 +165,7 @@ local opts = {
     },
     files = {
       add_current = "<M-f>",
-      add_all_buffers = "<M-F>",
+      add_all_buffers = false, -- doesn't work with auto_set_keymaps = false
     },
     select_model = false,
     select_history = false,
@@ -182,7 +181,6 @@ local opts = {
   },
   hints = {
     enabled = false,
-    -- submit_hint = false,
   },
   selector = {
     provider = "telescope",
@@ -214,10 +212,10 @@ for _, model in ipairs(hidden_models) do
   opts[model] = { hide_in_model_selector = true }
 end
 
-local no_tools = true
+local disable_tools = true
 
 for _, model in ipairs(opts.vendors) do
-  opts.vendors[model].disable_tools = no_tools
+  opts.vendors[model].disable_tools = disable_tools
 end
 
 return opts

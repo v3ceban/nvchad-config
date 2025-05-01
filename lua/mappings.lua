@@ -177,6 +177,9 @@ map({ "n" }, "<leader>as", function()
     vim.cmd "AvanteStop"
   end
 end, { desc = "AI Stop generating" })
+map({ "n" }, "<M-F>", function()
+  require("avante.api").add_buffer_files()
+end)
 
 -- Flash.nvim
 map({ "v", "o" }, "n", function()
