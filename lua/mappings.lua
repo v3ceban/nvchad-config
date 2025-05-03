@@ -153,12 +153,13 @@ map({ "v" }, "<leader>ar", function()
   CopilotTelescope.pick(CopilotActions.prompt_actions(get_chat_config(CopilotSelection.visual, false)))
 end, { desc = "AI Run action on selected code" })
 
-map({ "n" }, "<leader>ap", function()
-  local input = vim.fn.input "Perplexity: "
-  if input ~= "" then
-    CopilotChat.ask(input, get_chat_config(false, false, "perplexityai"))
-  end
-end, { desc = "AI Search with perplexity" })
+-- doesn't work currently
+-- map({ "n" }, "<leader>ap", function()
+--   local input = vim.fn.input "Perplexity: "
+--   if input ~= "" then
+--     CopilotChat.ask(input, get_chat_config(false, false, "perplexityai"))
+--   end
+-- end, { desc = "AI Search with perplexity" })
 
 map({ "n" }, "<leader>agc", function()
   vim.fn.system "git add ."

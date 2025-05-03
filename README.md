@@ -176,7 +176,6 @@ Enables Copilot integration and quick commands
   - `<leader>ac` to open chat
     - `<leader>h` in chat window to show help in chat window
   - `<leader>ar` to run a command
-  - `<leader>ap` to search with perplexity
   - `<leader>agc` to add all changes to git and generate a commit message
 
 ### Flash.nvim

@@ -104,30 +104,30 @@ local opts = {
       normal = "<leader>tS",
     },
     accept_diff = {
-      normal = "<leader>ga",
+      normal = "<leader>da",
       insert = "",
     },
     jump_to_diff = {
-      normal = "<leader>gj",
+      normal = "<leader>dj",
     },
     quickfix_answers = {
-      normal = "<leader>gqa",
+      normal = "<leader>qa",
     },
     quickfix_diffs = {
-      normal = "<leader>gqd",
+      normal = "<leader>qd",
     },
     yank_diff = {
-      normal = "<leader>gy",
+      normal = "<leader>dy",
       register = '"',
     },
     show_diff = {
-      normal = "<leader>d",
+      normal = "<leader>sd",
     },
     show_info = {
-      normal = "<leader>i",
+      normal = "<leader>si",
     },
     show_context = {
-      normal = "<leader>c",
+      normal = "<leader>sc",
     },
     show_help = {
       normal = "<leader>h",
