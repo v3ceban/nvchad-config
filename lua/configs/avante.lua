@@ -170,6 +170,9 @@ local opts = {
     select_model = false,
     select_history = false,
   },
+  history = {
+    storage_path = "/tmp/avante_history",
+  },
   highlights = {
     diff = {
       current = "DiffTextGroup",
