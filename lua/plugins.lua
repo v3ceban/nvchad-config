@@ -13,13 +13,18 @@ return {
       "MunifTanjim/nui.nvim",
     },
     opts = require "configs.avante",
-    -- disable floating input hint while lazy loading
     config = function(_, opts)
       require("avante").setup(opts)
-      local ok, Sidebar = pcall(require, "avante.sidebar")
-      if ok and Sidebar then
-        Sidebar.show_input_hint = function() end
-        Sidebar.close_input_hint = function() end
+      -- disable floating input hint
+      local sidebar = require "avante.sidebar"
+      if sidebar then
+        sidebar.show_input_hint = function() end
+        sidebar.close_input_hint = function() end
+      end
+      -- temp fix for #1815
+      local llm = require "avante.llm"
+      if llm then
+        llm.summarize_chat_thread_title = function() end
       end
     end,
   },
