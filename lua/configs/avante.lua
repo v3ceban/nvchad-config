@@ -10,6 +10,7 @@ local opts = {
       keep_alive = "20m",
     },
     stream = true,
+    disable_tools = true,
   },
   vendors = {
     ["openai:o4-mini"] = {
@@ -17,11 +18,13 @@ local opts = {
       model = "o4-mini",
       max_completion_tokens = 100000,
       reasoning_effort = "high",
+      disable_tools = true,
     },
     ["openai:gpt-4.1"] = {
       __inherited_from = "openai",
       model = "gpt-4.1",
       max_tokens = 32768,
+      disable_tools = true,
     },
     -- copilot doesn't seem to care about max_tokens values,
     -- be it 8k or over 9000k, max_tokens values below are
@@ -31,52 +34,59 @@ local opts = {
       __inherited_from = "copilot",
       model = "claude-3.5-sonnet",
       max_tokens = 65536,
+      disable_tools = true,
     },
     ["copilot:claude-3.7"] = {
       __inherited_from = "copilot",
       model = "claude-3.7-sonnet",
       max_tokens = 65536,
+      disable_tools = true,
     },
     ["copilot:claude-3.7-thought"] = {
       __inherited_from = "copilot",
       model = "claude-3.7-sonnet-thought",
       max_tokens = 65536,
+      disable_tools = true,
     },
     ["copilot:o4-mini"] = {
       __inherited_from = "copilot",
       model = "o4-mini",
       max_tokens = 100000,
+      disable_tools = true,
     },
     ["copilot:gpt-4.1"] = {
       __inherited_from = "copilot",
       model = "gpt-4.1",
       max_tokens = 32768,
+      disable_tools = true,
     },
     ["copilot:gemini-2.0"] = {
       __inherited_from = "copilot",
       model = "gemini-2.0-flash-001",
       max_tokens = 8192,
+      disable_tools = true,
     },
     ["copilot:gemini-2.5"] = {
       __inherited_from = "copilot",
       model = "gemini-2.5-pro",
       max_tokens = 65536,
+      disable_tools = true,
     },
     ["deepseek:v3"] = {
       __inherited_from = "openai",
       endpoint = "https://api.deepseek.com/v1",
       model = "deepseek-chat",
       api_key_name = "DEEPSEEK_API_KEY", -- needs DEEPSEEK_API_KEY env variable
-      disable_tools = true,
       max_tokens = 8192,
+      disable_tools = true,
     },
     ["deepseek:r1"] = {
       __inherited_from = "openai",
       endpoint = "https://api.deepseek.com/v1",
       model = "deepseek-reasoner",
       api_key_name = "DEEPSEEK_API_KEY",
-      disable_tools = true,
       max_tokens = 8192,
+      disable_tools = true,
     },
   },
   dual_boost = {
@@ -100,9 +110,6 @@ local opts = {
     enable_token_counting = false,
     use_cwd_as_project_root = false,
     auto_focus_on_diff_view = false,
-  },
-  disabled_tools = {
-    "python",
   },
   windows = {
     position = "right", -- "right" | "left" | "top" | "bottom" | "smart"
@@ -213,12 +220,6 @@ local hidden_models = {
 
 for _, model in ipairs(hidden_models) do
   opts[model] = { hide_in_model_selector = true }
-end
-
-local disable_tools = true
-
-for _, model in ipairs(opts.vendors) do
-  opts.vendors[model].disable_tools = disable_tools
 end
 
 return opts
