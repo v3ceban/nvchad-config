@@ -21,11 +21,6 @@ return {
         sidebar.show_input_hint = function() end
         sidebar.close_input_hint = function() end
       end
-      -- temp fix for #1815
-      local llm = require "avante.llm"
-      if llm then
-        llm.summarize_chat_thread_title = function() end
-      end
     end,
   },
   {
