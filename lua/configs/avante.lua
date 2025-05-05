@@ -1,3 +1,5 @@
+local M = {}
+
 local opts = {
   provider = "copilot:gpt-4.1",
   auto_suggestions_provider = "copilot:gpt-4.1",
@@ -222,4 +224,26 @@ for _, model in ipairs(hidden_models) do
   opts[model] = { hide_in_model_selector = true }
 end
 
-return opts
+local keys = {
+  {
+    "<M-f>",
+    function()
+      local tree_ext = require "avante.extensions.nvim_tree"
+      tree_ext.add_file()
+    end,
+    ft = "NvimTree",
+  },
+  {
+    "<M-F>",
+    function()
+      local tree_ext = require "avante.extensions.nvim_tree"
+      tree_ext.remove_file()
+    end,
+    ft = "NvimTree",
+  },
+}
+
+M.opts = opts
+M.keys = keys
+
+return M

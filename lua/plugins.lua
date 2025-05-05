@@ -12,7 +12,8 @@ return {
     dependencies = {
       "MunifTanjim/nui.nvim",
     },
-    opts = require "configs.avante",
+    opts = require "configs.avante".opts,
+    keys = require "configs.avante".keys,
     config = function(_, opts)
       require("avante").setup(opts)
       -- disable floating input hint
