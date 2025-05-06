@@ -12,8 +12,8 @@ return {
     dependencies = {
       "MunifTanjim/nui.nvim",
     },
-    opts = require "configs.avante".opts,
-    keys = require "configs.avante".keys,
+    opts = require("configs.avante").opts,
+    keys = require("configs.avante").keys,
     config = function(_, opts)
       require("avante").setup(opts)
       -- disable floating input hint
@@ -60,6 +60,11 @@ return {
     config = require "configs.git-conflict",
   },
   {
+    "lukas-reineke/indent-blankline.nvim",
+    event = "User FilePost",
+    opts = require "configs.indent-blankline",
+  },
+  {
     "mfussenegger/nvim-lint",
     event = { "BufReadPre", "BufNewFile" },
     config = function()
@@ -82,7 +87,7 @@ return {
   },
   {
     "antonk52/markdowny.nvim",
-    ft = { "markdown", "copilot-chat", "Avante" },
+    ft = { "markdown", "copilot-chat" },
     config = function()
       require("markdowny").setup()
     end,
