@@ -1,4 +1,6 @@
 return {
+  -- experimental nvchad blink integration
+  -- { import = "nvchad.blink.lazyspec" },
   {
     "tpope/vim-abolish",
     cmd = { "Abolish", "Subvert" },
