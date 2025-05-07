@@ -160,6 +160,7 @@ local opts = {
       insert = { "<C-c>" },
     },
     ask = false,
+    new_ask = false,
     edit = false,
     refresh = false,
     focus = false,

@@ -168,6 +168,7 @@ end, { desc = "AI Generate commit" })
 
 -- Avante
 map({ "n" }, "<M-a>", "<cmd>AvanteToggle<CR>", { desc = "AI Toggle chat" })
+map({ "n" }, "<M-A>", "<cmd>AvanteChatNew<CR>", { desc = "AI New chat" })
 map({ "v" }, "<leader>ae", "<cmd>AvanteEdit<CR>", { desc = "AI Edit selected code" })
 map({ "n" }, "<leader>am", "<cmd>AvanteModels<CR>", { desc = "AI Change model" })
 map({ "n" }, "<leader>ah", "<cmd>AvanteHistory<CR>", { desc = "AI Select history" })
