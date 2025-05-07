@@ -1,8 +1,8 @@
 local M = {}
 
 local opts = {
-  provider = "copilot:gpt-4.1",
-  auto_suggestions_provider = "copilot:gpt-4.1",
+  provider = "copilot/gpt-4.1",
+  auto_suggestions_provider = "copilot/gpt-4.1",
   mode = "legacy", -- agentic | legacy
   ollama = {
     endpoint = "http://127.0.0.1:11434",
@@ -15,16 +15,18 @@ local opts = {
     disable_tools = true,
   },
   vendors = {
-    ["openai:o4-mini"] = {
+    ["openai/o4-mini"] = {
       __inherited_from = "openai",
       model = "o4-mini",
+      display_name = "openai/o4-mini",
       max_completion_tokens = 100000,
       reasoning_effort = "high",
       disable_tools = true,
     },
-    ["openai:gpt-4.1"] = {
+    ["openai/gpt-4.1"] = {
       __inherited_from = "openai",
       model = "gpt-4.1",
+      display_name = "openai/gpt-4.1",
       max_tokens = 32768,
       disable_tools = true,
     },
@@ -32,60 +34,69 @@ local opts = {
     -- be it 8k or over 9000k, max_tokens values below are
     -- pulled from corresponding vendor model specifications
     -- and may or may not do anything
-    ["copilot:claude-3.5"] = {
+    ["copilot/claude-3.5"] = {
       __inherited_from = "copilot",
       model = "claude-3.5-sonnet",
+      display_name = "copilot/claude-3.5",
       max_tokens = 65536,
       disable_tools = true,
     },
-    ["copilot:claude-3.7"] = {
+    ["copilot/claude-3.7"] = {
       __inherited_from = "copilot",
-      model = "claude-3.7-sonnet",
+      model = "claude-3.7",
+      display_name = "copilot/claude-3.7",
       max_tokens = 65536,
       disable_tools = true,
     },
-    ["copilot:claude-3.7-thought"] = {
+    ["copilot/claude-3.7-thought"] = {
       __inherited_from = "copilot",
       model = "claude-3.7-sonnet-thought",
+      display_name = "copilot/claude-3.7-thought",
       max_tokens = 65536,
       disable_tools = true,
     },
-    ["copilot:o4-mini"] = {
+    ["copilot/o4-mini"] = {
       __inherited_from = "copilot",
       model = "o4-mini",
+      display_name = "copilot/o4-mini",
       max_tokens = 100000,
       disable_tools = true,
     },
-    ["copilot:gpt-4.1"] = {
+    ["copilot/gpt-4.1"] = {
       __inherited_from = "copilot",
       model = "gpt-4.1",
+      display_name = "copilot/gpt-4.1",
       max_tokens = 32768,
       disable_tools = true,
     },
-    ["copilot:gemini-2.0"] = {
+    ["copilot/gemini-2.0"] = {
       __inherited_from = "copilot",
       model = "gemini-2.0-flash-001",
+      display_name = "copilot/gemini-2.0-flash",
       max_tokens = 8192,
       disable_tools = true,
     },
-    ["copilot:gemini-2.5"] = {
+    ["copilot/gemini-2.5"] = {
       __inherited_from = "copilot",
       model = "gemini-2.5-pro",
+      display_name = "copilot/gemini-2.5-pro",
       max_tokens = 65536,
       disable_tools = true,
     },
-    ["deepseek:v3"] = {
+    ["deepseek/v3"] = {
       __inherited_from = "openai",
       endpoint = "https://api.deepseek.com/v1",
       model = "deepseek-chat",
+      display_name = "deepseek/v3",
       api_key_name = "DEEPSEEK_API_KEY", -- needs DEEPSEEK_API_KEY env variable
       max_tokens = 8192,
       disable_tools = true,
     },
-    ["deepseek:r1"] = {
+    ["deepseek/r1"] = {
       __inherited_from = "openai",
       endpoint = "https://api.deepseek.com/v1",
       model = "deepseek-reasoner",
+      display_name = "deepseek/r1",
       api_key_name = "DEEPSEEK_API_KEY",
       max_tokens = 8192,
       disable_tools = true,
