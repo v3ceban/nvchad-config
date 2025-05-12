@@ -1,6 +1,4 @@
 return {
-  -- experimental nvchad blink integration
-  -- { import = "nvchad.blink.lazyspec" },
   {
     "tpope/vim-abolish",
     cmd = { "Abolish", "Subvert" },
@@ -26,6 +24,12 @@ return {
       end
     end,
   },
+  -- experimental nvchad blink integration
+  -- { import = "nvchad.blink.lazyspec" },
+  -- {
+  --   "Saghen/blink.cmp",
+  --   opts = require "configs.blink",
+  -- },
   {
     "hrsh7th/nvim-cmp",
     opts = function()
