@@ -4,16 +4,16 @@ local opts = {
   provider = "copilot/gpt-4.1",
   auto_suggestions_provider = "copilot/gpt-4.1",
   mode = "legacy", -- agentic | legacy
-  ollama = {
-    endpoint = "http://127.0.0.1:11434",
-    model = "qwen2.5-coder", -- "ollama ls" for available models
-    options = {
-      num_ctx = 32768,
-      keep_alive = "20m",
-    },
-    stream = true,
-    disable_tools = true,
-  },
+  -- ollama = {
+  --   endpoint = "http://127.0.0.1:11434",
+  --   model = "qwen2.5-coder", -- "ollama ls" for available models
+  --   options = {
+  --     num_ctx = 32768,
+  --     keep_alive = "20m",
+  --   },
+  --   stream = true,
+  --   disable_tools = true,
+  -- },
   vendors = {
     ["openai/o4-mini"] = {
       __inherited_from = "openai",
