@@ -22,6 +22,11 @@ return {
         sidebar.show_input_hint = function() end
         sidebar.close_input_hint = function() end
       end
+      -- disable input hint in edit block mode
+      local PromptInput = require "avante.ui.prompt_input"
+      if PromptInput then
+        PromptInput.show_shortcuts_hints = function() end
+      end
     end,
   },
   -- experimental nvchad blink integration

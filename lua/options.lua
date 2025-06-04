@@ -35,6 +35,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.api.nvim_set_hl(0, "LspSignatureActiveParameter", { fg = "", bg = "", bold = true, italic = true })
   end,
 })
+-- highlight groups for Avante edit selected block
+vim.api.nvim_set_hl(0, "AvantePromptInput", { bg = "#1e1e2e", blend = 0 })
+vim.api.nvim_set_hl(0, "AvantePromptInputBorder", { bg = "#191828", blend = 0 })
+vim.api.nvim_set_hl(0, "AvanteSidebarWinSeparator", { link = "AvanteSidebarWinHorizontalSeparator" })
 
 -- for better syntax highlighting in .env files
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
