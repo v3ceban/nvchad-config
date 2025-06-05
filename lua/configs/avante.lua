@@ -131,7 +131,7 @@ local opts = {
       api_key_name = "DEEPSEEK_API_KEY",
       disable_tools = true,
       extra_request_body = {
-        max_tokens = 8192,
+        max_tokens = 65536,
       },
     },
   },
