@@ -140,10 +140,10 @@ local function get_chat_config(selection_type, with_buffer, agent)
 end
 
 map({ "n" }, "<leader>ac", function()
-  CopilotChat.open(get_chat_config(CopilotSelection.buffer, true))
+  CopilotChat.toggle(get_chat_config(CopilotSelection.buffer, true))
 end, { desc = "AI Open chat" })
 map({ "v" }, "<leader>ac", function()
-  CopilotChat.open(get_chat_config(CopilotSelection.visual, false))
+  CopilotChat.toggle(get_chat_config(CopilotSelection.visual, false))
 end, { desc = "AI Open chat with selected code" })
 
 map({ "n" }, "<leader>ar", function()
@@ -182,6 +182,22 @@ end, { desc = "AI Stop generating" })
 map({ "n" }, "<M-F>", function()
   require("avante.api").add_buffer_files()
 end)
+
+-- Claude Code
+vim.keymap.set({ "n", "t" }, "<A-c>", function()
+  require("nvchad.term").toggle {
+    pos = "float",
+    float_opts = {
+      row = 0.15,
+      col = 0.15,
+      width = 0.7,
+      height = 0.6,
+    },
+    id = "claudeTerm",
+    cmd = vim.fn.executable "claude" == 1 and "exec claude" or "exec npx @anthropic-ai/claude-code",
+    clear_cmd = false,
+  }
+end, { desc = "Claude Toggle code window" })
 
 -- Flash.nvim
 map({ "v", "o" }, "n", function()
