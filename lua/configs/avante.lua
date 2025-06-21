@@ -157,6 +157,7 @@ local opts = {
     use_cwd_as_project_root = false,
     auto_focus_on_diff_view = false,
     auto_approve_tool_permissions = false,
+    auto_check_diagnostics = true,
   },
   windows = {
     position = "right", -- "right" | "left" | "top" | "bottom" | "smart"
@@ -227,6 +228,12 @@ local opts = {
     },
     select_model = false,
     select_history = false,
+    confirm = {
+      focus_window = "<C-w>f",
+      code = "c",
+      resp = "r",
+      input = "i",
+    },
   },
   history = {
     storage_path = "/tmp/avante_history",
