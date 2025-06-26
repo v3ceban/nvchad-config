@@ -71,7 +71,6 @@ M.nvdash = {
 M.cheatsheet = {
   theme = "simple",
   excluded_groups = {
-    "avante:",
     ":help",
     "Add",
     "Change",

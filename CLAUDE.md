@@ -22,9 +22,7 @@ This is a personal Neovim configuration built on top of NvChad v2.5. It transfor
 
 ### AI Providers
 
-- **Primary**: Avante.nvim with Copilot provider (GPT-4.1 default)
-- **Secondary**: GitHub Copilot for code completion
-- **Supported**: OpenAI, DeepSeek, Groq, Ollama (requires API keys as env vars)
+- **Primary**: GitHub Copilot for code completion and chat or actions
 
 ### Language Support
 
@@ -32,7 +30,7 @@ Configured with LSP, formatting, and linting for: HTML/CSS, JavaScript/TypeScrip
 
 ### Plugin Categories
 
-- **AI**: Avante (chat-based editing), Copilot (completion), CopilotChat
+- **AI**: Copilot (completion), CopilotChat
 - **Navigation**: Flash.nvim (jump labels), Telescope, NvimTree
 - **Editing**: Surround, Abolish (substitutions), Sort Motion, TS-Autotag
 - **Git**: GitSigns, Git-Conflict resolution
@@ -62,10 +60,8 @@ Configured with LSP, formatting, and linting for: HTML/CSS, JavaScript/TypeScrip
 
 ## Important Keybindings
 
-- `<M-a>` - Toggle Avante chat
 - `<M-l>` - Accept Copilot suggestion (insert mode)
 - `<leader>ac` - Open CopilotChat
-- `<leader>ae` - Edit selection with Avante
 - `<A-c>` - Toggle Claude Code terminal
 - `<leader>sr` - Search and replace word
 - `<leader>ss` - Search and subvert word (with Abolish)
@@ -78,4 +74,3 @@ Configured with LSP, formatting, and linting for: HTML/CSS, JavaScript/TypeScrip
 - Treesitter-based code folding
 - Rounded borders for LSP diagnostics and hovers
 - Custom autocommands for .env files and docker-compose detection
-

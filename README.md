@@ -138,32 +138,6 @@ Plugin that helps with abbreviations and substitutions.
   - If no `{}` is provided, the plugin works the same as `:s`
 - Can do much more, see `:h abolish` for usage info
 
-### Avante
-
-[Avante.nvim](https://github.com/yetone/avante.nvim) is used to edit code with LLMs. It supports different AI providers and models,
-and has a clean chat interface. Tool usage is disabled by default, but can be enabled in the config.
-
-#### Setup & Configuration
-
-- Default provider is `copilot` with GPT-4.1
-- Various providers supported:
-  - Copilot (Claude 3.7/3.5, GPT-4.1/o4-mini, Gemini)
-  - OpenAI (needs `OPENAI_API_KEY`)
-  - Deepseek (needs `DEEPSEEK_API_KEY`)
-  - Groq (needs `GROQ_API_KEY`)
-  - Ollama (local models)
-- Web search powered by Tavily (needs `TAVILY_API_KEY`)
-
-#### Keybindings
-
-- `<M-a>` - Toggle chat window
-- `<leader>am` - Change provider/model
-- `<leader>ae` - Edit visual selection with AI
-- `<leader>ah` - View chat history
-- `<leader>as` - Stop AI generation
-- `<M-f>` - Add/remove current buffer to/from chat context
-- `<M-F>` - Add all open buffers to chat context
-
 ### Copilot
 
 Enables Copilot integration and quick commands

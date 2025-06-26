@@ -26,7 +26,7 @@ vim.diagnostic.config {
 vim.api.nvim_set_hl(0, "RenderMarkdownHeader", { fg = "#89b4fa" })
 vim.api.nvim_set_hl(0, "RenderMarkdownTodo", { fg = "#f38ba8" })
 vim.api.nvim_set_hl(0, "RenderMarkdownCodeInline", { fg = "#fab387" })
--- higlight groups for avante and git-conflict
+-- higlight groups for git-conflict
 vim.api.nvim_set_hl(0, "DiffAddGroup", { bg = "#272a3f" })
 vim.api.nvim_set_hl(0, "DiffTextGroup", { bg = "#1e2030" })
 -- highlight groups for LSP signature
@@ -35,9 +35,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.api.nvim_set_hl(0, "LspSignatureActiveParameter", { fg = "", bg = "", bold = true, italic = true })
   end,
 })
--- highlight groups for Avante edit selected block
-vim.api.nvim_set_hl(0, "AvantePromptInput", { bg = "#1e1e2e", blend = 0 })
-vim.api.nvim_set_hl(0, "AvantePromptInputBorder", { bg = "#191828", blend = 0 })
 
 -- for better syntax highlighting in .env files
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {

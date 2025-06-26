@@ -4,31 +4,6 @@ return {
     cmd = { "Abolish", "Subvert" },
     keys = { "cr" },
   },
-  {
-    "yetone/avante.nvim",
-    event = "VeryLazy",
-    build = "make",
-    version = false,
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-    },
-    opts = require("configs.avante").opts,
-    keys = require("configs.avante").keys,
-    config = function(_, opts)
-      require("avante").setup(opts)
-      -- disable floating input hint
-      local sidebar = require "avante.sidebar"
-      if sidebar then
-        sidebar.show_input_hint = function() end
-        sidebar.close_input_hint = function() end
-      end
-      -- disable input hint in edit block mode
-      local PromptInput = require "avante.ui.prompt_input"
-      if PromptInput then
-        PromptInput.show_shortcuts_hints = function() end
-      end
-    end,
-  },
   -- experimental nvchad blink integration
   -- { import = "nvchad.blink.lazyspec" },
   -- {
@@ -105,7 +80,7 @@ return {
   },
   {
     "MeanderingProgrammer/render-markdown.nvim",
-    ft = { "markdown", "copilot-chat", "Avante" },
+    ft = { "markdown", "copilot-chat" },
     opts = require "configs.render-markdown",
   },
   {
