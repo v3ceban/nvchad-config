@@ -4,73 +4,90 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This is a personal Neovim configuration built on top of NvChad v2.5. It transforms Neovim into a full-featured IDE with LSP, AI integration, and numerous productivity enhancements.
+Personal Neovim configuration built on NvChad v2.5 framework, transforming Neovim into a full-featured IDE with LSP support, AI integration, and productivity enhancements.
 
-## Architecture
+## Configuration Architecture
 
-- **Base**: NvChad v2.5 framework
-- **Plugin Manager**: Lazy.nvim
-- **Structure**:
-  - `init.lua` - Main entry point that bootstraps Lazy.nvim and loads NvChad
-  - `lua/plugins.lua` - Custom plugin specifications and overrides
-  - `lua/configs/` - Plugin-specific configuration files
-  - `lua/mappings.lua` - Custom keybindings (extends NvChad defaults)
-  - `lua/options.lua` - Editor options and autocommands
-  - `lua/chadrc.lua` - NvChad UI configuration
+**Loading Chain**: `init.lua` → Lazy.nvim bootstrap → NvChad v2.5 → custom plugins → configurations → mappings
 
-## Key Integrations
+**Core Structure**:
+- `init.lua` - Entry point, bootstraps Lazy.nvim and loads NvChad base
+- `lua/plugins.lua` - Custom plugin specifications with lazy loading configs
+- `lua/chadrc.lua` - NvChad UI theme and dashboard configuration (Catppuccin theme, custom nvdash)
+- `lua/options.lua` - Editor settings, autocommands, and highlight group customizations
+- `lua/mappings.lua` - Extended keybindings on top of NvChad defaults
+- `lua/configs/` - Individual plugin configurations
 
-### AI Providers
+## Language Ecosystem
 
-- **Primary**: GitHub Copilot for code completion and chat or actions
+**LSP Configuration** (`lua/configs/lspconfig.lua`):
+- Standard servers: bashls, dockerls, html, jsonls, prismals, docker_compose_language_service
+- Special configurations:
+  - `clangd` - UTF-16 offset encoding for C/C++
+  - `ts_ls` - TypeScript with disabled suggestions (relies on other tools)
+  - `intelephense` - PHP with custom global storage path
+  - `gopls` - Go with complete unimported, placeholders, unused params analysis
+  - `pylsp` - Python with increased mccabe threshold, E501/W503 ignore, 120 char line length
+  - `tailwindcss` - Extensive filetype support including templating languages
+  - `emmet_language_server` - HTML/CSS snippets for multiple template types
 
-### Language Support
+**Formatting** (`lua/configs/conform.lua`):
+- Multi-tool chains: `rustywind` + `prettierd` for Tailwind + Prettier formatting
+- Language-specific: `stylua` (Lua), `black`+`isort` (Python), `gofumpt`+`goimports-reviser`+`golines` (Go)
+- Format-on-save enabled with 2.5s timeout, LSP fallback
 
-Configured with LSP, formatting, and linting for: HTML/CSS, JavaScript/TypeScript, JSON, PHP, Lua, Bash, C/C++, Python, Go, Markdown, Docker
+**Linting** (`lua/configs/lint.lua`):
+- Dynamic ESLint configuration detection with directory caching
+- Searches for ESLint configs in current/parent directories (supports both legacy and flat config formats)
+- Caches config directory paths to avoid repeated filesystem traversal
+- Auto-triggers on `BufEnter`, `BufWritePost`, `CursorHold`
 
-### Plugin Categories
+## Development Commands
 
-- **AI**: Copilot (completion), CopilotChat
-- **Navigation**: Flash.nvim (jump labels), Telescope, NvimTree
-- **Editing**: Surround, Abolish (substitutions), Sort Motion, TS-Autotag
-- **Git**: GitSigns, Git-Conflict resolution
-- **UI**: Render-Markdown, Indent-Blankline, Which-Key
+**Plugin Management**:
+- `:Lazy` - Main plugin manager interface
+- `:Lazy update` - Update all plugins and regenerate lockfile
+- `:Lazy reload {plugin}` - Reload specific plugin without restart
+- `:Lazy profile` - Check plugin loading performance
 
-## Development Workflow
+**Health Checks**:
+- `:checkhealth` - General Neovim health diagnostics
+- `:checkhealth lspconfig` - LSP server status
+- `:checkhealth mason` - Mason tool installation status
 
-### Testing Configuration Changes
+**Configuration Testing**:
+- Restart Neovim completely to test major changes
+- Use `:source %` for immediate Lua configuration reloading
+- `:messages` to view startup errors
 
-- Restart Neovim to test changes
-- Use `:Lazy reload {plugin}` for plugin updates
-- Check `:checkhealth` for diagnostics
+## AI Integration Workflow
 
-### Adding New Plugins
+**GitHub Copilot**:
+- Authentication: `:Copilot auth`
+- Insert mode: `<M-l>` accept, `<M-j>`/`<M-k>` cycle suggestions
+- Configured with `g:copilot_no_tab_map = true` to prevent Tab conflicts
 
-1. Add plugin spec to `lua/plugins.lua`
-2. Create config file in `lua/configs/` if needed
-3. Add keybindings to `lua/mappings.lua`
-4. Update lazy-lock.json via `:Lazy update`
+**CopilotChat Integration**:
+- `<leader>ac` - Toggle chat (buffer context in normal mode, selection context in visual mode)
+- `<leader>ar` - Telescope-integrated action picker with context
+- `<leader>agc` - Auto git-add and commit message generation
+- Context-aware: automatically includes buffer or visual selection as context
 
-### Language Server Setup
+## Key Customizations
 
-- LSP configs in `lua/configs/lspconfig.lua`
-- Formatters in `lua/configs/conform.lua`
-- Linters in `lua/configs/lint.lua`
-- Treesitter parsers in `lua/configs/treesitter.lua`
+**Keybinding Patterns**:
+- Search/Replace trinity: `<leader>sw` (search), `<leader>sr` (replace), `<leader>ss` (subvert with Abolish)
+- Git navigation: `[h]`/`]h` (hunks), `[c]`/`]c` (conflicts), `[d]`/`]d` (diagnostics)
+- Buffer management: `<leader>x` (close with count support), number+`<Tab>` (go to buffer N)
 
-## Important Keybindings
+**Visual Enhancements**:
+- Global statusline (`laststatus=3`)
+- Relative line numbers with Treesitter folding
+- Rounded borders for LSP floats and diagnostics
+- Custom highlight groups for Markdown rendering and Git conflicts
 
-- `<M-l>` - Accept Copilot suggestion (insert mode)
-- `<leader>ac` - Open CopilotChat
-- `<A-c>` - Toggle Claude Code terminal
-- `<leader>sr` - Search and replace word
-- `<leader>ss` - Search and subvert word (with Abolish)
-
-## Configuration Notes
-
-- Uses Catppuccin theme with custom highlight groups
-- Relative line numbers enabled
-- Global statusline (laststatus=3)
-- Treesitter-based code folding
-- Rounded borders for LSP diagnostics and hovers
-- Custom autocommands for .env files and docker-compose detection
+**Auto-commands**:
+- `.env*` files → bash filetype for syntax highlighting
+- `docker-compose*.y{a,}ml` → `yaml.docker-compose` filetype for specialized LSP
+- Quickfix window auto-close behaviors (`<CR>`, `q`, `<Esc>`)
+- LSP signature parameter highlighting on attach
