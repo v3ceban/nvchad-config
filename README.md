@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This repository is archived and will not be maintained. Please see [my dotfiles](https://github.com/v3ceban/.dotfiles/tree/main/.config/nvim) for the most up-to-date version.
+
 # NvChad-Config
 
 My custom configuration for [NeoVim](https://neovim.io/) uses [NvChad](https://nvchad.com/) as the base and includes some
